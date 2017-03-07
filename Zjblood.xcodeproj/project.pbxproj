@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1D5808F3999FB7533E495D /* libPods-Zjblood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4F538DFBEBDFBB081FB5B6 /* libPods-Zjblood.a */; };
 		AD15FDEB1E6E66F000F31F1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FDEA1E6E66F000F31F1B /* main.m */; };
 		AD15FDEE1E6E66F000F31F1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FDED1E6E66F000F31F1B /* AppDelegate.m */; };
-		AD15FDF11E6E66F000F31F1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FDF01E6E66F000F31F1B /* ViewController.m */; };
-		AD15FDF41E6E66F000F31F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD15FDF21E6E66F000F31F1B /* Main.storyboard */; };
 		AD15FDF61E6E66F000F31F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD15FDF51E6E66F000F31F1B /* Assets.xcassets */; };
 		AD15FDF91E6E66F000F31F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD15FDF71E6E66F000F31F1B /* LaunchScreen.storyboard */; };
 		AD15FE041E6E66F100F31F1B /* ZjbloodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FE031E6E66F100F31F1B /* ZjbloodTests.m */; };
 		AD15FE0F1E6E66F100F31F1B /* ZjbloodUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FE0E1E6E66F100F31F1B /* ZjbloodUITests.m */; };
+		AD15FE221E6E83B300F31F1B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FE211E6E83B300F31F1B /* BaseViewController.m */; };
+		ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */; };
+		ADBFDF831E6E8842000358E0 /* ZJBInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF821E6E8842000358E0 /* ZJBInformationViewController.m */; };
+		ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,22 +38,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		510076145357607983E2F2A2 /* Pods-Zjblood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zjblood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zjblood/Pods-Zjblood.debug.xcconfig"; sourceTree = "<group>"; };
+		6E4F538DFBEBDFBB081FB5B6 /* libPods-Zjblood.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zjblood.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD15FDE61E6E66F000F31F1B /* Zjblood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zjblood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD15FDEA1E6E66F000F31F1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD15FDEC1E6E66F000F31F1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD15FDED1E6E66F000F31F1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AD15FDEF1E6E66F000F31F1B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AD15FDF01E6E66F000F31F1B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AD15FDF31E6E66F000F31F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AD15FDF51E6E66F000F31F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD15FDF51E6E66F000F31F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		AD15FDF81E6E66F000F31F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AD15FDFA1E6E66F000F31F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD15FDFA1E6E66F000F31F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		AD15FDFF1E6E66F000F31F1B /* ZjbloodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZjbloodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD15FE031E6E66F100F31F1B /* ZjbloodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZjbloodTests.m; sourceTree = "<group>"; };
 		AD15FE051E6E66F100F31F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD15FE0A1E6E66F100F31F1B /* ZjbloodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZjbloodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD15FE0E1E6E66F100F31F1B /* ZjbloodUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZjbloodUITests.m; sourceTree = "<group>"; };
 		AD15FE101E6E66F100F31F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD15FE201E6E83B300F31F1B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		AD15FE211E6E83B300F31F1B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		ADBFDF7E1E6E8827000358E0 /* ZJBServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBServiceViewController.h; sourceTree = "<group>"; };
+		ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBServiceViewController.m; sourceTree = "<group>"; };
+		ADBFDF811E6E8842000358E0 /* ZJBInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBInformationViewController.h; sourceTree = "<group>"; };
+		ADBFDF821E6E8842000358E0 /* ZJBInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBInformationViewController.m; sourceTree = "<group>"; };
+		ADBFDF841E6E8855000358E0 /* ZJBPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBPersonViewController.h; sourceTree = "<group>"; };
+		ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBPersonViewController.m; sourceTree = "<group>"; };
+		E94A8FE1001C3F069F14C006 /* Pods-Zjblood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zjblood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zjblood/Pods-Zjblood.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1D5808F3999FB7533E495D /* libPods-Zjblood.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		119FB7BE7848B4331CEAA01F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E4F538DFBEBDFBB081FB5B6 /* libPods-Zjblood.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A3CDAEF836C68EA6795E292 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				510076145357607983E2F2A2 /* Pods-Zjblood.debug.xcconfig */,
+				E94A8FE1001C3F069F14C006 /* Pods-Zjblood.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AD15FDDD1E6E66F000F31F1B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +114,8 @@
 				AD15FE021E6E66F100F31F1B /* ZjbloodTests */,
 				AD15FE0D1E6E66F100F31F1B /* ZjbloodUITests */,
 				AD15FDE71E6E66F000F31F1B /* Products */,
+				1A3CDAEF836C68EA6795E292 /* Pods */,
+				119FB7BE7848B4331CEAA01F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +134,12 @@
 			children = (
 				AD15FDEC1E6E66F000F31F1B /* AppDelegate.h */,
 				AD15FDED1E6E66F000F31F1B /* AppDelegate.m */,
-				AD15FDEF1E6E66F000F31F1B /* ViewController.h */,
-				AD15FDF01E6E66F000F31F1B /* ViewController.m */,
-				AD15FDF21E6E66F000F31F1B /* Main.storyboard */,
-				AD15FDF51E6E66F000F31F1B /* Assets.xcassets */,
+				AD15FE201E6E83B300F31F1B /* BaseViewController.h */,
+				AD15FE211E6E83B300F31F1B /* BaseViewController.m */,
+				AD15FE1D1E6E835C00F31F1B /* Class */,
+				AD15FE1E1E6E835C00F31F1B /* Config */,
+				AD15FE1F1E6E835C00F31F1B /* Resource */,
 				AD15FDF71E6E66F000F31F1B /* LaunchScreen.storyboard */,
-				AD15FDFA1E6E66F000F31F1B /* Info.plist */,
 				AD15FDE91E6E66F000F31F1B /* Supporting Files */,
 			);
 			path = Zjblood;
@@ -140,6 +171,59 @@
 			path = ZjbloodUITests;
 			sourceTree = "<group>";
 		};
+		AD15FE1D1E6E835C00F31F1B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				ADBFDF7B1E6E87A0000358E0 /* Service */,
+				ADBFDF7C1E6E87AF000358E0 /* Information */,
+				ADBFDF7D1E6E87E4000358E0 /* Person */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		AD15FE1E1E6E835C00F31F1B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		AD15FE1F1E6E835C00F31F1B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AD15FDFA1E6E66F000F31F1B /* Info.plist */,
+				AD15FDF51E6E66F000F31F1B /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		ADBFDF7B1E6E87A0000358E0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ADBFDF7E1E6E8827000358E0 /* ZJBServiceViewController.h */,
+				ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		ADBFDF7C1E6E87AF000358E0 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				ADBFDF811E6E8842000358E0 /* ZJBInformationViewController.h */,
+				ADBFDF821E6E8842000358E0 /* ZJBInformationViewController.m */,
+			);
+			name = Information;
+			sourceTree = "<group>";
+		};
+		ADBFDF7D1E6E87E4000358E0 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				ADBFDF841E6E8855000358E0 /* ZJBPersonViewController.h */,
+				ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */,
+			);
+			name = Person;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD15FE131E6E66F100F31F1B /* Build configuration list for PBXNativeTarget "Zjblood" */;
 			buildPhases = (
+				01BB2E776985090894330C2F /* [CP] Check Pods Manifest.lock */,
 				AD15FDE21E6E66F000F31F1B /* Sources */,
 				AD15FDE31E6E66F000F31F1B /* Frameworks */,
 				AD15FDE41E6E66F000F31F1B /* Resources */,
+				AD122C1E52373ADE45044ED4 /* [CP] Embed Pods Frameworks */,
+				3BE292026C43C8AB47D12C7B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,7 +294,7 @@
 				TargetAttributes = {
 					AD15FDE51E6E66F000F31F1B = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = D46277C5UP;
+						DevelopmentTeam = 5N55KK46S2;
 						ProvisioningStyle = Automatic;
 					};
 					AD15FDFE1E6E66F000F31F1B = {
@@ -251,7 +338,6 @@
 			files = (
 				AD15FDF91E6E66F000F31F1B /* LaunchScreen.storyboard in Resources */,
 				AD15FDF61E6E66F000F31F1B /* Assets.xcassets in Resources */,
-				AD15FDF41E6E66F000F31F1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,14 +357,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01BB2E776985090894330C2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3BE292026C43C8AB47D12C7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zjblood/Pods-Zjblood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD122C1E52373ADE45044ED4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zjblood/Pods-Zjblood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD15FDE21E6E66F000F31F1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD15FDF11E6E66F000F31F1B /* ViewController.m in Sources */,
 				AD15FDEE1E6E66F000F31F1B /* AppDelegate.m in Sources */,
+				AD15FE221E6E83B300F31F1B /* BaseViewController.m in Sources */,
+				ADBFDF831E6E8842000358E0 /* ZJBInformationViewController.m in Sources */,
 				AD15FDEB1E6E66F000F31F1B /* main.m in Sources */,
+				ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */,
+				ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,14 +451,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AD15FDF21E6E66F000F31F1B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD15FDF31E6E66F000F31F1B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD15FDF71E6E66F000F31F1B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -423,24 +552,30 @@
 		};
 		AD15FE141E6E66F100F31F1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 510076145357607983E2F2A2 /* Pods-Zjblood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D46277C5UP;
+				DEVELOPMENT_TEAM = 5N55KK46S2;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				INFOPLIST_FILE = Zjblood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.Zjblood";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjhlhl.zjblood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		AD15FE151E6E66F100F31F1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E94A8FE1001C3F069F14C006 /* Pods-Zjblood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = D46277C5UP;
+				DEVELOPMENT_TEAM = 5N55KK46S2;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				INFOPLIST_FILE = Zjblood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.Zjblood";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjhlhl.zjblood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -514,6 +649,7 @@
 				AD15FE151E6E66F100F31F1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD15FE161E6E66F100F31F1B /* Build configuration list for PBXNativeTarget "ZjbloodTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +658,7 @@
 				AD15FE181E6E66F100F31F1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD15FE191E6E66F100F31F1B /* Build configuration list for PBXNativeTarget "ZjbloodUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +667,7 @@
 				AD15FE1B1E6E66F100F31F1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
