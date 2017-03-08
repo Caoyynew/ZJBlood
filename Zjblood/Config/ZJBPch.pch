@@ -1,0 +1,31 @@
+//
+//  ZJBPch.pch
+//  Zjblood
+//
+//  Created by Cao yang on 2017/3/7.
+//  Copyright © 2017年 Zjblood. All rights reserved.
+//
+
+#ifndef ZJBPch_pch
+#define ZJBPch_pch
+
+
+#import "ZJBServiceViewController.h"
+#import "ZJBInformationViewController.h"
+#import "ZJBPersonViewController.h"
+
+
+#define tabarColor [UIColor colorWithRed:249/255.0 green:65/255.0 blue:72/255.0 alpha:1.0]
+#define personColor [UIColor colorWithRed:244/255.0 green:67/255.0 blue:80/255.0 alpha:0.9]
+#define zjbWindowH self.view.frame.size.height
+#define zjbWindowW self.view.frame.size.width
+
+#define CGRectOrigin(v)    v.frame.origin
+#define CGRectSize(v)      v.frame.size
+#define CGRectX(v)         CGRectOrigin(v).x
+#define CGRectY(v)         CGRectOrigin(v).y
+#define CGRectW(v)         CGRectSize(v).width
+#define CGRectH(v)         CGRectSize(v).height
+#define CGRectMT(v,t)       CGRectY(v)+CGRectH(v)+t
+#define CGRectML(v,t)       CGRectX(v)+CGRectW(v)+t
+#endif /* ZJBPch_pch */

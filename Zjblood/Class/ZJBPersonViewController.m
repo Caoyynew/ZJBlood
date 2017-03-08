@@ -7,16 +7,55 @@
 //
 
 #import "ZJBPersonViewController.h"
-
+#import "CPersonView.h"
+#import "CPersonTableView.h"
 @interface ZJBPersonViewController ()
-
+{
+    CPersonView *cpersonView;
+    CPersonTableView *cpersonTableView;
+    
+    UIImageView *navBarLineHideView;
+}
 @end
 
 @implementation ZJBPersonViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    UIScrollView * rootView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,0, zjbWindowW, zjbWindowH)];
+    //取消滑动反弹效果
+    rootView.bounces = NO;
+    
+    
+    cpersonView = [[CPersonView alloc]initWithFrame:CGRectMake(0, 0 ,zjbWindowW , 320) withDic:nil];
+    cpersonView.backgroundColor = tabarColor;
+    [rootView addSubview:cpersonView];
+    
+    cpersonTableView = [[CPersonTableView alloc]initWithFrame:CGRectMake(0, 342, zjbWindowW, zjbWindowH-342)];
+    [rootView addSubview:cpersonTableView];
+    
+    [self.view addSubview:rootView];
+    //设置上下滑动范围
+    rootView.contentSize = CGSizeMake(0, zjbWindowH+44);
     // Do any additional setup after loading the view.
+}
+- (UIImageView *)findHairlineImageViewUnder:(UIView *)view {
+    if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0) {
+        return (UIImageView *)view;
+    }
+    for (UIView *subview in view.subviews) {
+        UIImageView *imageView = [self findHairlineImageViewUnder:subview];
+        if (imageView) {
+            return imageView;
+        }
+    }
+    return nil;
 }
 
 - (void)didReceiveMemoryWarning {
