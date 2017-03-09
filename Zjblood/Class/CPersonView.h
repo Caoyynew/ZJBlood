@@ -11,9 +11,9 @@
 {
     CAShapeLayer * CurvedLineLayer;
     UIBezierPath * path;
-    UIButton * recordBtn;
-    UIButton * honroBtn;
-    UIButton * recognitionBtn;
+    UIView * recordBtn;
+    UIView * honroBtn;
+    UIView * recognitionBtn;
 }
 //用户基本信息
 @property (nonatomic, strong) NSDictionary * userDic;

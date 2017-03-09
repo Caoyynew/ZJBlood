@@ -61,6 +61,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIndetifier];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.section == 0) {
         if (indexPath.row ==0) {
             cell.imageView.image = [UIImage imageNamed:@"wodexiaoxi-2"];

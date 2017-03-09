@@ -41,6 +41,11 @@
     [super viewWillAppear:animated];
     idCardField.text = self.zjbIdCard;
 }
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.view endEditing:YES];
+}
 
 -(void)createRightButton
 {
