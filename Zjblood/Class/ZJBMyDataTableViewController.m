@@ -17,6 +17,7 @@
     __block NSString * myAddress;
     __block NSString * inputAddress;
     __block NSString * idCard;
+    __block NSString * mySexName;
 }
 @end
 
@@ -24,13 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    myName = @"";
-    myAddress = @"";
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+   
     self.tableView.tableFooterView = [[UIView alloc]init];
 }
 
@@ -74,7 +69,7 @@
         }else if (indexPath.row == 1){
             cell.imageView.image = [UIImage imageNamed:@"sex"];
             cell.textLabel.text = @"性别";
-//            cell.accessoryType = UITableViewCellAccessoryNone;
+            cell.detailTextLabel.text = mySexName;
         }else if (indexPath.row == 2){
             cell.imageView.image = [UIImage imageNamed:@"phone"];
             cell.textLabel.text = @"手机号";
@@ -112,7 +107,15 @@
             }];
             [self.navigationController pushViewController:nameVC animated:YES];
         }else if (indexPath.row ==1){
-            
+            ZJBSexViewController *sexVC = [[ZJBSexViewController alloc]init];
+            sexVC.view.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
+            sexVC.title = @"性别";
+            sexVC.sexStr = mySexName;
+            [sexVC ZJBSexBlock:^(NSString *sexName) {
+                mySexName = sexName;
+                [self.tableView reloadData];
+            }];
+            [self.navigationController pushViewController:sexVC animated:YES];
         }else if (indexPath.row ==2){
             
         }else if (indexPath.row ==3){

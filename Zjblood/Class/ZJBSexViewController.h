@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^ZJBSexBlock)(NSString * sexName);
+
 @interface ZJBSexViewController : UIViewController
 
+
+@property (nonatomic, copy)ZJBSexBlock _block;
+@property (nonatomic , strong) NSString * sexStr;
+
+-(void)ZJBSexBlock:(ZJBSexBlock)block;
 @end
