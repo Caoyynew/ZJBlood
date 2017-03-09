@@ -31,7 +31,7 @@
     cpersonView.backgroundColor = tabarColor;
     [rootView addSubview:cpersonView];
     
-    cpersonTableView = [[CPersonTableView alloc]initWithFrame:CGRectMake(0, 342, zjbWindowW, zjbWindowH-342)];
+    cpersonTableView = [[CPersonTableView alloc]initWithFrame:CGRectMake(0, CGRectMT(cpersonView, 0), zjbWindowW, zjbWindowH-342)];
     [rootView addSubview:cpersonTableView];
     
     [self.view addSubview:rootView];

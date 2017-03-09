@@ -64,21 +64,21 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.section == 0) {
         if (indexPath.row ==0) {
-            cell.imageView.image = [UIImage imageNamed:@"wodexiaoxi-2"];
+            cell.imageView.image = [UIImage imageNamed:@"pmessage"];
             cell.textLabel.text = @"我的消息";
         }else{
-            cell.imageView.image = [UIImage imageNamed:@"wodeziliao-2"];
+            cell.imageView.image = [UIImage imageNamed:@"pdata"];
             cell.textLabel.text = @"我的资料";
         }
     }else if (indexPath.section ==1){
-        cell.imageView.image = [UIImage imageNamed:@"shezhi-2"];
+        cell.imageView.image = [UIImage imageNamed:@"psetting"];
         cell.textLabel.text = @"系统设置";
     }else if (indexPath.section ==2){
         if (indexPath.row == 0) {
-            cell.imageView.image = [UIImage imageNamed:@"tuijian-2"];
+            cell.imageView.image = [UIImage imageNamed:@"pshare"];
             cell.textLabel.text = @"推荐给好友";
         }else{
-            cell.imageView.image = [UIImage imageNamed:@"yijian-2"];
+            cell.imageView.image = [UIImage imageNamed:@"padvice"];
             cell.textLabel.text = @"意见反馈";
         }
     }else{

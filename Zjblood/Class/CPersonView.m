@@ -28,7 +28,7 @@
     UIImageView *iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(cpviewW/2-60, cpviewH-0.68*cpviewW, 120, 120)];
     iconImageView.clipsToBounds = YES;
     iconImageView.layer.cornerRadius = 60;
-    iconImageView.image = [UIImage imageNamed:@"defuat01"];
+    iconImageView.image = [UIImage imageNamed:@"icondefault"];
     iconImageView.contentMode =  UIViewContentModeScaleAspectFit;
     [self addSubview:iconImageView];
     
@@ -63,7 +63,7 @@
     
     //献血记录按钮
     recordBtn = [[UIView alloc]initWithFrame:CGRectMake(10, CGRectMT(bloodCapacityLabel, 10), (cpviewW-60)/3, 60)];
-    UIView *view1 = [self drawViewOnButtonWithFrame:recordBtn.bounds buttonName:@"献血记录" imageName:@"recordimage"];
+    UIView *view1 = [self drawViewOnButtonWithFrame:recordBtn.bounds buttonName:@"献血记录" imageName:@"bloodcount"];
     [recordBtn addSubview:view1];
     [self addSubview:recordBtn];
     UITapGestureRecognizer *tapCallPhone1=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoRecort)];
@@ -71,7 +71,7 @@
     [recordBtn addGestureRecognizer:tapCallPhone1];
     //我的荣誉按钮
     honroBtn = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(recordBtn, 20), CGRectMT(bloodCapacityLabel, 10), (cpviewW-60)/3, 60)];
-    UIView *view2 = [self drawViewOnButtonWithFrame:honroBtn.bounds buttonName:@"我的荣誉" imageName:@"honorimage"];
+    UIView *view2 = [self drawViewOnButtonWithFrame:honroBtn.bounds buttonName:@"我的荣誉" imageName:@"bloodhonor"];
     [honroBtn addSubview:view2];
     [self addSubview:honroBtn];
     UITapGestureRecognizer *tapCallPhone2=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoHonro)];
@@ -79,7 +79,7 @@
     [honroBtn addGestureRecognizer:tapCallPhone2];
     //我的表彰按钮
     recognitionBtn = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(honroBtn, 20), CGRectMT(bloodCapacityLabel, 10), (cpviewW-60)/3, 60)];
-    UIView *view3 = [self drawViewOnButtonWithFrame:recognitionBtn.bounds buttonName:@"我的表彰" imageName:@"recognitionimage"];
+    UIView *view3 = [self drawViewOnButtonWithFrame:recognitionBtn.bounds buttonName:@"我的表彰" imageName:@"bloodrecognition"];
     [recognitionBtn addSubview:view3];
     [self addSubview:recognitionBtn];
     UITapGestureRecognizer *tapCallPhone3=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoRecognition)];

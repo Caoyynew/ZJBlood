@@ -56,7 +56,7 @@
         [sexCellView addSubview:man];
         
         selectManView = [[UIImageView alloc]initWithFrame:CGRectMake(sexCellView.frame.size.width-40,20, 20, 20)];
-        selectManView.image = [UIImage imageNamed:@"gou"];
+        selectManView.image = [UIImage imageNamed:@"select"];
         [sexCellView addSubview:selectManView];
         [cell addSubview:sexCellView];
     }else{
@@ -65,7 +65,7 @@
         man.text = @"女";
         [sexCellView addSubview:man];
         selectWomenView = [[UIImageView alloc]initWithFrame:CGRectMake(sexCellView.frame.size.width-40, 20, 20, 20)];
-        selectWomenView.image = [UIImage imageNamed:@"gou"];
+        selectWomenView.image = [UIImage imageNamed:@"select"];
         [sexCellView addSubview:selectWomenView];
         [cell addSubview:sexCellView];
     }

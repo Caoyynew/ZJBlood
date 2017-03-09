@@ -10,7 +10,6 @@
 		5A1D5808F3999FB7533E495D /* libPods-Zjblood.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4F538DFBEBDFBB081FB5B6 /* libPods-Zjblood.a */; };
 		AD15FDEB1E6E66F000F31F1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FDEA1E6E66F000F31F1B /* main.m */; };
 		AD15FDEE1E6E66F000F31F1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FDED1E6E66F000F31F1B /* AppDelegate.m */; };
-		AD15FDF61E6E66F000F31F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD15FDF51E6E66F000F31F1B /* Assets.xcassets */; };
 		AD15FDF91E6E66F000F31F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD15FDF71E6E66F000F31F1B /* LaunchScreen.storyboard */; };
 		AD15FE041E6E66F100F31F1B /* ZjbloodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FE031E6E66F100F31F1B /* ZjbloodTests.m */; };
 		AD15FE0F1E6E66F100F31F1B /* ZjbloodUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FE0E1E6E66F100F31F1B /* ZjbloodUITests.m */; };
@@ -28,6 +27,7 @@
 		ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */; };
 		ADBFDF831E6E8842000358E0 /* ZJBInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF821E6E8842000358E0 /* ZJBInformationViewController.m */; };
 		ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */; };
+		ADBFE2EE1E71A4ED0004767D /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADBFE2ED1E71A4ED0004767D /* images.xcassets */; };
 		ADF06BFC1E6EB89B00E9A0F8 /* CPersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF06BFB1E6EB89B00E9A0F8 /* CPersonView.m */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +55,6 @@
 		AD15FDEA1E6E66F000F31F1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD15FDEC1E6E66F000F31F1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD15FDED1E6E66F000F31F1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AD15FDF51E6E66F000F31F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		AD15FDF81E6E66F000F31F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD15FDFA1E6E66F000F31F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		AD15FDFF1E6E66F000F31F1B /* ZjbloodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZjbloodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +91,7 @@
 		ADBFDF821E6E8842000358E0 /* ZJBInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBInformationViewController.m; sourceTree = "<group>"; };
 		ADBFDF841E6E8855000358E0 /* ZJBPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBPersonViewController.h; sourceTree = "<group>"; };
 		ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBPersonViewController.m; sourceTree = "<group>"; };
+		ADBFE2ED1E71A4ED0004767D /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		ADF06BFA1E6EB89B00E9A0F8 /* CPersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPersonView.h; sourceTree = "<group>"; };
 		ADF06BFB1E6EB89B00E9A0F8 /* CPersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPersonView.m; sourceTree = "<group>"; };
 		ADF06BFE1E6EC53600E9A0F8 /* ZJBPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJBPch.pch; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				AD15FDFA1E6E66F000F31F1B /* Info.plist */,
-				AD15FDF51E6E66F000F31F1B /* Assets.xcassets */,
+				ADBFE2ED1E71A4ED0004767D /* images.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -441,8 +441,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBFE2EE1E71A4ED0004767D /* images.xcassets in Resources */,
 				AD15FDF91E6E66F000F31F1B /* LaunchScreen.storyboard in Resources */,
-				AD15FDF61E6E66F000F31F1B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

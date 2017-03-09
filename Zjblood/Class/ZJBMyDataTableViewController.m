@@ -59,27 +59,27 @@
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if (indexPath.section == 0) {
-        cell.imageView.image = [UIImage imageNamed:@"name"];
+        cell.imageView.image = [UIImage imageNamed:@"pername"];
         cell.textLabel.text = @"头像";
     }else if (indexPath.section ==1){
         if (indexPath.row == 0) {
-            cell.imageView.image = [UIImage imageNamed:@"name"];
+            cell.imageView.image = [UIImage imageNamed:@"pername"];
             cell.textLabel.text = @"姓名";
             cell.detailTextLabel.text = myName;
         }else if (indexPath.row == 1){
-            cell.imageView.image = [UIImage imageNamed:@"sex"];
+            cell.imageView.image = [UIImage imageNamed:@"persex"];
             cell.textLabel.text = @"性别";
             cell.detailTextLabel.text = mySexName;
         }else if (indexPath.row == 2){
-            cell.imageView.image = [UIImage imageNamed:@"phone"];
+            cell.imageView.image = [UIImage imageNamed:@"perphone"];
             cell.textLabel.text = @"手机号";
 //            cell.accessoryType = UITableViewCellAccessoryNone;
         }else if (indexPath.row == 3){
-            cell.imageView.image = [UIImage imageNamed:@"idcard"];
+            cell.imageView.image = [UIImage imageNamed:@"peridcard"];
             cell.textLabel.text = @"身份证";
             cell.detailTextLabel.text = idCard;
         }else if (indexPath.row == 4){
-            cell.imageView.image = [UIImage imageNamed:@"address"];
+            cell.imageView.image = [UIImage imageNamed:@"peraddress"];
             cell.textLabel.text = @"地址";
             cell.detailTextLabel.text = myAddress;
         }

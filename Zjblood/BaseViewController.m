@@ -19,9 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UINavigationController * serviceNC = [self setViewContriller:[[ZJBServiceViewController alloc]init] withTitle:@"服务窗" andImageName:@"service"];
-    UINavigationController * informationNV = [self setViewContriller:[[ZJBInformationViewController alloc]init] withTitle:@"资讯窗" andImageName:@"information"];
-    UINavigationController * personNC = [self setViewContriller:[[ZJBPersonViewController alloc]init] withTitle:@"我" andImageName:@"person"];
+    UINavigationController * serviceNC = [self setViewContriller:[[ZJBServiceViewController alloc]init] withTitle:@"服务窗" andImageName:@"tabar_service"];
+    UINavigationController * informationNV = [self setViewContriller:[[ZJBInformationViewController alloc]init] withTitle:@"资讯窗" andImageName:@"bloodmessage"];
+    UINavigationController * personNC = [self setViewContriller:[[ZJBPersonViewController alloc]init] withTitle:@"我" andImageName:@"tabar_person"];
     NSArray *viewArr = @[serviceNC,informationNV,personNC];
     [self setViewControllers:viewArr animated:NO];
     //设置标签栏文字和图片的颜色

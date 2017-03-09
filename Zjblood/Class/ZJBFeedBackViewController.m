@@ -36,7 +36,7 @@
     [self.view addSubview:companyView];
     
     UIImageView * feedImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 15, 20, 30)];
-    feedImageView.image = [UIImage imageNamed:@"phone"];
+    feedImageView.image = [UIImage imageNamed:@"companyphone"];
     UILabel *feedCompanyLable = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(feedImageView, 10), 0, 200, 60)];
     feedCompanyLable.text = @"浙江省献血管理中心";
     [companyView addSubview:feedImageView];
@@ -101,7 +101,7 @@
     [self.view addSubview:adviceTextView];
     
     UIImageView *logoImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, 20, 20)];
-    logoImgView.image = [UIImage imageNamed:@"ic_about_app"];
+    logoImgView.image = [UIImage imageNamed:@"aboutapp"];
     
     UILabel *logoLab = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(logoImgView, 20), 0, 200, 60)];
     logoLab.text = @"关于APP";
