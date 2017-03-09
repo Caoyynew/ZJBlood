@@ -21,6 +21,10 @@
 		AD2926FB1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2926FA1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m */; };
 		AD2926FE1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2926FD1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m */; };
 		AD38A8B11E70FEE700E7B4A7 /* CustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8B01E70FEE700E7B4A7 /* CustomTextView.m */; };
+		AD38A8BC1E711DF200E7B4A7 /* ZJBNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8BB1E711DF200E7B4A7 /* ZJBNameViewController.m */; };
+		AD38A8BF1E711E8700E7B4A7 /* ZJBSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8BE1E711E8700E7B4A7 /* ZJBSexViewController.m */; };
+		AD38A8C21E711FCC00E7B4A7 /* ZJBAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8C11E711FCC00E7B4A7 /* ZJBAddressViewController.m */; };
+		AD38A8C51E7120D000E7B4A7 /* ZJBIdCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8C41E7120D000E7B4A7 /* ZJBIdCardViewController.m */; };
 		ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */; };
 		ADBFDF831E6E8842000358E0 /* ZJBInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF821E6E8842000358E0 /* ZJBInformationViewController.m */; };
 		ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */; };
@@ -74,6 +78,14 @@
 		AD2926FD1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBFeedBackViewController.m; sourceTree = "<group>"; };
 		AD38A8AF1E70FEE700E7B4A7 /* CustomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextView.h; sourceTree = "<group>"; };
 		AD38A8B01E70FEE700E7B4A7 /* CustomTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextView.m; sourceTree = "<group>"; };
+		AD38A8BA1E711DF200E7B4A7 /* ZJBNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBNameViewController.h; sourceTree = "<group>"; };
+		AD38A8BB1E711DF200E7B4A7 /* ZJBNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBNameViewController.m; sourceTree = "<group>"; };
+		AD38A8BD1E711E8700E7B4A7 /* ZJBSexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBSexViewController.h; sourceTree = "<group>"; };
+		AD38A8BE1E711E8700E7B4A7 /* ZJBSexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBSexViewController.m; sourceTree = "<group>"; };
+		AD38A8C01E711FCC00E7B4A7 /* ZJBAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBAddressViewController.h; sourceTree = "<group>"; };
+		AD38A8C11E711FCC00E7B4A7 /* ZJBAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBAddressViewController.m; sourceTree = "<group>"; };
+		AD38A8C31E7120D000E7B4A7 /* ZJBIdCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBIdCardViewController.h; sourceTree = "<group>"; };
+		AD38A8C41E7120D000E7B4A7 /* ZJBIdCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBIdCardViewController.m; sourceTree = "<group>"; };
 		ADBFDF7E1E6E8827000358E0 /* ZJBServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBServiceViewController.h; sourceTree = "<group>"; };
 		ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBServiceViewController.m; sourceTree = "<group>"; };
 		ADBFDF811E6E8842000358E0 /* ZJBInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBInformationViewController.h; sourceTree = "<group>"; };
@@ -220,6 +232,57 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		AD38A8B21E71060700E7B4A7 /* MyDataView */ = {
+			isa = PBXGroup;
+			children = (
+				AD2926F61E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.h */,
+				AD2926F71E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m */,
+				AD38A8BA1E711DF200E7B4A7 /* ZJBNameViewController.h */,
+				AD38A8BB1E711DF200E7B4A7 /* ZJBNameViewController.m */,
+				AD38A8BD1E711E8700E7B4A7 /* ZJBSexViewController.h */,
+				AD38A8BE1E711E8700E7B4A7 /* ZJBSexViewController.m */,
+				AD38A8C31E7120D000E7B4A7 /* ZJBIdCardViewController.h */,
+				AD38A8C41E7120D000E7B4A7 /* ZJBIdCardViewController.m */,
+				AD38A8C01E711FCC00E7B4A7 /* ZJBAddressViewController.h */,
+				AD38A8C11E711FCC00E7B4A7 /* ZJBAddressViewController.m */,
+			);
+			name = MyDataView;
+			sourceTree = "<group>";
+		};
+		AD38A8B31E71064500E7B4A7 /* SystemSetView */ = {
+			isa = PBXGroup;
+			children = (
+				AD2926F91E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.h */,
+				AD2926FA1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m */,
+			);
+			name = SystemSetView;
+			sourceTree = "<group>";
+		};
+		AD38A8B41E7106BC00E7B4A7 /* MyMessageView */ = {
+			isa = PBXGroup;
+			children = (
+				AD2926F31E6FDDB800FBAEF8 /* ZJBMyMessageViewController.h */,
+				AD2926F41E6FDDB800FBAEF8 /* ZJBMyMessageViewController.m */,
+			);
+			name = MyMessageView;
+			sourceTree = "<group>";
+		};
+		AD38A8B51E7106D500E7B4A7 /* FeedBackView */ = {
+			isa = PBXGroup;
+			children = (
+				AD2926FC1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.h */,
+				AD2926FD1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m */,
+			);
+			name = FeedBackView;
+			sourceTree = "<group>";
+		};
+		AD38A8B61E71076000E7B4A7 /* MyShareView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MyShareView;
+			sourceTree = "<group>";
+		};
 		ADBFDF7B1E6E87A0000358E0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,14 +307,11 @@
 				ADF06BF91E6EB7F000E9A0F8 /* CustomView */,
 				ADBFDF841E6E8855000358E0 /* ZJBPersonViewController.h */,
 				ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */,
-				AD2926F31E6FDDB800FBAEF8 /* ZJBMyMessageViewController.h */,
-				AD2926F41E6FDDB800FBAEF8 /* ZJBMyMessageViewController.m */,
-				AD2926F61E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.h */,
-				AD2926F71E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m */,
-				AD2926F91E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.h */,
-				AD2926FA1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m */,
-				AD2926FC1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.h */,
-				AD2926FD1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m */,
+				AD38A8B41E7106BC00E7B4A7 /* MyMessageView */,
+				AD38A8B21E71060700E7B4A7 /* MyDataView */,
+				AD38A8B31E71064500E7B4A7 /* SystemSetView */,
+				AD38A8B61E71076000E7B4A7 /* MyShareView */,
+				AD38A8B51E7106D500E7B4A7 /* FeedBackView */,
 			);
 			name = Person;
 			sourceTree = "<group>";
@@ -455,8 +515,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD38A8C21E711FCC00E7B4A7 /* ZJBAddressViewController.m in Sources */,
 				AD2926FE1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m in Sources */,
 				AD15FDEE1E6E66F000F31F1B /* AppDelegate.m in Sources */,
+				AD38A8BC1E711DF200E7B4A7 /* ZJBNameViewController.m in Sources */,
 				AD15FE221E6E83B300F31F1B /* BaseViewController.m in Sources */,
 				AD2926F21E6FCEC300FBAEF8 /* CPersonTableView.m in Sources */,
 				ADBFDF831E6E8842000358E0 /* ZJBInformationViewController.m in Sources */,
@@ -464,7 +526,9 @@
 				AD2926F51E6FDDB800FBAEF8 /* ZJBMyMessageViewController.m in Sources */,
 				AD2926FB1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m in Sources */,
 				AD2926F81E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m in Sources */,
+				AD38A8C51E7120D000E7B4A7 /* ZJBIdCardViewController.m in Sources */,
 				ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */,
+				AD38A8BF1E711E8700E7B4A7 /* ZJBSexViewController.m in Sources */,
 				ADF06BFC1E6EB89B00E9A0F8 /* CPersonView.m in Sources */,
 				AD38A8B11E70FEE700E7B4A7 /* CustomTextView.m in Sources */,
 				ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */,

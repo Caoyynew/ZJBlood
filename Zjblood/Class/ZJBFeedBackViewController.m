@@ -109,8 +109,8 @@
     [adviceTextView addSubview:logoImgView];
     [adviceTextView addSubview:logoLab];
     
-    cTextView = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(logoLab, 0), 0.9*zjbWindowW, zjbWindowH*0.4-60)];
-    cTextView.strCount = 200;
+    cTextView = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(logoLab, 0), 0.9*zjbWindowW, zjbWindowH*0.4-60) withType:200];
+//    cTextView.strCount = 200;
     cTextView.zjbPlaceHolderLabel.text = @"如果符合您的心意,请不要吝啬您的赞美";
     [adviceTextView addSubview:cTextView];
     

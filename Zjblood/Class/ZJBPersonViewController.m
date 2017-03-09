@@ -20,18 +20,12 @@
 
 @implementation ZJBPersonViewController
 
--(void)viewWillAppear:(BOOL)animated
-{
-    
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     UIScrollView * rootView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,0, zjbWindowW, zjbWindowH)];
     //取消滑动反弹效果
     rootView.bounces = NO;
-    
     
     cpersonView = [[CPersonView alloc]initWithFrame:CGRectMake(0, 0 ,zjbWindowW , 320) withDic:nil];
     cpersonView.backgroundColor = tabarColor;

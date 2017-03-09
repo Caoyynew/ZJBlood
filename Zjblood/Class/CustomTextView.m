@@ -10,10 +10,11 @@
 
 @implementation CustomTextView
 
--(instancetype)initWithFrame:(CGRect)frame
+-(instancetype)initWithFrame:(CGRect)frame withType:(NSInteger)type
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.strCount = type;
         [self createTextView];
     }
     return self;
@@ -22,11 +23,14 @@
 {
     //TextView加个背景框
     UIView *bgView = [[UIView alloc]initWithFrame:self.bounds];
-    bgView.layer.borderColor = [tabarColor CGColor];
-    bgView.layer.borderWidth = 1.0;
-    bgView.layer.cornerRadius = 5.0f;
-    [bgView.layer setMasksToBounds:YES];
     
+    if (_strCount == 200) {
+        bgView.layer.borderColor = [tabarColor CGColor];
+        bgView.layer.borderWidth = 1.0;
+        bgView.layer.cornerRadius = 5.0f;
+        [bgView.layer setMasksToBounds:YES];
+    }
+    bgView.backgroundColor = [UIColor whiteColor];
     [self addSubview:bgView];
     
     _zjbTextView = [[UITextView alloc]initWithFrame:CGRectMake(20, 10, self.bounds.size.width-40,self.bounds.size.height-20 )];
@@ -45,10 +49,7 @@
     [bgView addSubview:_zjbPlaceHolderLabel];
     
     zjbCountLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.bounds.size.width-120,self.bounds.size.height-50,100,50)];
-    
-    if (_strCount == 0) {
-        _strCount = 200;
-    }
+  
     zjbCountLabel.text = [NSString stringWithFormat:@"0/%ld",(long)_strCount];
     zjbCountLabel.textAlignment = NSTextAlignmentRight;
     [bgView addSubview:zjbCountLabel];
@@ -67,7 +68,7 @@
         _zjbPlaceHolderLabel.hidden = NO;
     }
     if (res>=0) {
-        zjbCountLabel.text = [NSString stringWithFormat:@"%ld/200",[new length]];
+        zjbCountLabel.text = [NSString stringWithFormat:@"%ld/%ld",[new length],(long)_strCount];
         return YES;
     }else{
         return NO;
@@ -88,7 +89,7 @@
         _zjbPlaceHolderLabel.hidden = YES;
     }
     //    NSInteger res = strCount - [textView.text length];
-    zjbCountLabel.text = [NSString stringWithFormat:@"%ld/200",[textView.text length]];
+    zjbCountLabel.text = [NSString stringWithFormat:@"%ld/%ld",[textView.text length],(long)_strCount];
 }
 
 

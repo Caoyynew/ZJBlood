@@ -14,5 +14,8 @@
 }
 @property (nonatomic, strong) UITextView * zjbTextView;
 @property (nonatomic, strong) UILabel * zjbPlaceHolderLabel;
-@property NSInteger strCount;
+@property (nonatomic, assign) NSInteger strCount;
+
+-(instancetype)initWithFrame:(CGRect)frame withType:(NSInteger)type;
+
 @end
