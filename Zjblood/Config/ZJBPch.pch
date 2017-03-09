@@ -16,7 +16,8 @@
 
 
 #define tabarColor [UIColor colorWithRed:249/255.0 green:65/255.0 blue:72/255.0 alpha:1.0]
-#define personColor [UIColor colorWithRed:244/255.0 green:67/255.0 blue:80/255.0 alpha:0.9]
+#define buttonColor [UIColor colorWithRed:44/255.0 green:221/255.0 blue:155/255.0 alpha:1.0]
+#define RGB_COLOR(a,b,c,d) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:d]
 #define zjbWindowH self.view.frame.size.height
 #define zjbWindowW self.view.frame.size.width
 

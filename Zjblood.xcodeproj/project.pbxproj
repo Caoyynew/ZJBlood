@@ -20,6 +20,7 @@
 		AD2926F81E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2926F71E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m */; };
 		AD2926FB1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2926FA1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m */; };
 		AD2926FE1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2926FD1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m */; };
+		AD38A8B11E70FEE700E7B4A7 /* CustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8B01E70FEE700E7B4A7 /* CustomTextView.m */; };
 		ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */; };
 		ADBFDF831E6E8842000358E0 /* ZJBInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF821E6E8842000358E0 /* ZJBInformationViewController.m */; };
 		ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */; };
@@ -71,6 +72,8 @@
 		AD2926FA1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBSystenSettingViewController.m; sourceTree = "<group>"; };
 		AD2926FC1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBFeedBackViewController.h; sourceTree = "<group>"; };
 		AD2926FD1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBFeedBackViewController.m; sourceTree = "<group>"; };
+		AD38A8AF1E70FEE700E7B4A7 /* CustomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextView.h; sourceTree = "<group>"; };
+		AD38A8B01E70FEE700E7B4A7 /* CustomTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextView.m; sourceTree = "<group>"; };
 		ADBFDF7E1E6E8827000358E0 /* ZJBServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBServiceViewController.h; sourceTree = "<group>"; };
 		ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBServiceViewController.m; sourceTree = "<group>"; };
 		ADBFDF811E6E8842000358E0 /* ZJBInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBInformationViewController.h; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				ADF06BFB1E6EB89B00E9A0F8 /* CPersonView.m */,
 				AD2926F01E6FCEC300FBAEF8 /* CPersonTableView.h */,
 				AD2926F11E6FCEC300FBAEF8 /* CPersonTableView.m */,
+				AD38A8AF1E70FEE700E7B4A7 /* CustomTextView.h */,
+				AD38A8B01E70FEE700E7B4A7 /* CustomTextView.m */,
 			);
 			name = CustomView;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 				AD2926F81E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m in Sources */,
 				ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */,
 				ADF06BFC1E6EB89B00E9A0F8 /* CPersonView.m in Sources */,
+				AD38A8B11E70FEE700E7B4A7 /* CustomTextView.m in Sources */,
 				ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
