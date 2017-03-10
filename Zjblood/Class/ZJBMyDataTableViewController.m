@@ -59,7 +59,7 @@
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if (indexPath.section == 0) {
-        cell.imageView.image = [UIImage imageNamed:@"pername"];
+        cell.imageView.image = [UIImage imageNamed:@"pheadlogo"];
         cell.textLabel.text = @"头像";
     }else if (indexPath.section ==1){
         if (indexPath.row == 0) {

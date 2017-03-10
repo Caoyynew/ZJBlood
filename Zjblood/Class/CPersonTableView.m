@@ -29,6 +29,7 @@
     _CPersontableView = [[UITableView alloc]initWithFrame:self.bounds];
     _CPersontableView.dataSource = self;
     _CPersontableView.delegate = self;
+    _CPersontableView.scrollEnabled = NO;
     [self addSubview:_CPersontableView];
 }
 
@@ -52,13 +53,17 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 20.0f;
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60.0f;
+}
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIndetifier = @"cpercell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndetifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIndetifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndetifier];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;

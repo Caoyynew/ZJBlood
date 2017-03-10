@@ -24,6 +24,9 @@
 		AD38A8BF1E711E8700E7B4A7 /* ZJBSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8BE1E711E8700E7B4A7 /* ZJBSexViewController.m */; };
 		AD38A8C21E711FCC00E7B4A7 /* ZJBAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8C11E711FCC00E7B4A7 /* ZJBAddressViewController.m */; };
 		AD38A8C51E7120D000E7B4A7 /* ZJBIdCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8C41E7120D000E7B4A7 /* ZJBIdCardViewController.m */; };
+		AD4D79FD1E723A3A00C14A56 /* ZJBClickView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D79FC1E723A3A00C14A56 /* ZJBClickView.m */; };
+		AD4D7A031E7275A900C14A56 /* ZJBServiceTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D7A021E7275A900C14A56 /* ZJBServiceTableView.m */; };
+		AD4D7A061E72807A00C14A56 /* ZJBConfigPhoneStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D7A051E72807A00C14A56 /* ZJBConfigPhoneStyle.m */; };
 		ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */; };
 		ADBFDF831E6E8842000358E0 /* ZJBInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF821E6E8842000358E0 /* ZJBInformationViewController.m */; };
 		ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */; };
@@ -85,6 +88,12 @@
 		AD38A8C11E711FCC00E7B4A7 /* ZJBAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBAddressViewController.m; sourceTree = "<group>"; };
 		AD38A8C31E7120D000E7B4A7 /* ZJBIdCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBIdCardViewController.h; sourceTree = "<group>"; };
 		AD38A8C41E7120D000E7B4A7 /* ZJBIdCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBIdCardViewController.m; sourceTree = "<group>"; };
+		AD4D79FB1E723A3A00C14A56 /* ZJBClickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBClickView.h; sourceTree = "<group>"; };
+		AD4D79FC1E723A3A00C14A56 /* ZJBClickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBClickView.m; sourceTree = "<group>"; };
+		AD4D7A011E7275A900C14A56 /* ZJBServiceTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBServiceTableView.h; sourceTree = "<group>"; };
+		AD4D7A021E7275A900C14A56 /* ZJBServiceTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBServiceTableView.m; sourceTree = "<group>"; };
+		AD4D7A041E72807A00C14A56 /* ZJBConfigPhoneStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBConfigPhoneStyle.h; sourceTree = "<group>"; };
+		AD4D7A051E72807A00C14A56 /* ZJBConfigPhoneStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBConfigPhoneStyle.m; sourceTree = "<group>"; };
 		ADBFDF7E1E6E8827000358E0 /* ZJBServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBServiceViewController.h; sourceTree = "<group>"; };
 		ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBServiceViewController.m; sourceTree = "<group>"; };
 		ADBFDF811E6E8842000358E0 /* ZJBInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBInformationViewController.h; sourceTree = "<group>"; };
@@ -219,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				ADF06BFE1E6EC53600E9A0F8 /* ZJBPch.pch */,
+				AD4D7A041E72807A00C14A56 /* ZJBConfigPhoneStyle.h */,
+				AD4D7A051E72807A00C14A56 /* ZJBConfigPhoneStyle.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -283,9 +294,21 @@
 			name = MyShareView;
 			sourceTree = "<group>";
 		};
+		AD4D79FA1E72397D00C14A56 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD4D79FB1E723A3A00C14A56 /* ZJBClickView.h */,
+				AD4D79FC1E723A3A00C14A56 /* ZJBClickView.m */,
+				AD4D7A011E7275A900C14A56 /* ZJBServiceTableView.h */,
+				AD4D7A021E7275A900C14A56 /* ZJBServiceTableView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		ADBFDF7B1E6E87A0000358E0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				AD4D79FA1E72397D00C14A56 /* View */,
 				ADBFDF7E1E6E8827000358E0 /* ZJBServiceViewController.h */,
 				ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */,
 			);
@@ -515,14 +538,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD4D7A031E7275A900C14A56 /* ZJBServiceTableView.m in Sources */,
 				AD38A8C21E711FCC00E7B4A7 /* ZJBAddressViewController.m in Sources */,
 				AD2926FE1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m in Sources */,
+				AD4D7A061E72807A00C14A56 /* ZJBConfigPhoneStyle.m in Sources */,
 				AD15FDEE1E6E66F000F31F1B /* AppDelegate.m in Sources */,
 				AD38A8BC1E711DF200E7B4A7 /* ZJBNameViewController.m in Sources */,
 				AD15FE221E6E83B300F31F1B /* BaseViewController.m in Sources */,
 				AD2926F21E6FCEC300FBAEF8 /* CPersonTableView.m in Sources */,
 				ADBFDF831E6E8842000358E0 /* ZJBInformationViewController.m in Sources */,
 				AD15FDEB1E6E66F000F31F1B /* main.m in Sources */,
+				AD4D79FD1E723A3A00C14A56 /* ZJBClickView.m in Sources */,
 				AD2926F51E6FDDB800FBAEF8 /* ZJBMyMessageViewController.m in Sources */,
 				AD2926FB1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m in Sources */,
 				AD2926F81E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m in Sources */,

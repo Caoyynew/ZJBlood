@@ -40,7 +40,7 @@
     [self addSubview:nameLab];
     
     UIImageView *nameIconView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectML(nameLab, 10), CGRectMT(iconImageView, 0), 17, 17)];
-    nameIconView.image = [UIImage imageNamed:@"man"];
+    nameIconView.image = [UIImage imageNamed:@"manlogo"];
     [self addSubview:nameIconView];
     
     //献血次数和总量
@@ -66,7 +66,8 @@
     UIView *view1 = [self drawViewOnButtonWithFrame:recordBtn.bounds buttonName:@"献血记录" imageName:@"bloodcount"];
     [recordBtn addSubview:view1];
     [self addSubview:recordBtn];
-    UITapGestureRecognizer *tapCallPhone1=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoRecort)];
+    recordBtn.tag = 49;
+    UITapGestureRecognizer *tapCallPhone1=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoAction:)];
     recordBtn.userInteractionEnabled= YES;
     [recordBtn addGestureRecognizer:tapCallPhone1];
     //我的荣誉按钮
@@ -74,7 +75,8 @@
     UIView *view2 = [self drawViewOnButtonWithFrame:honroBtn.bounds buttonName:@"我的荣誉" imageName:@"bloodhonor"];
     [honroBtn addSubview:view2];
     [self addSubview:honroBtn];
-    UITapGestureRecognizer *tapCallPhone2=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoHonro)];
+    honroBtn.tag = 50;
+    UITapGestureRecognizer *tapCallPhone2=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoAction:)];
     honroBtn.userInteractionEnabled= YES;
     [honroBtn addGestureRecognizer:tapCallPhone2];
     //我的表彰按钮
@@ -82,7 +84,8 @@
     UIView *view3 = [self drawViewOnButtonWithFrame:recognitionBtn.bounds buttonName:@"我的表彰" imageName:@"bloodrecognition"];
     [recognitionBtn addSubview:view3];
     [self addSubview:recognitionBtn];
-    UITapGestureRecognizer *tapCallPhone3=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoRecognition)];
+    recognitionBtn.tag = 51;
+    UITapGestureRecognizer *tapCallPhone3=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoAction:)];
     recognitionBtn.userInteractionEnabled= YES;
     [recognitionBtn addGestureRecognizer:tapCallPhone3];
     
@@ -121,17 +124,16 @@
     return mString;
 }
 #pragma mark - 按钮点击事件处理
--(void)gotoRecort
+-(void)gotoAction:(UITapGestureRecognizer*)sender
 {
-    NSLog(@"献血记录");
-}
--(void)gotoHonro
-{
-    NSLog(@"我的荣誉");
-}
--(void)gotoRecognition
-{
-    NSLog(@"我的表彰");
+    long tag = [sender view].tag;
+    if (tag ==49) {
+        NSLog(@"献血记录");
+    }else if (tag ==50){
+        NSLog(@"我的荣誉");
+    }else if (tag ==51){
+        NSLog(@"我的表彰");
+    }
 }
 
 // Only override drawRect: if you perform custom drawing.

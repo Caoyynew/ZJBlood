@@ -25,18 +25,23 @@
 
     UIScrollView * rootView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,0, zjbWindowW, zjbWindowH)];
     //取消滑动反弹效果
-    rootView.bounces = NO;
-    
+//    rootView.bounces = NO;
+
     cpersonView = [[CPersonView alloc]initWithFrame:CGRectMake(0, 0 ,zjbWindowW , 320) withDic:nil];
     cpersonView.backgroundColor = tabarColor;
     [rootView addSubview:cpersonView];
     
-    cpersonTableView = [[CPersonTableView alloc]initWithFrame:CGRectMake(0, CGRectMT(cpersonView, 0), zjbWindowW, zjbWindowH-342)];
+    cpersonTableView = [[CPersonTableView alloc]initWithFrame:CGRectMake(0, CGRectMT(cpersonView, 0), zjbWindowW,400)];
     [rootView addSubview:cpersonTableView];
     
     [self.view addSubview:rootView];
     //设置上下滑动范围
-    rootView.contentSize = CGSizeMake(0, zjbWindowH+44);
+    //TODO:适配机型
+    if (zjbWindowH <600) {
+        rootView.contentSize = CGSizeMake(0, zjbWindowH+120);
+    }else{
+        rootView.contentSize = CGSizeMake(0, zjbWindowH+80);
+    }
     // Do any additional setup after loading the view.
 }
 - (UIImageView *)findHairlineImageViewUnder:(UIView *)view {
