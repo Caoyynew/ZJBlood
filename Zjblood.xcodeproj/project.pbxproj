@@ -35,6 +35,8 @@
 		ADBFDF831E6E8842000358E0 /* ZJBInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF821E6E8842000358E0 /* ZJBInformationViewController.m */; };
 		ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */; };
 		ADBFE2EE1E71A4ED0004767D /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADBFE2ED1E71A4ED0004767D /* images.xcassets */; };
+		ADD0654F1E76A87B0026F680 /* ZJBloodRecTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD0654D1E76A87B0026F680 /* ZJBloodRecTableViewCell.m */; };
+		ADD065501E76A87B0026F680 /* ZJBloodRecTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD0654E1E76A87B0026F680 /* ZJBloodRecTableViewCell.xib */; };
 		ADF06BFC1E6EB89B00E9A0F8 /* CPersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF06BFB1E6EB89B00E9A0F8 /* CPersonView.m */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,9 @@
 		ADBFDF841E6E8855000358E0 /* ZJBPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBPersonViewController.h; sourceTree = "<group>"; };
 		ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBPersonViewController.m; sourceTree = "<group>"; };
 		ADBFE2ED1E71A4ED0004767D /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		ADD0654C1E76A87B0026F680 /* ZJBloodRecTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBloodRecTableViewCell.h; sourceTree = "<group>"; };
+		ADD0654D1E76A87B0026F680 /* ZJBloodRecTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBloodRecTableViewCell.m; sourceTree = "<group>"; };
+		ADD0654E1E76A87B0026F680 /* ZJBloodRecTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBloodRecTableViewCell.xib; sourceTree = "<group>"; };
 		ADF06BFA1E6EB89B00E9A0F8 /* CPersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPersonView.h; sourceTree = "<group>"; };
 		ADF06BFB1E6EB89B00E9A0F8 /* CPersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPersonView.m; sourceTree = "<group>"; };
 		ADF06BFE1E6EC53600E9A0F8 /* ZJBPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJBPch.pch; sourceTree = "<group>"; };
@@ -264,6 +269,9 @@
 				AD28F0171E768784005E41B5 /* ZJBloodRecordViewController.m */,
 				AD28F0191E769F79005E41B5 /* ZJBloodResultViewController.h */,
 				AD28F01A1E769F79005E41B5 /* ZJBloodResultViewController.m */,
+				ADD0654C1E76A87B0026F680 /* ZJBloodRecTableViewCell.h */,
+				ADD0654D1E76A87B0026F680 /* ZJBloodRecTableViewCell.m */,
+				ADD0654E1E76A87B0026F680 /* ZJBloodRecTableViewCell.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -492,6 +500,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD065501E76A87B0026F680 /* ZJBloodRecTableViewCell.xib in Resources */,
 				ADBFE2EE1E71A4ED0004767D /* images.xcassets in Resources */,
 				AD15FDF91E6E66F000F31F1B /* LaunchScreen.storyboard in Resources */,
 			);
@@ -589,6 +598,7 @@
 				AD38A8BF1E711E8700E7B4A7 /* ZJBSexViewController.m in Sources */,
 				ADF06BFC1E6EB89B00E9A0F8 /* CPersonView.m in Sources */,
 				AD38A8B11E70FEE700E7B4A7 /* CustomTextView.m in Sources */,
+				ADD0654F1E76A87B0026F680 /* ZJBloodRecTableViewCell.m in Sources */,
 				ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -111,7 +111,7 @@
     NSLog(@"------查询献血记录");
     ZJBloodResultViewController * result = [[ZJBloodResultViewController alloc]init];
     result.title = @"献血记录";
-    result.view.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
+    result.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:result animated:YES];
 
 }

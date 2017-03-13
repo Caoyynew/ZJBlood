@@ -7,21 +7,58 @@
 //
 
 #import "ZJBloodResultViewController.h"
-
-@interface ZJBloodResultViewController ()
-
+#import "ZJBloodRecTableViewCell.h"
+@interface ZJBloodResultViewController ()<UITableViewDataSource,UITableViewDelegate>
+{
+    UITableView * bloodTableView;
+    UINib * nib;
+}
 @end
 
 @implementation ZJBloodResultViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self createTableView];
 }
 
+-(void)createTableView
+{
+    bloodTableView = [[UITableView alloc]initWithFrame:self.view.bounds];
+    bloodTableView.delegate = self;
+    bloodTableView.dataSource = self;
+    bloodTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    bloodTableView.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
+    [self.view addSubview:bloodTableView];
+}
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 6;
+}
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identy = @"ZJBloodRecCell";
+    if (!nib) {
+        nib = [UINib nibWithNibName:@"ZJBloodRecTableViewCell" bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:identy];
+    }
+    ZJBloodRecTableViewCell * cell =  [tableView dequeueReusableCellWithIdentifier:identy];
+    //TODO:加载数据
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 83.0f;
+}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -38,7 +75,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 
