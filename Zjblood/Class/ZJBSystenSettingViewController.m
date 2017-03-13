@@ -7,7 +7,7 @@
 //
 
 #import "ZJBSystenSettingViewController.h"
-
+#import "ZJBLoginViewController.h"
 @interface ZJBSystenSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *systemSetTableView;
@@ -42,6 +42,11 @@
 -(void)logoutAction
 {
     NSLog(@"点击了退出登录!");
+    ZJBLoginViewController * logo = [[ZJBLoginViewController alloc]init];
+    
+    [self.navigationController pushViewController:logo animated:YES];
+    
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

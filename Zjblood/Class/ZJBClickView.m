@@ -7,7 +7,7 @@
 //
 
 #import "ZJBClickView.h"
-
+#import "ZJBloodRecordViewController.h"
 @interface ZJBClickView ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * serviceTableView;
@@ -190,6 +190,12 @@
     long tag = [touch view].tag;
     if (tag == 1000) {
         NSLog(@"tag=====%ld--献血记录",(long)[touch view].tag);
+        ZJBloodRecordViewController * bloodRecord = [[ZJBloodRecordViewController alloc]init];
+        bloodRecord.title = @"献血记录";
+        bloodRecord.view.backgroundColor = [UIColor whiteColor];
+        //隐藏底部tabar
+//        [self viewController].hidesBottomBarWhenPushed = YES;
+        [[self viewController].navigationController pushViewController:bloodRecord animated:YES];
     }else if (tag ==1001){
         NSLog(@"tag=====%ld--献血者之家",(long)[touch view].tag);
     }else if (tag == 1002){
@@ -199,6 +205,16 @@
     }
 }
 
+#pragma mark - 获取当前视图的视图控制器
+- (UIViewController *)viewController {
+    for (UIView *next = [self superview]; next != nil; next = next.superview) {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

@@ -36,7 +36,7 @@
     
     [self.view addSubview:rootView];
     //设置上下滑动范围
-    //TODO:适配机型
+    //TODO:适配机型(未完善)
     if (zjbWindowH <600) {
         rootView.contentSize = CGSizeMake(0, zjbWindowH+120);
     }else{

@@ -7,10 +7,11 @@
 //
 
 #import "ZJBServiceTableView.h"
-
+#import "ZJBAlertView.h"
 @interface ZJBServiceTableView ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * zJBtabview;
+    ZJBAlertView * alertView;
 }
 
 @end
@@ -54,9 +55,10 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell * cell = [[UITableViewCell alloc]init];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if (indexPath.section == 0) {
         cell.textLabel.text = @"签到有积分";
-        cell.imageView.image = [UIImage imageNamed:@""];
+        cell.imageView.image = [UIImage imageNamed:@"serviceasign"];
     }else if (indexPath.section == 1){
         cell.textLabel.text = @"hello";
     }else if (indexPath.section == 2){
@@ -89,6 +91,16 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 40.0f;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        CGRect rx = [ UIScreen mainScreen ].bounds;
+        alertView = [[ZJBAlertView alloc]initWithFrame:CGRectMake(rx.size.width*0.05, rx.size.height*0.3,rx.size.width*0.9,rx.size.height*0.45)];
+        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+        [keyWindow addSubview:alertView];
+    }
 }
 
 /*
