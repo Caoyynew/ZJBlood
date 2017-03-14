@@ -21,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //创建导航右侧按钮
+    [self createRightButton];
     rootSV = [[UIScrollView alloc]initWithFrame:self.view.bounds];
     rootSV.scrollEnabled = NO;
     [self.view addSubview:rootSV];
@@ -30,6 +32,19 @@
     
     // Do any additional setup after loading the view.
 }
+
+-(void)createRightButton
+{
+    UIBarButtonItem * rightBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"serviceSearch"] style:UIBarButtonItemStyleDone target:self action:@selector(searchAction)];
+    rightBtn.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = rightBtn;
+}
+
+-(void)searchAction
+{
+    NSLog(@"点击了search!!");
+}
+
 
 -(void)createHeadUI
 {

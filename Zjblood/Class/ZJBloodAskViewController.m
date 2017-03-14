@@ -16,8 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self createRightButton];
     // Do any additional setup after loading the view.
 }
+-(void)createRightButton
+{
+    UIBarButtonItem * rightBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"serviceSearch"] style:UIBarButtonItemStyleDone target:self action:@selector(searchAction)];
+    rightBtn.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = rightBtn;
+}
+-(void)searchAction
+{
+    NSLog(@"点击了search!!");
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

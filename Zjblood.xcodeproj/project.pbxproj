@@ -33,6 +33,8 @@
 		AD4C51501E77BAE70062B4A4 /* ZJBloodSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C514F1E77BAE70062B4A4 /* ZJBloodSearchViewController.m */; };
 		AD4C51541E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C51521E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.m */; };
 		AD4C51551E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD4C51531E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.xib */; };
+		AD4C51591E77F5080062B4A4 /* ZJBloodSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C51571E77F5080062B4A4 /* ZJBloodSearchTableViewCell.m */; };
+		AD4C515A1E77F5080062B4A4 /* ZJBloodSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD4C51581E77F5080062B4A4 /* ZJBloodSearchTableViewCell.xib */; };
 		AD4D79FD1E723A3A00C14A56 /* ZJBClickView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D79FC1E723A3A00C14A56 /* ZJBClickView.m */; };
 		AD4D7A031E7275A900C14A56 /* ZJBServiceTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D7A021E7275A900C14A56 /* ZJBServiceTableView.m */; };
 		AD4D7A061E72807A00C14A56 /* ZJBConfigPhoneStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D7A051E72807A00C14A56 /* ZJBConfigPhoneStyle.m */; };
@@ -126,6 +128,9 @@
 		AD4C51511E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBloodHomeTableViewCell.h; sourceTree = "<group>"; };
 		AD4C51521E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBloodHomeTableViewCell.m; sourceTree = "<group>"; };
 		AD4C51531E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBloodHomeTableViewCell.xib; sourceTree = "<group>"; };
+		AD4C51561E77F5080062B4A4 /* ZJBloodSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBloodSearchTableViewCell.h; sourceTree = "<group>"; };
+		AD4C51571E77F5080062B4A4 /* ZJBloodSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBloodSearchTableViewCell.m; sourceTree = "<group>"; };
+		AD4C51581E77F5080062B4A4 /* ZJBloodSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBloodSearchTableViewCell.xib; sourceTree = "<group>"; };
 		AD4D79FB1E723A3A00C14A56 /* ZJBClickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBClickView.h; sourceTree = "<group>"; };
 		AD4D79FC1E723A3A00C14A56 /* ZJBClickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBClickView.m; sourceTree = "<group>"; };
 		AD4D7A011E7275A900C14A56 /* ZJBServiceTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBServiceTableView.h; sourceTree = "<group>"; };
@@ -394,6 +399,9 @@
 				AD4C51511E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.h */,
 				AD4C51521E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.m */,
 				AD4C51531E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.xib */,
+				AD4C51561E77F5080062B4A4 /* ZJBloodSearchTableViewCell.h */,
+				AD4C51571E77F5080062B4A4 /* ZJBloodSearchTableViewCell.m */,
+				AD4C51581E77F5080062B4A4 /* ZJBloodSearchTableViewCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -629,6 +637,7 @@
 				AD4C51551E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.xib in Resources */,
 				AD7A2CA41E76F9F600E1D95A /* btn_navigation_close@2x.png in Resources */,
 				ADBFE2EE1E71A4ED0004767D /* images.xcassets in Resources */,
+				AD4C515A1E77F5080062B4A4 /* ZJBloodSearchTableViewCell.xib in Resources */,
 				AD7A2CA31E76F9F600E1D95A /* btn_navigation_back@2x.png in Resources */,
 				AD15FDF91E6E66F000F31F1B /* LaunchScreen.storyboard in Resources */,
 				AD7A2CA51E76F9F600E1D95A /* shadow.png in Resources */,
@@ -708,6 +717,7 @@
 				AD7A2CA91E76F9F600E1D95A /* ZLPopView.m in Sources */,
 				AD38A8C21E711FCC00E7B4A7 /* ZJBAddressViewController.m in Sources */,
 				AD7A2CA61E76F9F600E1D95A /* ZLChannelViewModel.m in Sources */,
+				AD4C51591E77F5080062B4A4 /* ZJBloodSearchTableViewCell.m in Sources */,
 				AD28F01B1E769F79005E41B5 /* ZJBloodResultViewController.m in Sources */,
 				AD2926FE1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m in Sources */,
 				AD4D7A061E72807A00C14A56 /* ZJBConfigPhoneStyle.m in Sources */,
