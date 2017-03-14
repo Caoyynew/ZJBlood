@@ -8,6 +8,9 @@
 
 #import "ZJBClickView.h"
 #import "ZJBloodRecordViewController.h"
+#import "ZJBloodHomeViewController.h"
+#import "ZJBloodAskViewController.h"
+#import "ZJBloodSearchViewController.h"
 @interface ZJBClickView ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * serviceTableView;
@@ -189,7 +192,6 @@
 {
     long tag = [touch view].tag;
     if (tag == 1000) {
-        NSLog(@"tag=====%ld--献血记录",(long)[touch view].tag);
         ZJBloodRecordViewController * bloodRecord = [[ZJBloodRecordViewController alloc]init];
         bloodRecord.title = @"献血记录";
         bloodRecord.view.backgroundColor = [UIColor whiteColor];
@@ -197,11 +199,20 @@
 //        [self viewController].hidesBottomBarWhenPushed = YES;
         [[self viewController].navigationController pushViewController:bloodRecord animated:YES];
     }else if (tag ==1001){
-        NSLog(@"tag=====%ld--献血者之家",(long)[touch view].tag);
+        ZJBloodHomeViewController * home = [[ZJBloodHomeViewController alloc]init];
+        home.title = @"献血者之家";
+        home.view.backgroundColor = [UIColor whiteColor];
+        [[self viewController].navigationController pushViewController:home animated:YES];
     }else if (tag == 1002){
-        NSLog(@"tag=====%ld--献血咨询",(long)[touch view].tag);
+        ZJBloodAskViewController * ask = [[ZJBloodAskViewController alloc]init];
+        ask.title = @"献血咨询";
+        ask.view.backgroundColor = [UIColor whiteColor];
+        [[self viewController].navigationController pushViewController:ask animated:YES];
     }else if (tag == 1003){
-        NSLog(@"tag=====%ld--资料查询",(long)[touch view].tag);
+        ZJBloodSearchViewController * search = [[ZJBloodSearchViewController alloc]init];
+        search.title = @"资料查询";
+        search.view.backgroundColor = [UIColor whiteColor];
+        [[self viewController].navigationController pushViewController:search animated:YES];
     }
 }
 
