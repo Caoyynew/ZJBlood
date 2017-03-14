@@ -25,7 +25,7 @@
 {
     NSLog(@"path is null");
     //头像
-    UIImageView *iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(cpviewW/2-60, cpviewH-0.68*cpviewW, 120, 120)];
+    UIImageView *iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(cpviewW/2-60, cpviewH-0.8*cpviewW, 120, 120)];
     iconImageView.clipsToBounds = YES;
     iconImageView.layer.cornerRadius = 60;
     iconImageView.image = [UIImage imageNamed:@"icondefault"];
@@ -62,8 +62,8 @@
     
     
     //献血记录按钮
-    recordBtn = [[UIView alloc]initWithFrame:CGRectMake(10, CGRectMT(bloodCapacityLabel, 10), (cpviewW-60)/3, 60)];
-    UIView *view1 = [self drawViewOnButtonWithFrame:recordBtn.bounds buttonName:@"献血记录" imageName:@"bloodcount"];
+    recordBtn = [[UIView alloc]initWithFrame:CGRectMake(10, CGRectMT(bloodCapacityLabel, 15), (cpviewW-60)/3, 60)];
+    UIView *view1 = [self drawViewOnButtonWithFrame:recordBtn.bounds buttonName:@"还血记录" imageName:@"bloodcount"];
     [recordBtn addSubview:view1];
     [self addSubview:recordBtn];
     recordBtn.tag = 49;
@@ -71,8 +71,8 @@
     recordBtn.userInteractionEnabled= YES;
     [recordBtn addGestureRecognizer:tapCallPhone1];
     //我的荣誉按钮
-    honroBtn = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(recordBtn, 20), CGRectMT(bloodCapacityLabel, 10), (cpviewW-60)/3, 60)];
-    UIView *view2 = [self drawViewOnButtonWithFrame:honroBtn.bounds buttonName:@"我的荣誉" imageName:@"bloodhonor"];
+    honroBtn = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(recordBtn, 20), CGRectMT(bloodCapacityLabel, 15), (cpviewW-60)/3, 60)];
+    UIView *view2 = [self drawViewOnButtonWithFrame:honroBtn.bounds buttonName:@"我的荣誉证" imageName:@"bloodhonor"];
     [honroBtn addSubview:view2];
     [self addSubview:honroBtn];
     honroBtn.tag = 50;
@@ -80,7 +80,7 @@
     honroBtn.userInteractionEnabled= YES;
     [honroBtn addGestureRecognizer:tapCallPhone2];
     //我的表彰按钮
-    recognitionBtn = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(honroBtn, 20), CGRectMT(bloodCapacityLabel, 10), (cpviewW-60)/3, 60)];
+    recognitionBtn = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(honroBtn, 20), CGRectMT(bloodCapacityLabel, 15), (cpviewW-60)/3, 60)];
     UIView *view3 = [self drawViewOnButtonWithFrame:recognitionBtn.bounds buttonName:@"我的表彰" imageName:@"bloodrecognition"];
     [recognitionBtn addSubview:view3];
     [self addSubview:recognitionBtn];
@@ -143,7 +143,7 @@
     [color set];
     path = [[UIBezierPath alloc] init];
     [path addArcWithCenter:CGPointMake(self.frame.size.width/2, 400)
-                    radius:self.frame.size.width*0.7
+                    radius:self.frame.size.width*0.8
                 startAngle:0
                   endAngle:M_PI*2
                  clockwise:YES];

@@ -31,6 +31,16 @@
 		AD4D79FD1E723A3A00C14A56 /* ZJBClickView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D79FC1E723A3A00C14A56 /* ZJBClickView.m */; };
 		AD4D7A031E7275A900C14A56 /* ZJBServiceTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D7A021E7275A900C14A56 /* ZJBServiceTableView.m */; };
 		AD4D7A061E72807A00C14A56 /* ZJBConfigPhoneStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D7A051E72807A00C14A56 /* ZJBConfigPhoneStyle.m */; };
+		AD7A2CA11E76F9F600E1D95A /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A2C8C1E76F9F600E1D95A /* NSArray+Log.m */; };
+		AD7A2CA21E76F9F600E1D95A /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A2C8E1E76F9F600E1D95A /* UIImage+ImageEffects.m */; };
+		AD7A2CA31E76F9F600E1D95A /* btn_navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7A2C901E76F9F600E1D95A /* btn_navigation_back@2x.png */; };
+		AD7A2CA41E76F9F600E1D95A /* btn_navigation_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7A2C911E76F9F600E1D95A /* btn_navigation_close@2x.png */; };
+		AD7A2CA51E76F9F600E1D95A /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7A2C921E76F9F600E1D95A /* shadow.png */; };
+		AD7A2CA61E76F9F600E1D95A /* ZLChannelViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A2C951E76F9F600E1D95A /* ZLChannelViewModel.m */; };
+		AD7A2CA71E76F9F600E1D95A /* ZLChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A2C981E76F9F600E1D95A /* ZLChannelView.m */; };
+		AD7A2CA81E76F9F600E1D95A /* ZLNavTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A2C9A1E76F9F600E1D95A /* ZLNavTabBar.m */; };
+		AD7A2CA91E76F9F600E1D95A /* ZLPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A2C9C1E76F9F600E1D95A /* ZLPopView.m */; };
+		AD7A2CAA1E76F9F600E1D95A /* ZLNavTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A2CA01E76F9F600E1D95A /* ZLNavTabBarController.m */; };
 		ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */; };
 		ADBFDF831E6E8842000358E0 /* ZJBInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF821E6E8842000358E0 /* ZJBInformationViewController.m */; };
 		ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */; };
@@ -108,6 +118,24 @@
 		AD4D7A021E7275A900C14A56 /* ZJBServiceTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBServiceTableView.m; sourceTree = "<group>"; };
 		AD4D7A041E72807A00C14A56 /* ZJBConfigPhoneStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBConfigPhoneStyle.h; sourceTree = "<group>"; };
 		AD4D7A051E72807A00C14A56 /* ZJBConfigPhoneStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBConfigPhoneStyle.m; sourceTree = "<group>"; };
+		AD7A2C8B1E76F9F600E1D95A /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		AD7A2C8C1E76F9F600E1D95A /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		AD7A2C8D1E76F9F600E1D95A /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		AD7A2C8E1E76F9F600E1D95A /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		AD7A2C901E76F9F600E1D95A /* btn_navigation_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_navigation_back@2x.png"; sourceTree = "<group>"; };
+		AD7A2C911E76F9F600E1D95A /* btn_navigation_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_navigation_close@2x.png"; sourceTree = "<group>"; };
+		AD7A2C921E76F9F600E1D95A /* shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow.png; sourceTree = "<group>"; };
+		AD7A2C941E76F9F600E1D95A /* ZLChannelViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLChannelViewModel.h; sourceTree = "<group>"; };
+		AD7A2C951E76F9F600E1D95A /* ZLChannelViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLChannelViewModel.m; sourceTree = "<group>"; };
+		AD7A2C971E76F9F600E1D95A /* ZLChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLChannelView.h; sourceTree = "<group>"; };
+		AD7A2C981E76F9F600E1D95A /* ZLChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLChannelView.m; sourceTree = "<group>"; };
+		AD7A2C991E76F9F600E1D95A /* ZLNavTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLNavTabBar.h; sourceTree = "<group>"; };
+		AD7A2C9A1E76F9F600E1D95A /* ZLNavTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLNavTabBar.m; sourceTree = "<group>"; };
+		AD7A2C9B1E76F9F600E1D95A /* ZLPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLPopView.h; sourceTree = "<group>"; };
+		AD7A2C9C1E76F9F600E1D95A /* ZLPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLPopView.m; sourceTree = "<group>"; };
+		AD7A2C9D1E76F9F600E1D95A /* ZLCommonConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCommonConst.h; sourceTree = "<group>"; };
+		AD7A2C9F1E76F9F600E1D95A /* ZLNavTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLNavTabBarController.h; sourceTree = "<group>"; };
+		AD7A2CA01E76F9F600E1D95A /* ZLNavTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLNavTabBarController.m; sourceTree = "<group>"; };
 		ADBFDF7E1E6E8827000358E0 /* ZJBServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBServiceViewController.h; sourceTree = "<group>"; };
 		ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBServiceViewController.m; sourceTree = "<group>"; };
 		ADBFDF811E6E8842000358E0 /* ZJBInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBInformationViewController.h; sourceTree = "<group>"; };
@@ -269,9 +297,6 @@
 				AD28F0171E768784005E41B5 /* ZJBloodRecordViewController.m */,
 				AD28F0191E769F79005E41B5 /* ZJBloodResultViewController.h */,
 				AD28F01A1E769F79005E41B5 /* ZJBloodResultViewController.m */,
-				ADD0654C1E76A87B0026F680 /* ZJBloodRecTableViewCell.h */,
-				ADD0654D1E76A87B0026F680 /* ZJBloodRecTableViewCell.m */,
-				ADD0654E1E76A87B0026F680 /* ZJBloodRecTableViewCell.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -340,9 +365,85 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		AD7A2C881E76EFC800E1D95A /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				ADD0654C1E76A87B0026F680 /* ZJBloodRecTableViewCell.h */,
+				ADD0654D1E76A87B0026F680 /* ZJBloodRecTableViewCell.m */,
+				ADD0654E1E76A87B0026F680 /* ZJBloodRecTableViewCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		AD7A2C891E76F9F600E1D95A /* ZLNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A2C8A1E76F9F600E1D95A /* Category */,
+				AD7A2C8F1E76F9F600E1D95A /* Icon */,
+				AD7A2C931E76F9F600E1D95A /* Model */,
+				AD7A2C961E76F9F600E1D95A /* View */,
+				AD7A2C9D1E76F9F600E1D95A /* ZLCommonConst.h */,
+				AD7A2C9E1E76F9F600E1D95A /* ZLNavTabBarController */,
+			);
+			path = ZLNavigationController;
+			sourceTree = "<group>";
+		};
+		AD7A2C8A1E76F9F600E1D95A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A2C8B1E76F9F600E1D95A /* NSArray+Log.h */,
+				AD7A2C8C1E76F9F600E1D95A /* NSArray+Log.m */,
+				AD7A2C8D1E76F9F600E1D95A /* UIImage+ImageEffects.h */,
+				AD7A2C8E1E76F9F600E1D95A /* UIImage+ImageEffects.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		AD7A2C8F1E76F9F600E1D95A /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A2C901E76F9F600E1D95A /* btn_navigation_back@2x.png */,
+				AD7A2C911E76F9F600E1D95A /* btn_navigation_close@2x.png */,
+				AD7A2C921E76F9F600E1D95A /* shadow.png */,
+			);
+			path = Icon;
+			sourceTree = "<group>";
+		};
+		AD7A2C931E76F9F600E1D95A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A2C941E76F9F600E1D95A /* ZLChannelViewModel.h */,
+				AD7A2C951E76F9F600E1D95A /* ZLChannelViewModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD7A2C961E76F9F600E1D95A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A2C971E76F9F600E1D95A /* ZLChannelView.h */,
+				AD7A2C981E76F9F600E1D95A /* ZLChannelView.m */,
+				AD7A2C991E76F9F600E1D95A /* ZLNavTabBar.h */,
+				AD7A2C9A1E76F9F600E1D95A /* ZLNavTabBar.m */,
+				AD7A2C9B1E76F9F600E1D95A /* ZLPopView.h */,
+				AD7A2C9C1E76F9F600E1D95A /* ZLPopView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD7A2C9E1E76F9F600E1D95A /* ZLNavTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A2C9F1E76F9F600E1D95A /* ZLNavTabBarController.h */,
+				AD7A2CA01E76F9F600E1D95A /* ZLNavTabBarController.m */,
+			);
+			path = ZLNavTabBarController;
+			sourceTree = "<group>";
+		};
 		ADBFDF7B1E6E87A0000358E0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				AD7A2C881E76EFC800E1D95A /* cell */,
 				AD28F0151E76871A005E41B5 /* ViewController */,
 				AD4D79FA1E72397D00C14A56 /* View */,
 				ADBFDF7E1E6E8827000358E0 /* ZJBServiceViewController.h */,
@@ -354,6 +455,7 @@
 		ADBFDF7C1E6E87AF000358E0 /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				AD7A2C891E76F9F600E1D95A /* ZLNavigationController */,
 				ADBFDF811E6E8842000358E0 /* ZJBInformationViewController.h */,
 				ADBFDF821E6E8842000358E0 /* ZJBInformationViewController.m */,
 			);
@@ -501,8 +603,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD065501E76A87B0026F680 /* ZJBloodRecTableViewCell.xib in Resources */,
+				AD7A2CA41E76F9F600E1D95A /* btn_navigation_close@2x.png in Resources */,
 				ADBFE2EE1E71A4ED0004767D /* images.xcassets in Resources */,
+				AD7A2CA31E76F9F600E1D95A /* btn_navigation_back@2x.png in Resources */,
 				AD15FDF91E6E66F000F31F1B /* LaunchScreen.storyboard in Resources */,
+				AD7A2CA51E76F9F600E1D95A /* shadow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,16 +681,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD4D7A031E7275A900C14A56 /* ZJBServiceTableView.m in Sources */,
+				AD7A2CA91E76F9F600E1D95A /* ZLPopView.m in Sources */,
 				AD38A8C21E711FCC00E7B4A7 /* ZJBAddressViewController.m in Sources */,
+				AD7A2CA61E76F9F600E1D95A /* ZLChannelViewModel.m in Sources */,
 				AD28F01B1E769F79005E41B5 /* ZJBloodResultViewController.m in Sources */,
 				AD2926FE1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m in Sources */,
 				AD4D7A061E72807A00C14A56 /* ZJBConfigPhoneStyle.m in Sources */,
+				AD7A2CA21E76F9F600E1D95A /* UIImage+ImageEffects.m in Sources */,
 				AD15FDEE1E6E66F000F31F1B /* AppDelegate.m in Sources */,
 				AD38A8BC1E711DF200E7B4A7 /* ZJBNameViewController.m in Sources */,
+				AD7A2CA11E76F9F600E1D95A /* NSArray+Log.m in Sources */,
 				AD15FE221E6E83B300F31F1B /* BaseViewController.m in Sources */,
 				AD2926F21E6FCEC300FBAEF8 /* CPersonTableView.m in Sources */,
+				AD7A2CAA1E76F9F600E1D95A /* ZLNavTabBarController.m in Sources */,
+				AD7A2CA71E76F9F600E1D95A /* ZLChannelView.m in Sources */,
 				ADBFDF831E6E8842000358E0 /* ZJBInformationViewController.m in Sources */,
 				AD15FDEB1E6E66F000F31F1B /* main.m in Sources */,
+				AD7A2CA81E76F9F600E1D95A /* ZLNavTabBar.m in Sources */,
 				AD28F0111E762FEA005E41B5 /* ZJBAlertView.m in Sources */,
 				AD28F0141E76687E005E41B5 /* ZJBLoginViewController.m in Sources */,
 				AD4D79FD1E723A3A00C14A56 /* ZJBClickView.m in Sources */,

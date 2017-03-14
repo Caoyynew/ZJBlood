@@ -13,7 +13,8 @@
     UIView * companyView;
     UIView * adviceTextView;
     
-    CustomTextView *cTextView;
+    CustomTextView *cTextView1;
+    CustomTextView *cTextView2;
 
 }
 
@@ -32,20 +33,20 @@
 
 -(void)createCompanyView
 {
-    companyView = [[UIView alloc]initWithFrame:CGRectMake(0.05*zjbWindowW, 10, 0.9*zjbWindowW, 0.3*zjbWindowH)];
+    companyView = [[UIView alloc]initWithFrame:CGRectMake(0.05*zjbWindowW, 10, 0.9*zjbWindowW, 0.224*zjbWindowH)];
     [self.view addSubview:companyView];
     
-    UIImageView * feedImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 15, 20, 30)];
+    UIImageView * feedImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 12.5, 15, 20)];
     feedImageView.image = [UIImage imageNamed:@"companyphone"];
-    UILabel *feedCompanyLable = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(feedImageView, 10), 0, 200, 60)];
+    UILabel *feedCompanyLable = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(feedImageView, 10), 0, 200, 45)];
     feedCompanyLable.text = @"浙江省献血管理中心";
     [companyView addSubview:feedImageView];
     [companyView addSubview:feedCompanyLable];
     
-    UILabel *lineLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 60, 0.9*zjbWindowW, 0.5)];
+    UILabel *lineLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 45, 0.9*zjbWindowW, 0.5)];
     lineLab.backgroundColor = [UIColor grayColor];
     [companyView addSubview:lineLab];
-    CGFloat y = (0.3*zjbWindowH - 60)/3;
+    CGFloat y = (0.224*zjbWindowH - 45)/3;
     
     UILabel *emailAddressLab = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectMT(lineLab, 0), 300, y)];
     emailAddressLab.text = @"电子邮件:    xxfwb@zjb.org.cn";
@@ -97,7 +98,7 @@
 
 -(void)createAdviceTextView
 {
-    adviceTextView = [[UIView alloc]initWithFrame:CGRectMake(0.05*zjbWindowW, CGRectMT(companyView, 25), 0.9*zjbWindowW, zjbWindowH*0.4)];
+    adviceTextView = [[UIView alloc]initWithFrame:CGRectMake(0.05*zjbWindowW, CGRectMT(companyView, 15), 0.9*zjbWindowW, zjbWindowH*0.48)];
     [self.view addSubview:adviceTextView];
     
     UIImageView *logoImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, 20, 20)];
@@ -109,29 +110,39 @@
     [adviceTextView addSubview:logoImgView];
     [adviceTextView addSubview:logoLab];
     
-    cTextView = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(logoLab, 0), 0.9*zjbWindowW, zjbWindowH*0.4-60) withType:200];
-//    cTextView.strCount = 200;
-    cTextView.zjbPlaceHolderLabel.text = @"如果符合您的心意,请不要吝啬您的赞美";
-    [adviceTextView addSubview:cTextView];
+    cTextView1 = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(logoLab, 0), 0.9*zjbWindowW, 130) withType:200];
+    cTextView1.zjbPlaceHolderLabel.text = @"如果符合您的心意,请不要吝啬您的赞美";
+    [adviceTextView addSubview:cTextView1];
+    
+    cTextView2 = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(cTextView1, 15), 0.9*zjbWindowW, 130) withType:200];
+    cTextView2.zjbPlaceHolderLabel.text = @"如果有不足之处,请一定指出";
+    [adviceTextView addSubview:cTextView2];
     
 }
 
 #pragma mark - 打电话
 -(void)openPhone1
 {
-    NSLog(@"1");
-    //    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://85167833"]];
+#if TARGET_IPHONE_SIMULATOR
+    NSLog(@"run on simulator");
+#define SIMULATOR_TEST
+#else
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://85167833"]];
+#endif
 }
-
 -(void)openPhone2
 {
-    NSLog(@"2");
-    //    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://85167833"]];
+#if TARGET_IPHONE_SIMULATOR
+    NSLog(@"run on simulator");
+#define SIMULATOR_TEST
+#else
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://85167833"]];
+#endif
 }
 #pragma mark - 建议按钮
 -(void)drawAdviceButton
 {
-    UIButton * adviceBtn = [[UIButton alloc]initWithFrame:CGRectMake(0.1*zjbWindowW, zjbWindowH*0.8, zjbWindowW*0.8, 50)];
+    UIButton * adviceBtn = [[UIButton alloc]initWithFrame:CGRectMake(zjbWindowW/2-100, CGRectMT(adviceTextView, 40), 200, 45)];
     adviceBtn.backgroundColor = buttonColor;
     adviceBtn.clipsToBounds=YES;
     adviceBtn.layer.cornerRadius=5;
@@ -147,7 +158,8 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [cTextView.zjbTextView resignFirstResponder];
+    [cTextView1.zjbTextView resignFirstResponder];
+    [cTextView2.zjbTextView resignFirstResponder];
 }
 
 -(void)viewWillDisappear:(BOOL)animated

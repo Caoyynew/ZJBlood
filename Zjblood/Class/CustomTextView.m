@@ -53,9 +53,6 @@
     zjbCountLabel.text = [NSString stringWithFormat:@"0/%ld",(long)_strCount];
     zjbCountLabel.textAlignment = NSTextAlignmentRight;
     [bgView addSubview:zjbCountLabel];
-    
-
-    
 }
 
 

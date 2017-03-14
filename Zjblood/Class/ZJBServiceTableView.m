@@ -96,11 +96,22 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0 && indexPath.row == 0) {
-        CGRect rx = [ UIScreen mainScreen ].bounds;
-        alertView = [[ZJBAlertView alloc]initWithFrame:CGRectMake(rx.size.width*0.05, rx.size.height*0.3,rx.size.width*0.9,rx.size.height*0.45)];
-        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-        [keyWindow addSubview:alertView];
+//        CGRect rx = [ UIScreen mainScreen ].bounds;
+        alertView = [[ZJBAlertView alloc]init];
+//        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+//        [keyWindow addSubview:alertView];
+        [[self viewController]presentViewController:alertView animated:YES completion:nil];
     }
+}
+#pragma mark - 获取当前视图的视图控制器
+- (UIViewController *)viewController {
+    for (UIView *next = [self superview]; next != nil; next = next.superview) {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
 }
 
 /*

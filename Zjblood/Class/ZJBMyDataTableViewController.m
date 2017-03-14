@@ -11,14 +11,18 @@
 #import "ZJBSexViewController.h"
 #import "ZJBIdCardViewController.h"
 #import "ZJBAddressViewController.h"
-@interface ZJBMyDataTableViewController ()
+@interface ZJBMyDataTableViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
     __block NSString * myName;
     __block NSString * myAddress;
     __block NSString * inputAddress;
     __block NSString * idCard;
     __block NSString * mySexName;
+    UIImage * myHeadImg;
 }
+//相机管理器
+@property (nonatomic ,strong) UIImagePickerController * imagePicker;
+@property (nonatomic ,strong) UIImageView * headImage;
 @end
 
 @implementation ZJBMyDataTableViewController
@@ -49,7 +53,19 @@
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 20.0f;
+    if (section == 0) {
+        return 0;
+    }else{
+        return 15.0f;
+    }
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 55.0f;
+    }else{
+        return 45.0f;
+    }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIndetifier = @"systemDatacell";
@@ -61,6 +77,15 @@
     if (indexPath.section == 0) {
         cell.imageView.image = [UIImage imageNamed:@"pheadlogo"];
         cell.textLabel.text = @"头像";
+        _headImage = [[UIImageView alloc]initWithFrame:CGRectMake(cell.frame.size.width*0.8, cell.frame.size.height*0.15, cell.frame.size.height*0.7, cell.frame.size.height*0.7)];
+        _headImage.layer.cornerRadius = 2.0f;
+        _headImage.clipsToBounds = YES;
+        if (myHeadImg == nil) {
+            _headImage.image = [UIImage imageNamed:@""];
+        }else{
+            _headImage.image = myHeadImg;
+        }
+        [cell addSubview:_headImage];
     }else if (indexPath.section ==1){
         if (indexPath.row == 0) {
             cell.imageView.image = [UIImage imageNamed:@"pername"];
@@ -92,6 +117,13 @@
 {
     if (indexPath.section == 0) {
         NSLog(@"打开相册相机");
+        _imagePicker = [[UIImagePickerController alloc]init];
+        // 允许编辑
+        _imagePicker.allowsEditing=YES;
+        // 设置代理，检测操作
+        _imagePicker.delegate=self;
+        [self selectedImageForIcon];
+
     }else if (indexPath.section ==1){
         if (indexPath.row ==0) {
             ZJBNameViewController *nameVC = [[ZJBNameViewController alloc]init];
@@ -145,6 +177,41 @@
             [self.navigationController pushViewController:addressVC animated:YES];
         }
     }
+}
+#pragma mark  - 展示选择图片方式
+-(void)selectedImageForIcon
+{
+    UIAlertController *alertController = [[UIAlertController alloc]init];
+    UIAlertAction *actionCamera=[UIAlertAction actionWithTitle:@"打开相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        _imagePicker.sourceType=UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:_imagePicker animated:YES completion:nil];
+    }];
+    UIAlertAction *actionPhotoLIbrary=[UIAlertAction actionWithTitle:@"打开相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        _imagePicker.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:_imagePicker animated:YES completion:nil];
+        
+    }];
+    UIAlertAction *actionPhotoAlbum=[UIAlertAction actionWithTitle:@"打开图库" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        _imagePicker.sourceType=UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        [self presentViewController:_imagePicker animated:YES completion:nil];
+    }];
+    UIAlertAction *cancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction:actionCamera];
+    [alertController addAction:actionPhotoAlbum];
+    [alertController addAction:actionPhotoLIbrary];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
+#pragma mark - UIImagePickerControllerDataDelegate
+//完成拍照后的回调方法
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    UIImage * selectImg = info[@"UIImagePickerControllerEditedImage"];
+    myHeadImg = selectImg;
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.tableView reloadData];
 }
 
 /*

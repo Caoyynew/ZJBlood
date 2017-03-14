@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZJBAlertView : UIView
+@interface ZJBAlertView : UIViewController
 ///**
 // *  弹出视图
 // *

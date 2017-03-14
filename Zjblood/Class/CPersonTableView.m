@@ -30,6 +30,7 @@
     _CPersontableView.dataSource = self;
     _CPersontableView.delegate = self;
     _CPersontableView.scrollEnabled = NO;
+    _CPersontableView.tableFooterView = [[UIView alloc]init];
     [self addSubview:_CPersontableView];
 }
 
@@ -51,11 +52,11 @@
     return 3;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 20.0f;
+    return 15.0f;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60.0f;
+    return 45.0f;
 }
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -129,6 +130,8 @@
        
     }
 }
+
+
 #pragma mark - 获取当前视图的视图控制器
 - (UIViewController *)viewController {
     for (UIView *next = [self superview]; next != nil; next = next.superview) {

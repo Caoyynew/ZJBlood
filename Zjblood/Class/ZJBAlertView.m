@@ -22,63 +22,57 @@
 @implementation ZJBAlertView
 
 
--(instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self createUI];
-    }
-    return self;
+//-(instancetype)initWithFrame:(CGRect)frame
+//{
+//    self = [super initWithFrame:frame];
+//    if (self) {
+//        [self createUI];
+//    }
+//    return self;
+//}
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    [self createUI];
+    self.view.backgroundColor = [UIColor grayColor];
+    
+    self.view.alpha = 0.8;
 }
+
 
 -(void)createUI
 {
-    showView = [[UIView alloc]initWithFrame:self.bounds];
+    showView = [[UIView alloc]initWithFrame:CGRectMake(zjbWindowW*0.1, zjbWindowH*0.28, zjbWindowW*0.8, zjbWindowH*0.45)];
     showView.backgroundColor = [UIColor whiteColor];
-    [self addSubview:showView];
+    [self.view addSubview:showView];
     
-    closeBtn = [[UIButton alloc]initWithFrame:CGRectMake(self.frame.size.width-45, 15, 30, 30)];
+    closeBtn = [[UIButton alloc]initWithFrame:CGRectMake(showView.frame.size.width-45, 15, 30, 30)];
     [closeBtn setImage:[UIImage imageNamed:@"scloseBtn"] forState:UIControlStateNormal];
     [closeBtn addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
     [showView addSubview:closeBtn];
     
-    UIImageView * signIV = [[UIImageView alloc]initWithFrame:CGRectMake((self.frame.size.width-80)/2, 40,80,80)];
+    UIImageView * signIV = [[UIImageView alloc]initWithFrame:CGRectMake((showView.frame.size.width-80)/2, 40,80,80)];
     signIV.image = [UIImage imageNamed:@"serviceSign"];
     [signIV setContentMode:UIViewContentModeScaleAspectFill];
     [showView addSubview:signIV];
     
-    UILabel * signLab = [[UILabel alloc]initWithFrame:CGRectMake((self.frame.size.width-200)/2, CGRectMT(signIV, 0), 200, 50)];
+    UILabel * signLab = [[UILabel alloc]initWithFrame:CGRectMake((showView.frame.size.width-200)/2, CGRectMT(signIV, 0), 200, 50)];
     signLab.text = @"今日已签到!";
     signLab.textAlignment = NSTextAlignmentCenter;
     [showView addSubview:signLab];
     
-    UILabel * signDayLab = [[UILabel alloc]initWithFrame:CGRectMake((self.frame.size.width-200)/2, CGRectMT(signLab, 0), 200, 30)];
+    UILabel * signDayLab = [[UILabel alloc]initWithFrame:CGRectMake((showView.frame.size.width-200)/2, CGRectMT(signLab, 0), 200, 30)];
     signDayLab.text = @"您已连续签到15天啦~";
     signDayLab.textAlignment = NSTextAlignmentCenter;
     [showView addSubview:signDayLab];
     
-    signRecordBtn = [[UIButton alloc]initWithFrame:CGRectMake(50, CGRectMT(signDayLab, 0), self.frame.size.width-100, 40)];
+    signRecordBtn = [[UIButton alloc]initWithFrame:CGRectMake(50, CGRectMT(signDayLab, 0), showView.frame.size.width-100, 40)];
     [signRecordBtn addTarget:self action:@selector(lookSignRecord) forControlEvents:UIControlEventTouchUpInside];
     signRecordBtn.backgroundColor = tabarColor;
     signRecordBtn.clipsToBounds = YES;
     signRecordBtn.layer.cornerRadius = 5.0f;
     [signRecordBtn setTitle:@"查看历史签到记录" forState:UIControlStateNormal];
     [showView addSubview:signRecordBtn];
-    
-    greyView = [[UIView alloc]initWithFrame:[self viewController].view.frame];
-    greyView.backgroundColor = RGB_COLOR(192, 192, 192, 0.5);
-    [[self viewController].view addSubview:greyView];
-    
-}
-#pragma mark - 获取当前视图的视图控制器
-- (UIViewController *)viewController {
-    for (UIView *next = [self superview]; next != nil; next = next.superview) {
-        UIResponder *nextResponder = [next nextResponder];
-        if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            return (UIViewController *)nextResponder;
-        }
-    }
-    return nil;
 }
 
 -(void)lookSignRecord
@@ -89,13 +83,14 @@
 -(void)closeAction
 {
     NSLog(@"关闭");
-//    [self closeAnimated:YES];
-    [self removeFromSuperview];
+    [showView removeFromSuperview];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self removeFromSuperview];
+    [showView removeFromSuperview];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 //- (void)popView:(UIView *)view animated:(BOOL)animated {
@@ -152,18 +147,18 @@
 //        [self removeFromSuperview];
 //    }
 //}
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    UIView *view = [super hitTest:point withEvent:event];
-    if (view == nil) {
-        for (UIView *subView in self.subviews) {
-            CGPoint tp = [subView convertPoint:point fromView:self];
-            if (CGRectContainsPoint(subView.bounds, tp)) {
-                view = subView;
-            }
-        }
-    }
-    return view;
-}
+//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+//    UIView *view = [super hitTest:point withEvent:event];
+//    if (view == nil) {
+//        for (UIView *subView in self.subviews) {
+//            CGPoint tp = [subView convertPoint:point fromView:self];
+//            if (CGRectContainsPoint(subView.bounds, tp)) {
+//                view = subView;
+//            }
+//        }
+//    }
+//    return view;
+//}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
