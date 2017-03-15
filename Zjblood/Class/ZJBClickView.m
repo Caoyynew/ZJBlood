@@ -65,6 +65,10 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     UIView * cellView = [self drawTableViewCellWithTag:indexPath.row];
     [cell addSubview:cellView];
+    //移动表彰查询下面黑线
+    if(indexPath.row ==2){
+        cell.separatorInset = UIEdgeInsetsMake(0, self.frame.size.width, 0, 0);
+    }
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -138,7 +142,7 @@
     clickView.backgroundColor = [UIColor whiteColor];
     [self addSubview:clickView];
     CGFloat x = (self.frame.size.width - 320)/4;
-    recordView = [[UIView alloc]initWithFrame:CGRectMake(x/2, 10, 80, 60)];
+    recordView = [[UIView alloc]initWithFrame:CGRectMake(x/2, 15, 80, 60)];
     recordView = [self createButtonWithFrame:recordView.frame Title:@"献血记录" imageNmae:@"srecord"];
     [clickView addSubview:recordView];
     UITapGestureRecognizer *clickTouch1=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAction:)];
@@ -147,7 +151,7 @@
     [recordView addGestureRecognizer:clickTouch1];
     
     
-    homeView = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(recordView, x), 10, 80, 60)];
+    homeView = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(recordView, x), 15, 80, 60)];
     homeView = [self createButtonWithFrame:homeView.frame Title:@"献血者之家" imageNmae:@"shome"];
     [clickView addSubview:homeView];
     UITapGestureRecognizer *clickTouch2=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAction:)];
@@ -155,7 +159,7 @@
     homeView.userInteractionEnabled= YES;
     [homeView addGestureRecognizer:clickTouch2];
     
-    askView = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(homeView, x), 10, 80, 60)];
+    askView = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(homeView, x), 15, 80, 60)];
     askView = [self createButtonWithFrame:askView.frame Title:@"献血咨询" imageNmae:@"sask"];
     [clickView addSubview:askView];
     UITapGestureRecognizer *clickTouch3=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAction:)];
@@ -163,7 +167,7 @@
     askView.userInteractionEnabled= YES;
     [askView addGestureRecognizer:clickTouch3];
     
-    searchView = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(askView, x), 10, 80, 60)];
+    searchView = [[UIView alloc]initWithFrame:CGRectMake(CGRectML(askView, x), 15, 80, 60)];
     searchView = [self createButtonWithFrame:searchView.frame Title:@"资料查找" imageNmae:@"ssearch"];
     [clickView addSubview:searchView];
     UITapGestureRecognizer *clickTouch4=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickAction:)];

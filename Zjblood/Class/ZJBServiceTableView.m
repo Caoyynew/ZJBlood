@@ -90,6 +90,7 @@
     }else if (indexPath.section == 1){
         if (indexPath.row == 0) {
             cell.textLabel.text = @"无偿献血,有奖竞答";
+            cell.accessoryType = UITableViewCellAccessoryNone;
             cell.imageView.image = [UIImage imageNamed:@"huodong"];
         }else{
             UIImageView * huodongView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 0,self.frame.size.width-30 ,130)];

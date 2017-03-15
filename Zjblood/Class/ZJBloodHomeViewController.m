@@ -112,6 +112,7 @@
     _homeTableView.dataSource = self;
     _homeTableView.tableFooterView = [[UIView alloc]init];
 //    _homeTableView.scrollEnabled = NO;
+    _homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [rootSV addSubview:_homeTableView];
 }
 
