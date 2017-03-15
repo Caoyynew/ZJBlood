@@ -12,6 +12,7 @@
 {
     UIScrollView * rootSV;
     UINib * nib;
+    UIImageView * backTopView;
 }
 @property (nonatomic, strong) UITableView * homeTableView;
 
@@ -28,6 +29,7 @@
     [self.view addSubview:rootSV];
     [self createHeadUI];
     [self createTableView];
+    [self createBacktoTopView];
 //    rootSV.contentSize = CGSizeMake(0, 70+ _homeTableView.frame.size.height+44);
     
     // Do any additional setup after loading the view.
@@ -115,12 +117,32 @@
     _homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [rootSV addSubview:_homeTableView];
 }
+#pragma mark 创建backtop
+-(void)createBacktoTopView
+{
+    CGRect rx = [UIScreen mainScreen ].bounds;
+    backTopView = [[UIImageView alloc]initWithFrame:CGRectMake(rx.size.width*0.78,rx.size.height*0.88, 50, 50)];
+    backTopView.image = [UIImage imageNamed:@"backtotop"];
+    [backTopView setContentMode:UIViewContentModeScaleAspectFill];
+    backTopView.layer.cornerRadius = 25.0f;
+    backTopView.clipsToBounds = YES;
+    backTopView.backgroundColor = RGB_COLOR(242, 242, 242, 0.3);
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    [keyWindow addSubview:backTopView];
+    backTopView.hidden = YES;
+    
+    UITapGestureRecognizer *clickTouch=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backtoTopAction)];
+    backTopView.userInteractionEnabled= YES;
+    [backTopView addGestureRecognizer:clickTouch];
+
+}
 
 #pragma mark - 发帖和回复按钮
 -(void)clickAction:(UITapGestureRecognizer *)sender
 {
     //101:发帖 102:回复
     NSLog(@"click tag=%ld",[sender view].tag);
+    
 
 }
 
@@ -130,7 +152,7 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 8;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -148,6 +170,21 @@
     ZJBloodHomeTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identy];
     return cell;
 }
+#pragma mark - 下滑显示backtop按钮
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+
+    float y = scrollView.contentOffset.y;
+    if (y>=2*zjbWindowH) {
+        backTopView.hidden = NO;
+    }else{
+        backTopView.hidden = YES;
+    }
+}
+-(void)backtoTopAction
+{
+    //返回顶部代码
+    [_homeTableView setContentOffset:CGPointMake(0, 0) animated:YES];
+}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -158,6 +195,7 @@
 {
     [super viewWillDisappear:animated];
     self.tabBarController.tabBar.hidden = NO;
+    backTopView.hidden = YES;
     
 }
 - (void)didReceiveMemoryWarning {

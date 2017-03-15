@@ -8,6 +8,7 @@
 
 #import "ZJBloodSearchViewController.h"
 #import "ZJBloodSearchTableViewCell.h"
+#import "ZJBSearchBarViewController.h"
 @interface ZJBloodSearchViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * searchTV;
@@ -34,6 +35,18 @@
 -(void)searchAction
 {
     NSLog(@"点击了search!!");
+    
+//    UISearchController * searchBar = [[UISearchController alloc]initWithSearchResultsController:self];;
+//    searchTV.tableHeaderView = searchBar.searchBar;
+    
+    ZJBSearchBarViewController * searchBar1 = [[ZJBSearchBarViewController alloc]init];
+    searchBar1.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:searchBar1 animated:YES];
+//    [self presentViewController:searchBar1 animated:YES completion:nil];
+    
+    
+    
+    
 }
 
 -(void)createsearchTV
