@@ -28,13 +28,6 @@
     // Do any additional setup after loading the view.
 }
 
-//-(void)viewWillAppear:(BOOL)animated{
-//    
-//    if (self.tabBarController.tabBar.hidden == YES) {
-//        self.tabBarController.tabBar.hidden = NO;
-//    }
-//}
-
 #pragma mark - 消息推送
 -(void)createLeftButton
 {
@@ -51,12 +44,12 @@
 {
     UIScrollView * rootScrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
     rootScrollView.delegate = self;
-    rootScrollView.contentSize = rootScrollView.bounds.size;
+    rootScrollView.contentSize = CGSizeMake(0, 1150);
     [self.view addSubview:rootScrollView];
     clickView = [[ZJBClickView alloc]initWithFrame:CGRectMake(0, 0, zjbWindowW, 335)];
     [rootScrollView addSubview:clickView];
     
-    serviceView = [[ZJBServiceTableView alloc]initWithFrame:CGRectMake(0, CGRectMT(clickView,0), zjbWindowW, zjbWindowH-335)];
+    serviceView = [[ZJBServiceTableView alloc]initWithFrame:CGRectMake(0, CGRectMT(clickView,0), zjbWindowW, 750)];
     serviceView.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
     [rootScrollView addSubview:serviceView];
 }

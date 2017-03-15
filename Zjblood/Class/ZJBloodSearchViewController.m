@@ -7,10 +7,11 @@
 //
 
 #import "ZJBloodSearchViewController.h"
-
+#import "ZJBloodSearchTableViewCell.h"
 @interface ZJBloodSearchViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * searchTV;
+    UINib * nib;
 }
 
 @end
@@ -38,9 +39,12 @@
 -(void)createsearchTV
 {
     searchTV = [[UITableView alloc]initWithFrame:self.view.bounds];
+    searchTV.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
     [self.view addSubview:searchTV];
     searchTV.delegate = self;
     searchTV.dataSource = self;
+    //去掉分割线
+    searchTV.separatorStyle = UITableViewCellSeparatorStyleNone;
     
 }
 
@@ -51,13 +55,23 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 3;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell =[[UITableViewCell alloc]init];
-    cell.textLabel.text = @"hahhahahahaah";
+    static NSString *identy = @"ZJBloodSeaCell";
+    if (!nib) {
+        nib = [UINib nibWithNibName:@"ZJBloodSearchTableViewCell" bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:identy];
+    }
+    ZJBloodSearchTableViewCell * cell =  [tableView dequeueReusableCellWithIdentifier:identy];
+    //TODO:加载数据
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 160.0f;
 }
 
 -(void)viewWillAppear:(BOOL)animated

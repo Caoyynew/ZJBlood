@@ -8,10 +8,12 @@
 
 #import "ZJBServiceTableView.h"
 #import "ZJBAlertView.h"
+#import "ZJBloodLoveTableViewCell.h"
 @interface ZJBServiceTableView ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * zJBtabview;
     ZJBAlertView * alertView;
+    UINib * nib;
 }
 
 @end
@@ -33,6 +35,9 @@
     zJBtabview = [[UITableView alloc]initWithFrame:self.bounds];
     zJBtabview.delegate = self;
     zJBtabview.dataSource = self;
+    zJBtabview.scrollEnabled  = NO;
+    //取消cell下划线
+    zJBtabview.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self addSubview:zJBtabview];
 }
 #pragma mark -UITableViewDataSource
@@ -45,24 +50,67 @@
     if (section == 0) {
         return 1;
     }else if ( section == 1){
-        return 1;
+        return 2;
     }else if (section == 2){
-        return 1;
+        return 2;
     }else{
         return 0;
     }
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 40.0f;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 2) {
+        if (indexPath.row != 0) {
+            return 350.0f;
+        }else{
+            return 45.0f;
+        }
+    }
+    if (indexPath.section == 1) {
+        if (indexPath.row !=0) {
+            return 145.0f;
+        }else{
+            return 45.0f;
+        }
+    }
+    return 45.0f;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell * cell = [[UITableViewCell alloc]init];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.section == 0) {
         cell.textLabel.text = @"签到有积分";
         cell.imageView.image = [UIImage imageNamed:@"serviceasign"];
     }else if (indexPath.section == 1){
-        cell.textLabel.text = @"hello";
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"无偿献血,有奖竞答";
+            cell.imageView.image = [UIImage imageNamed:@"huodong"];
+        }else{
+            UIImageView * huodongView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 0,self.frame.size.width-30 ,130)];
+            huodongView.image = [UIImage imageNamed:@"jiashujutu"];
+            [huodongView setContentMode:UIViewContentModeScaleToFill];
+            [cell addSubview:huodongView];
+        }
     }else if (indexPath.section == 2){
-        cell.textLabel.text = @"hello";
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"爱心汇";
+            cell.imageView.image = [UIImage imageNamed:@"aixinhui"];
+        }else{
+            static NSString *identy = @"ZJBloodLoveShowCell";
+            if (!nib) {
+                nib = [UINib nibWithNibName:@"ZJBloodLoveTableViewCell" bundle:nil];
+                [tableView registerNib:nib forCellReuseIdentifier:identy];
+            }
+            ZJBloodLoveTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identy];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            return cell;
+        }
     }
     return cell;
 }
@@ -88,10 +136,7 @@
     [headView addSubview:rightLine];
     return headView;
 }
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 40.0f;
-}
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

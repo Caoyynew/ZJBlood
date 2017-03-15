@@ -37,11 +37,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1月1日,2017年的第一天,浙江省新华医院水电费水电费水电费第三方士大夫士大夫你死定了防溺水劳动妇女胜多负少劳动妇女老师带你飞两三年 塑料袋奶粉两三年的法律是你的发来是你疯了山东鲁能发牢骚那地方两三年" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXf-As-ACF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXf-As-ACF">
                                 <rect key="frame" x="10" y="220" width="441" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="F7H-2C-Ahc"/>
                                 </constraints>
+                                <mutableString key="text">据《纽约邮报》14日报道，本周初，黄光裕及妻子杜鹃买下了位于纽约东76大街7号（7 East 76th Street）的一座联排别墅，该物业面积为1.4万平方英尺，价值4150万美元，黄光裕购入该物业的均价近每平方英尺3000美元。
+
+　　据悉，该物业名为Clarence Whitman Masion，前主人为日本富豪Bungo Shimada，最初的挂牌价为5000万美元。今年1月，Shimada又以4500万美元的价格再次挂牌。
+
+　　黄光裕为国美电器创始人，2004、2005、2008年三度问鼎胡润百富榜之大陆首富，在2006年福布斯中国富豪榜亦排名第一。</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -172,7 +177,9 @@
                 <outlet property="contentText" destination="oXf-As-ACF" id="uKi-0M-otP"/>
                 <outlet property="contentTitle" destination="1J0-fD-22z" id="F3g-Xy-bzf"/>
                 <outlet property="dataTime" destination="gxj-rJ-a5n" id="Umu-eY-163"/>
+                <outlet property="headView" destination="mq5-jT-1Hx" id="Cdz-6p-R0K"/>
                 <outlet property="lookPeople" destination="rZk-4l-vME" id="Qvv-CO-Grw"/>
+                <outlet property="showView" destination="T2i-2G-2pq" id="5WC-bF-pOr"/>
                 <outlet property="writerPeople" destination="fbz-Mu-4AG" id="2AS-23-Ohy"/>
             </connections>
             <point key="canvasLocation" x="114.5" y="77.5"/>

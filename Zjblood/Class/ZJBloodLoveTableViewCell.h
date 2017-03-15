@@ -1,26 +1,22 @@
 //
-//  ZJBloodHomeTableViewCell.h
+//  ZJBloodLoveTableViewCell.h
 //  Zjblood
 //
-//  Created by Cao yang on 2017/3/14.
+//  Created by Cao yang on 2017/3/15.
 //  Copyright © 2017年 Zjblood. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ZJBloodHomeTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *contentImg;
+@interface ZJBloodLoveTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *contentImage;
 @property (weak, nonatomic) IBOutlet UILabel *contentTitle;
-@property (weak, nonatomic) IBOutlet UILabel *contentText;
+@property (weak, nonatomic) IBOutlet UILabel *contentShow;
 @property (weak, nonatomic) IBOutlet UIImageView *conpanyLogo;
 @property (weak, nonatomic) IBOutlet UIImageView *conpanyLogoBig;
-@property (weak, nonatomic) IBOutlet UILabel *dataTime;
+@property (weak, nonatomic) IBOutlet UILabel *contentData;
 @property (weak, nonatomic) IBOutlet UILabel *conpanyName;
 @property (weak, nonatomic) IBOutlet UILabel *lookPeople;
 @property (weak, nonatomic) IBOutlet UILabel *writerPeople;
-@property (weak, nonatomic) IBOutlet UIView *headView;
-@property (weak, nonatomic) IBOutlet UIView *showView;
-
-@property (nonatomic, strong) NSString * cellType;
 
 @end
