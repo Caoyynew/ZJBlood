@@ -15,8 +15,13 @@ static CGFloat const titleH = 44;
 static CGFloat const maxTitleScale = 1.3;
 
 @interface ZJBInformationViewController ()<UIScrollViewDelegate>
-@property (nonatomic, weak) UIScrollView *titleScrollView;
-@property (nonatomic, weak) UIScrollView *contentScrollView;
+{
+    UIScrollView *titleScrollView;
+    UIScrollView *contentScrollView;
+    UILabel * lineLab ;
+}
+//@property (nonatomic, weak) UIScrollView *titleScrollView;
+//@property (nonatomic, weak) UIScrollView *contentScrollView;
 // 选中按钮
 @property (nonatomic, weak) UIButton *selTitleButton;
 
@@ -44,31 +49,34 @@ static CGFloat const maxTitleScale = 1.3;
     [self setupTitle];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.contentScrollView.contentSize = CGSizeMake(self.childViewControllers.count * zjbWindowW, 0);
-    self.contentScrollView.pagingEnabled = YES;
-    self.contentScrollView.showsHorizontalScrollIndicator = NO;
-    self.contentScrollView.delegate = self;
+    contentScrollView.contentSize = CGSizeMake(self.childViewControllers.count * zjbWindowW, 0);
+    contentScrollView.pagingEnabled = YES;
+    contentScrollView.showsHorizontalScrollIndicator = NO;
+    contentScrollView.delegate = self;
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+}
 
 
 #pragma mark - 设置头部标题栏
 - (void)setupTitleScrollView
 {
     CGRect rect = CGRectMake(0, 0, zjbWindowW, titleH);
-    UIScrollView *titleScrollView = [[UIScrollView alloc] initWithFrame:rect];
+    titleScrollView = [[UIScrollView alloc] initWithFrame:rect];
     titleScrollView.backgroundColor = tabarColor;
     self.navigationItem.titleView = titleScrollView;
-    self.titleScrollView = titleScrollView;
 }
 
 #pragma mark - 设置内容
 - (void)setupContentScrollView
 {
     CGRect rect = CGRectMake(0, 0, zjbWindowW, zjbWindowH);
-    UIScrollView *contentScrollView = [[UIScrollView alloc] initWithFrame:rect];
+    contentScrollView = [[UIScrollView alloc] initWithFrame:rect];
     [self.view addSubview:contentScrollView];
-    self.contentScrollView = contentScrollView;
 }
 
 #pragma mark - 添加子控制器
@@ -86,6 +94,14 @@ static CGFloat const maxTitleScale = 1.3;
     vc2.title = @"爱心汇";
     [self addChildViewController:vc2];
     
+//    ZJBLoveTableViewController *vc3 = [[ZJBLoveTableViewController alloc] init];
+//    vc3.title = @"爱心";
+//    [self addChildViewController:vc3];
+//    
+//    ZJBLoveTableViewController *vc4 = [[ZJBLoveTableViewController alloc] init];
+//    vc4.title = @"爱汇心";
+//    [self addChildViewController:vc4];
+//    
 }
 
 #pragma mark - 设置标题
@@ -103,6 +119,7 @@ static CGFloat const maxTitleScale = 1.3;
         
         x = i * w;
         CGRect rect = CGRectMake(x, 0, w, h);
+        
         UIButton *btn = [[UIButton alloc] initWithFrame:rect];
         
         btn.tag = i;
@@ -112,39 +129,48 @@ static CGFloat const maxTitleScale = 1.3;
         [btn setTitle:vc.title forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(chick:) forControlEvents:UIControlEventTouchDown];
         
+        NSString *content = btn.titleLabel.text;
+        UIFont *font = btn.titleLabel.font;
+        CGSize size = CGSizeMake(MAXFLOAT, 30.0f);
+        CGSize buttonSize = [content boundingRectWithSize:size
+                                                  options:NSStringDrawingTruncatesLastVisibleLine  | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                               attributes:@{ NSFontAttributeName:font}
+                                                  context:nil].size;
+        btn.alpha = 0.5;
         [self.buttons addObject:btn];
-        [self.titleScrollView addSubview:btn];
-        
+        [titleScrollView addSubview:btn];
+        //显示第一次加载页面数据
         if (i == 0)
         {
+            btn.alpha = 1.0;
+            lineLab = [[UILabel alloc]initWithFrame:CGRectMake((w-buttonSize.width*maxTitleScale)/2, h-7, buttonSize.width*maxTitleScale, 1)];
+            lineLab.backgroundColor = [UIColor whiteColor];
+            [titleScrollView addSubview:lineLab];
             [self chick:btn];
+            btn.transform = CGAffineTransformMakeScale(maxTitleScale,maxTitleScale);
+    
+
         }
-        
     }
-    self.titleScrollView.contentSize = CGSizeMake(count * w, 0);
-    self.titleScrollView.showsHorizontalScrollIndicator = NO;
+    titleScrollView.contentSize = CGSizeMake(count * w, 0);
+    titleScrollView.showsHorizontalScrollIndicator = YES;
 }
 
 // 按钮点击
 - (void)chick:(UIButton *)btn
 {
-    [self selTitleBtn:btn];
     NSUInteger i = btn.tag;
-    
     [self setUpOneChildViewController:i];
-    
+    [self selTitleBtn:btn];
 }
 // 选中按钮
 - (void)selTitleBtn:(UIButton *)btn
 {
-    [self.selTitleButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.selTitleButton.transform = CGAffineTransformIdentity;
-    
-    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    btn.transform = CGAffineTransformMakeScale(maxTitleScale, maxTitleScale);
-    
-    self.selTitleButton = btn;
-    [self.contentScrollView setContentOffset:CGPointMake(btn.tag*zjbWindowW, 0) animated:YES];
+    [UIView animateWithDuration:0.5 animations:^{
+        self.selTitleButton.transform = CGAffineTransformMakeScale(maxTitleScale, maxTitleScale);
+    }];
+    [contentScrollView setContentOffset:CGPointMake(btn.tag*zjbWindowW, 0) animated:YES];
 }
 
 - (void)setUpOneChildViewController:(NSUInteger)i
@@ -156,36 +182,16 @@ static CGFloat const maxTitleScale = 1.3;
     if (vc.view.superview) {
         return;
     }
-    vc.view.frame = CGRectMake(x, 0, zjbWindowW, zjbWindowH - self.contentScrollView.frame.origin.y-44);
+    vc.view.frame = CGRectMake(x, 0, zjbWindowW, zjbWindowH - contentScrollView.frame.origin.y-44);
     
-    [self.contentScrollView addSubview:vc.view];
+    [contentScrollView addSubview:vc.view];
     
 }
-
-//- (void)setupTitleCenter:(UIButton *)btn
-//{
-//    CGFloat offset = btn.center.x - zjbWindowW * 0.5;
-//    
-//    if (offset < 0)
-//    {
-//        offset = 0;
-//    }
-//    
-//    CGFloat maxOffset = self.titleScrollView.contentSize.width - zjbWindowW;
-//    if (offset > maxOffset)
-//    {
-//        offset = maxOffset;
-//    }
-//    
-//    [self.titleScrollView setContentOffset:CGPointMake(offset, 0) animated:YES];
-//    
-//    
-//}
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    NSUInteger i = self.contentScrollView.contentOffset.x / zjbWindowW;
+    NSUInteger i = contentScrollView.contentOffset.x / zjbWindowW;
     [self selTitleBtn:self.buttons[i]];
     [self setUpOneChildViewController:i];
 }
@@ -194,37 +200,34 @@ static CGFloat const maxTitleScale = 1.3;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     
+    
     CGFloat offsetX = scrollView.contentOffset.x;
-    NSInteger leftIndex = offsetX / zjbWindowW;
-    NSInteger rightIndex = leftIndex + 1;
+    NSInteger middleIndex = offsetX / zjbWindowW;
+    NSInteger rightIndex = middleIndex + 1;
+    NSInteger leftIndex = middleIndex - 1;
     
-    //    NSLog(@"%zd,%zd",leftIndex,rightIndex);
+    UIButton *middleButton = self.buttons[middleIndex];
     
-    UIButton *leftButton = self.buttons[leftIndex];
-    
+    [UIView animateWithDuration:0.5 animations:^{
+        lineLab.transform =CGAffineTransformMakeTranslation(middleIndex*80,0);
+    }];
     UIButton *rightButton = nil;
     if (rightIndex < self.buttons.count) {
         rightButton = self.buttons[rightIndex];
     }
+    UIButton *leftButton = nil;
+    if (leftIndex>-1) {
+        leftButton = self.buttons[leftIndex];
+    }
     
-    CGFloat scaleR = offsetX / zjbWindowW - leftIndex;
-    
-    CGFloat scaleL = 1 - scaleR;
-    
-    
-    CGFloat transScale = maxTitleScale - 1;
-    leftButton.transform = CGAffineTransformMakeScale(scaleL * transScale + 1, scaleL * transScale + 1);
-    
-    rightButton.transform = CGAffineTransformMakeScale(scaleR * transScale + 1, scaleR * transScale + 1);
-    
-    
-//    UIColor *rightColor = [UIColor colorWithRed:scaleR green:0 blue:0 alpha:1];
-//    UIColor *leftColor = [UIColor colorWithRed:scaleL green:0 blue:0 alpha:1];
-    
-    [leftButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [rightButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    
-    
+    [UIView animateWithDuration:0.5 animations:^{
+        middleButton.alpha = 1.0;
+        rightButton.alpha = 0.5;
+        leftButton.alpha = 0.5;
+        middleButton.transform = CGAffineTransformMakeScale(maxTitleScale, maxTitleScale);
+        rightButton.transform = CGAffineTransformMakeScale(1, 1);
+        leftButton.transform = CGAffineTransformMakeScale(1, 1);
+    }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
