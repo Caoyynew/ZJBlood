@@ -8,6 +8,7 @@
 
 #import "ZJBMyMessageViewController.h"
 #import "ZJBDynamicTableViewCell.h"
+#import "ZJBDynamic2TableViewCell.h"
 @interface ZJBMyMessageViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView * dynamicTableView;
@@ -22,8 +23,10 @@
     
     dynamicTableView = [[UITableView alloc]initWithFrame:self.view.frame];
     [self.view addSubview:dynamicTableView];
+    dynamicTableView.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
     dynamicTableView.delegate = self;
     dynamicTableView.dataSource = self;
+    dynamicTableView.tableFooterView = [[UIView alloc]init];
     // Do any additional setup after loading the view.
 }
 
@@ -34,6 +37,9 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (section ==1) {
+        return 2;
+    }
     return 1;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -79,9 +85,10 @@
         [cell addSubview:new];
         [cell addSubview:picIV];
     }
-    type = 1;
+    
     if (indexPath.section ==1) {
-        if (type == 1) {
+        type = indexPath.row;
+        if (type == 0) {
             UINib * nib;
             static NSString *identy = @"ZJBDynamicTableViewCell";
             if (!nib) {
@@ -91,7 +98,14 @@
             ZJBDynamicTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identy];
             return cell;
         }else{
-            
+            UINib * nib;
+            static NSString *identy = @"ZJBDynamic2TableViewCell";
+            if (!nib) {
+                nib = [UINib nibWithNibName:@"ZJBDynamic2TableViewCell" bundle:nil];
+                [tableView registerNib:nib forCellReuseIdentifier:identy];
+            }
+            ZJBDynamic2TableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identy];
+            return cell;
         }
     }
     return cell;
