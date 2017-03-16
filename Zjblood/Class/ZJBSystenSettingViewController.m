@@ -30,7 +30,7 @@
 #pragma mark - 登出按钮
 -(void)drawLogoutButton
 {
-    UIButton * logoutBtn = [[UIButton alloc]initWithFrame:CGRectMake(0.1*zjbWindowW, zjbWindowH*0.8, zjbWindowW*0.8, 50)];
+    UIButton * logoutBtn = [[UIButton alloc]initWithFrame:CGRectMake(zjbWindowW/2-100, zjbWindowH*0.8, 200, 40)];
     logoutBtn.backgroundColor = buttonColor;
     logoutBtn.clipsToBounds=YES;
     logoutBtn.layer.cornerRadius=5;
@@ -48,15 +48,18 @@
     
     
 }
-
+#pragma mark - UITableViewDelegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 6;
 }
-
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 45.0f;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

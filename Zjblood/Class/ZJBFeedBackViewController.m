@@ -142,7 +142,7 @@
 #pragma mark - 建议按钮
 -(void)drawAdviceButton
 {
-    UIButton * adviceBtn = [[UIButton alloc]initWithFrame:CGRectMake(zjbWindowW/2-100, CGRectMT(adviceTextView, 40), 200, 45)];
+    UIButton * adviceBtn = [[UIButton alloc]initWithFrame:CGRectMake(zjbWindowW/2-100, CGRectMT(adviceTextView, 40), 200, 40)];
     adviceBtn.backgroundColor = buttonColor;
     adviceBtn.clipsToBounds=YES;
     adviceBtn.layer.cornerRadius=5;

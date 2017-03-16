@@ -47,6 +47,7 @@ static CGFloat const maxTitleScale = 1.3;
     [self setupContentScrollView];
     [self addChildViewController];
     [self setupTitle];
+    [self createRightButton];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     contentScrollView.contentSize = CGSizeMake(self.childViewControllers.count * zjbWindowW, 0);
@@ -61,6 +62,16 @@ static CGFloat const maxTitleScale = 1.3;
 
 }
 
+-(void)createRightButton
+{
+    UIBarButtonItem * rightBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"serviceSearch"] style:UIBarButtonItemStyleDone target:self action:@selector(searchAction)];
+    rightBtn.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = rightBtn;
+}
+-(void)searchAction
+{
+    NSLog(@"查询");
+}
 
 #pragma mark - 设置头部标题栏
 - (void)setupTitleScrollView

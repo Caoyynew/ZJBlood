@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="109" id="KGk-i7-Jjw" customClass="ZJBDynamicTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="108.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hondian" translatesAutoresizingMaskIntoConstraints="NO" id="AFt-FM-8Tn">
+                        <rect key="frame" x="15" y="22" width="5" height="5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="LT3-MV-OOw"/>
+                            <constraint firstAttribute="height" constant="5" id="i1a-gK-9sP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1-10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uej-p7-PX7">
+                        <rect key="frame" x="215" y="15" width="40" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="63J-1N-IVN"/>
+                            <constraint firstAttribute="width" constant="40" id="x1T-YK-Ab3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获奖通知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4V-Xh-Dzj">
+                        <rect key="frame" x="25" y="15" width="70" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="H8M-WR-qPg"/>
+                            <constraint firstAttribute="height" constant="20" id="NMz-O5-o8Q"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜你获得了2014-2015年度浙江无偿献血特别奉献奖,之江无偿献血之江奖" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAh-Il-juD">
+                        <rect key="frame" x="15" y="40" width="290" height="53.5"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgv-YW-avW">
+                        <rect key="frame" x="265" y="15" width="40" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="cfR-ek-R1h"/>
+                            <constraint firstAttribute="height" constant="20" id="hKD-kx-5AJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="E4V-Xh-Dzj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="90q-C1-hwc"/>
+                    <constraint firstAttribute="trailing" secondItem="pgv-YW-avW" secondAttribute="trailing" constant="15" id="Dg2-2m-5Ut"/>
+                    <constraint firstItem="AFt-FM-8Tn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Jjt-Vc-qjy"/>
+                    <constraint firstAttribute="trailing" secondItem="pAh-Il-juD" secondAttribute="trailing" constant="15" id="Kun-Od-dae"/>
+                    <constraint firstItem="E4V-Xh-Dzj" firstAttribute="leading" secondItem="AFt-FM-8Tn" secondAttribute="trailing" constant="5" id="Pp0-V2-eTj"/>
+                    <constraint firstItem="pgv-YW-avW" firstAttribute="leading" secondItem="Uej-p7-PX7" secondAttribute="trailing" constant="10" id="Qdl-Xj-TQf"/>
+                    <constraint firstItem="pAh-Il-juD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="RiD-PB-dbr"/>
+                    <constraint firstItem="Uej-p7-PX7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="XeR-0g-HHA"/>
+                    <constraint firstItem="AFt-FM-8Tn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="aop-12-4kG"/>
+                    <constraint firstItem="pAh-Il-juD" firstAttribute="top" secondItem="E4V-Xh-Dzj" secondAttribute="bottom" constant="5" id="cpc-yP-FDI"/>
+                    <constraint firstItem="pgv-YW-avW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="rmw-rv-Y2o"/>
+                    <constraint firstAttribute="bottom" secondItem="pAh-Il-juD" secondAttribute="bottom" constant="15" id="vPZ-Il-fiF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="content" destination="pAh-Il-juD" id="PPz-oB-Iau"/>
+                <outlet property="data" destination="Uej-p7-PX7" id="hkh-Kk-Cwd"/>
+                <outlet property="time" destination="pgv-YW-avW" id="uct-12-eT8"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="88.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="hondian" width="5" height="5"/>
+    </resources>
+</document>

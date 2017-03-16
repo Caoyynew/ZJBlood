@@ -28,6 +28,8 @@
 		AD38A8BF1E711E8700E7B4A7 /* ZJBSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8BE1E711E8700E7B4A7 /* ZJBSexViewController.m */; };
 		AD38A8C21E711FCC00E7B4A7 /* ZJBAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8C11E711FCC00E7B4A7 /* ZJBAddressViewController.m */; };
 		AD38A8C51E7120D000E7B4A7 /* ZJBIdCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8C41E7120D000E7B4A7 /* ZJBIdCardViewController.m */; };
+		AD4AE83F1E7A31ED00687989 /* ZJBDynamicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4AE83D1E7A31ED00687989 /* ZJBDynamicTableViewCell.m */; };
+		AD4AE8401E7A31ED00687989 /* ZJBDynamicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD4AE83E1E7A31ED00687989 /* ZJBDynamicTableViewCell.xib */; };
 		AD4C514A1E77B9AA0062B4A4 /* ZJBloodHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C51491E77B9AA0062B4A4 /* ZJBloodHomeViewController.m */; };
 		AD4C514D1E77BA760062B4A4 /* ZJBloodAskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C514C1E77BA760062B4A4 /* ZJBloodAskViewController.m */; };
 		AD4C51501E77BAE70062B4A4 /* ZJBloodSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C514F1E77BAE70062B4A4 /* ZJBloodSearchViewController.m */; };
@@ -117,6 +119,9 @@
 		AD38A8C11E711FCC00E7B4A7 /* ZJBAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBAddressViewController.m; sourceTree = "<group>"; };
 		AD38A8C31E7120D000E7B4A7 /* ZJBIdCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBIdCardViewController.h; sourceTree = "<group>"; };
 		AD38A8C41E7120D000E7B4A7 /* ZJBIdCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBIdCardViewController.m; sourceTree = "<group>"; };
+		AD4AE83C1E7A31ED00687989 /* ZJBDynamicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBDynamicTableViewCell.h; sourceTree = "<group>"; };
+		AD4AE83D1E7A31ED00687989 /* ZJBDynamicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBDynamicTableViewCell.m; sourceTree = "<group>"; };
+		AD4AE83E1E7A31ED00687989 /* ZJBDynamicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBDynamicTableViewCell.xib; sourceTree = "<group>"; };
 		AD4C51481E77B9AA0062B4A4 /* ZJBloodHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBloodHomeViewController.h; sourceTree = "<group>"; };
 		AD4C51491E77B9AA0062B4A4 /* ZJBloodHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBloodHomeViewController.m; sourceTree = "<group>"; };
 		AD4C514B1E77BA760062B4A4 /* ZJBloodAskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBloodAskViewController.h; sourceTree = "<group>"; };
@@ -351,6 +356,7 @@
 		AD38A8B41E7106BC00E7B4A7 /* MyMessageView */ = {
 			isa = PBXGroup;
 			children = (
+				AD4AE83B1E7A31A200687989 /* cell */,
 				AD2926F31E6FDDB800FBAEF8 /* ZJBMyMessageViewController.h */,
 				AD2926F41E6FDDB800FBAEF8 /* ZJBMyMessageViewController.m */,
 			);
@@ -371,6 +377,16 @@
 			children = (
 			);
 			name = MyShareView;
+			sourceTree = "<group>";
+		};
+		AD4AE83B1E7A31A200687989 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				AD4AE83C1E7A31ED00687989 /* ZJBDynamicTableViewCell.h */,
+				AD4AE83D1E7A31ED00687989 /* ZJBDynamicTableViewCell.m */,
+				AD4AE83E1E7A31ED00687989 /* ZJBDynamicTableViewCell.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		AD4D79FA1E72397D00C14A56 /* View */ = {
@@ -593,6 +609,7 @@
 			files = (
 				ADD065501E76A87B0026F680 /* ZJBloodRecTableViewCell.xib in Resources */,
 				AD4C51551E77D1BF0062B4A4 /* ZJBloodHomeTableViewCell.xib in Resources */,
+				AD4AE8401E7A31ED00687989 /* ZJBDynamicTableViewCell.xib in Resources */,
 				ADBFE2EE1E71A4ED0004767D /* images.xcassets in Resources */,
 				AD7AF0091E793022002D4C01 /* ZJBInofTableViewCell.xib in Resources */,
 				AD4C515A1E77F5080062B4A4 /* ZJBloodSearchTableViewCell.xib in Resources */,
@@ -692,6 +709,7 @@
 				AD2926F51E6FDDB800FBAEF8 /* ZJBMyMessageViewController.m in Sources */,
 				AD2926FB1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m in Sources */,
 				AD7AF0101E793B8D002D4C01 /* ZJBPolicyTableViewController.m in Sources */,
+				AD4AE83F1E7A31ED00687989 /* ZJBDynamicTableViewCell.m in Sources */,
 				AD2926F81E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m in Sources */,
 				AD38A8C51E7120D000E7B4A7 /* ZJBIdCardViewController.m in Sources */,
 				AD7AF0031E790DD2002D4C01 /* ZJBSearchBarViewController.m in Sources */,

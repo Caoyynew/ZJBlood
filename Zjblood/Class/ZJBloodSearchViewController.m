@@ -35,18 +35,10 @@
 -(void)searchAction
 {
     NSLog(@"点击了search!!");
-    
-//    UISearchController * searchBar = [[UISearchController alloc]initWithSearchResultsController:self];;
-//    searchTV.tableHeaderView = searchBar.searchBar;
-    
-    ZJBSearchBarViewController * searchBar1 = [[ZJBSearchBarViewController alloc]init];
-    searchBar1.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController pushViewController:searchBar1 animated:YES];
-//    [self presentViewController:searchBar1 animated:YES completion:nil];
-    
-    
-    
-    
+
+    ZJBSearchBarViewController * searchBar = [[ZJBSearchBarViewController alloc]init];
+    searchBar.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:searchBar animated:YES];
 }
 
 -(void)createsearchTV
