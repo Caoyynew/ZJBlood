@@ -32,6 +32,9 @@
 		AD4AE8401E7A31ED00687989 /* ZJBDynamicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD4AE83E1E7A31ED00687989 /* ZJBDynamicTableViewCell.xib */; };
 		AD4AE8441E7A389B00687989 /* ZJBDynamic2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4AE8421E7A389B00687989 /* ZJBDynamic2TableViewCell.m */; };
 		AD4AE8451E7A389B00687989 /* ZJBDynamic2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD4AE8431E7A389B00687989 /* ZJBDynamic2TableViewCell.xib */; };
+		AD4AE8491E7A63B700687989 /* ZJBMyHonorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4AE8481E7A63B700687989 /* ZJBMyHonorViewController.m */; };
+		AD4AE84D1E7A6B9600687989 /* ZJBApplicant.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4AE84C1E7A6B9600687989 /* ZJBApplicant.m */; };
+		AD4AE8501E7A87F100687989 /* ZJBApplicationContent.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4AE84F1E7A87F100687989 /* ZJBApplicationContent.m */; };
 		AD4C514A1E77B9AA0062B4A4 /* ZJBloodHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C51491E77B9AA0062B4A4 /* ZJBloodHomeViewController.m */; };
 		AD4C514D1E77BA760062B4A4 /* ZJBloodAskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C514C1E77BA760062B4A4 /* ZJBloodAskViewController.m */; };
 		AD4C51501E77BAE70062B4A4 /* ZJBloodSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4C514F1E77BAE70062B4A4 /* ZJBloodSearchViewController.m */; };
@@ -127,6 +130,12 @@
 		AD4AE8411E7A389B00687989 /* ZJBDynamic2TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBDynamic2TableViewCell.h; sourceTree = "<group>"; };
 		AD4AE8421E7A389B00687989 /* ZJBDynamic2TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBDynamic2TableViewCell.m; sourceTree = "<group>"; };
 		AD4AE8431E7A389B00687989 /* ZJBDynamic2TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBDynamic2TableViewCell.xib; sourceTree = "<group>"; };
+		AD4AE8471E7A63B700687989 /* ZJBMyHonorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBMyHonorViewController.h; sourceTree = "<group>"; };
+		AD4AE8481E7A63B700687989 /* ZJBMyHonorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBMyHonorViewController.m; sourceTree = "<group>"; };
+		AD4AE84B1E7A6B9600687989 /* ZJBApplicant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBApplicant.h; sourceTree = "<group>"; };
+		AD4AE84C1E7A6B9600687989 /* ZJBApplicant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBApplicant.m; sourceTree = "<group>"; };
+		AD4AE84E1E7A87F100687989 /* ZJBApplicationContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBApplicationContent.h; sourceTree = "<group>"; };
+		AD4AE84F1E7A87F100687989 /* ZJBApplicationContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBApplicationContent.m; sourceTree = "<group>"; };
 		AD4C51481E77B9AA0062B4A4 /* ZJBloodHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBloodHomeViewController.h; sourceTree = "<group>"; };
 		AD4C51491E77B9AA0062B4A4 /* ZJBloodHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBloodHomeViewController.m; sourceTree = "<group>"; };
 		AD4C514B1E77BA760062B4A4 /* ZJBloodAskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBloodAskViewController.h; sourceTree = "<group>"; };
@@ -397,6 +406,27 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		AD4AE8461E7A637800687989 /* MyHonor */ = {
+			isa = PBXGroup;
+			children = (
+				AD4AE84A1E7A6B3600687989 /* view */,
+				AD4AE8471E7A63B700687989 /* ZJBMyHonorViewController.h */,
+				AD4AE8481E7A63B700687989 /* ZJBMyHonorViewController.m */,
+			);
+			name = MyHonor;
+			sourceTree = "<group>";
+		};
+		AD4AE84A1E7A6B3600687989 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AD4AE84B1E7A6B9600687989 /* ZJBApplicant.h */,
+				AD4AE84C1E7A6B9600687989 /* ZJBApplicant.m */,
+				AD4AE84E1E7A87F100687989 /* ZJBApplicationContent.h */,
+				AD4AE84F1E7A87F100687989 /* ZJBApplicationContent.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		AD4D79FA1E72397D00C14A56 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,9 +508,10 @@
 		ADBFDF7D1E6E87E4000358E0 /* Person */ = {
 			isa = PBXGroup;
 			children = (
-				ADF06BF91E6EB7F000E9A0F8 /* CustomView */,
 				ADBFDF841E6E8855000358E0 /* ZJBPersonViewController.h */,
 				ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */,
+				ADF06BF91E6EB7F000E9A0F8 /* CustomView */,
+				AD4AE8461E7A637800687989 /* MyHonor */,
 				AD38A8B41E7106BC00E7B4A7 /* MyMessageView */,
 				AD38A8B21E71060700E7B4A7 /* MyDataView */,
 				AD38A8B31E71064500E7B4A7 /* SystemSetView */,
@@ -715,6 +746,7 @@
 				AD4C514A1E77B9AA0062B4A4 /* ZJBloodHomeViewController.m in Sources */,
 				AD28F0111E762FEA005E41B5 /* ZJBAlertView.m in Sources */,
 				AD28F0141E76687E005E41B5 /* ZJBLoginViewController.m in Sources */,
+				AD4AE8491E7A63B700687989 /* ZJBMyHonorViewController.m in Sources */,
 				AD4D79FD1E723A3A00C14A56 /* ZJBClickView.m in Sources */,
 				AD2926F51E6FDDB800FBAEF8 /* ZJBMyMessageViewController.m in Sources */,
 				AD2926FB1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m in Sources */,
@@ -722,6 +754,7 @@
 				AD4AE83F1E7A31ED00687989 /* ZJBDynamicTableViewCell.m in Sources */,
 				AD2926F81E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m in Sources */,
 				AD38A8C51E7120D000E7B4A7 /* ZJBIdCardViewController.m in Sources */,
+				AD4AE84D1E7A6B9600687989 /* ZJBApplicant.m in Sources */,
 				AD7AF0031E790DD2002D4C01 /* ZJBSearchBarViewController.m in Sources */,
 				ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */,
 				AD7AF0131E793BA0002D4C01 /* ZJBLoveTableViewController.m in Sources */,
@@ -734,6 +767,7 @@
 				ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */,
 				AD4C514D1E77BA760062B4A4 /* ZJBloodAskViewController.m in Sources */,
 				AD4C51501E77BAE70062B4A4 /* ZJBloodSearchViewController.m in Sources */,
+				AD4AE8501E7A87F100687989 /* ZJBApplicationContent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

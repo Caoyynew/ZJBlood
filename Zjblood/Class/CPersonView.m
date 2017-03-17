@@ -7,6 +7,7 @@
 //
 
 #import "CPersonView.h"
+#import "ZJBMyHonorViewController.h"
 #define cpviewW self.frame.size.width
 #define cpviewH self.frame.size.height
 
@@ -130,11 +131,26 @@
     if (tag ==49) {
         NSLog(@"献血记录");
     }else if (tag ==50){
-        NSLog(@"我的荣誉");
+        ZJBMyHonorViewController * myhonor = [[ZJBMyHonorViewController alloc]init];
+//        myhonor.view.backgroundColor = [UIColor whiteColor];
+        myhonor.title = @"我的荣誉证";
+        [[self viewController].navigationController pushViewController:myhonor animated:YES];
     }else if (tag ==51){
         NSLog(@"我的表彰");
     }
 }
+
+#pragma mark - 获取当前视图的视图控制器
+- (UIViewController *)viewController {
+    for (UIView *next = [self superview]; next != nil; next = next.superview) {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
+}
+
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
