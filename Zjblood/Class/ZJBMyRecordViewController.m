@@ -1,34 +1,43 @@
 //
-//  ZJBloodAskViewController.m
+//  ZJBMyRecordViewController.m
 //  Zjblood
 //
-//  Created by Cao yang on 2017/3/14.
+//  Created by Cao yang on 2017/3/17.
 //  Copyright © 2017年 Zjblood. All rights reserved.
 //
 
-#import "ZJBloodAskViewController.h"
+#import "ZJBMyRecordViewController.h"
 
-@interface ZJBloodAskViewController ()
-
+@interface ZJBMyRecordViewController ()
+{
+    UIScrollView * headScroll;
+    UIScrollView * contentScroll;
+}
 @end
 
-@implementation ZJBloodAskViewController
+@implementation ZJBMyRecordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createRightButton];
+    self.view.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
+
+    [self createHeadView];
+    [self createContentView];
     // Do any additional setup after loading the view.
 }
--(void)createRightButton
+#pragma mark - 顶部View
+-(void)createHeadView
 {
-    UIBarButtonItem * rightBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"serviceSearch"] style:UIBarButtonItemStyleDone target:self action:@selector(searchAction)];
-    rightBtn.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = rightBtn;
+    headScroll =[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, zjbWindowW, 40)];
+    [self.view addSubview:headScroll];
+    
 }
--(void)searchAction
+#pragma mark - 内容展示View
+-(void)createContentView
 {
-    NSLog(@"点击了search!!");
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -90,14 +90,17 @@
 -(UIView *)drawTableViewCellWithTag:(NSInteger)index
 {
     UIView * view = [[UIView alloc]init];
-    UIImageView * logoView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 20, 30, 40)];
-    UILabel * titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(logoView, 20), 15, 150, 30)];
-    titleLabel.font = [UIFont systemFontOfSize:18];
-    UILabel * detailLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(logoView, 20), 45, 200, 20)];
-    detailLabel.font = [UIFont systemFontOfSize:14];
-    selectLab = [[UILabel alloc]initWithFrame:CGRectMake(self.frame.size.width-120, 25, 80, 30)];
-    selectLab.font = [UIFont systemFontOfSize:18];
-    asignlogo = [[UIImageView alloc]initWithFrame:CGRectMake(self.frame.size.width-40, 27.5, 20, 25)];
+    UIImageView * logoView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 20, 30, 35)];
+    UILabel * titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(logoView, 15), 15, 150, 30)];
+    titleLabel.font = [UIFont systemFontOfSize:16];
+    UILabel * detailLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(logoView, 15), 45, 200, 20)];
+    detailLabel.font = [UIFont systemFontOfSize:13];
+    detailLabel.textColor = [UIColor grayColor];
+    selectLab = [[UILabel alloc]initWithFrame:CGRectMake(self.frame.size.width-100, 25, 70, 30)];
+    selectLab.font = [UIFont systemFontOfSize:15];
+    selectLab.textColor = [UIColor grayColor];
+    selectLab.textAlignment = NSTextAlignmentRight;
+    asignlogo = [[UIImageView alloc]initWithFrame:CGRectMake(self.frame.size.width-25, 32.5, 10, 15)];
     [asignlogo setContentMode:UIViewContentModeScaleAspectFill];
     asignlogo.image = [UIImage imageNamed:@"servicegrey"];
     if (selectTag == 0) {
@@ -186,6 +189,7 @@
     UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(0, 35, 80, 20)];
     title.font = [UIFont systemFontOfSize:14];
     title.text = str;
+    title.textColor = [UIColor grayColor];
     title.textAlignment = NSTextAlignmentCenter;
     [btnView addSubview:imageV];
     [btnView addSubview:title];
@@ -200,20 +204,23 @@
         bloodRecord.title = @"献血记录";
         bloodRecord.view.backgroundColor = [UIColor whiteColor];
         //隐藏底部tabar
-//        [self viewController].hidesBottomBarWhenPushed = YES;
+        bloodRecord.hidesBottomBarWhenPushed = YES;
         [[self viewController].navigationController pushViewController:bloodRecord animated:YES];
     }else if (tag ==1001){
         ZJBloodHomeViewController * home = [[ZJBloodHomeViewController alloc]init];
         home.title = @"献血者之家";
+        home.hidesBottomBarWhenPushed = YES;
         home.view.backgroundColor = [UIColor whiteColor];
         [[self viewController].navigationController pushViewController:home animated:YES];
     }else if (tag == 1002){
         ZJBloodAskViewController * ask = [[ZJBloodAskViewController alloc]init];
         ask.title = @"献血咨询";
+        ask.hidesBottomBarWhenPushed = YES;
         ask.view.backgroundColor = [UIColor whiteColor];
         [[self viewController].navigationController pushViewController:ask animated:YES];
     }else if (tag == 1003){
         ZJBloodSearchViewController * search = [[ZJBloodSearchViewController alloc]init];
+        search.hidesBottomBarWhenPushed = YES;
         search.title = @"资料查询";
         search.view.backgroundColor = [UIColor whiteColor];
         [[self viewController].navigationController pushViewController:search animated:YES];

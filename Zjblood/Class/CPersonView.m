@@ -7,7 +7,7 @@
 //
 
 #import "CPersonView.h"
-#import "ZJBMyHonorViewController.h"
+
 #define cpviewW self.frame.size.width
 #define cpviewH self.frame.size.height
 
@@ -26,7 +26,7 @@
 {
     NSLog(@"path is null");
     //头像
-    UIImageView *iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(cpviewW/2-60, cpviewH-0.8*cpviewW, 120, 120)];
+    UIImageView *iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(cpviewW/2-60,30, 120, 120)];
     iconImageView.clipsToBounds = YES;
     iconImageView.layer.cornerRadius = 60;
     iconImageView.image = [UIImage imageNamed:@"icondefault"];
@@ -36,17 +36,19 @@
     //名字+性别
     UILabel * nameLab = [[UILabel alloc]init];
     nameLab.text = @"丁丁订";
+    nameLab.font = [UIFont systemFontOfSize:16];
     CGSize expectSize1 = [self setLabelSize:nameLab];
-    nameLab.frame = CGRectMake(cpviewW/2-expectSize1.width/2, CGRectMT(iconImageView, 0), expectSize1.width, expectSize1.height);
+    nameLab.frame = CGRectMake(cpviewW/2-expectSize1.width/2, CGRectMT(iconImageView, 2), expectSize1.width, expectSize1.height);
     [self addSubview:nameLab];
     
-    UIImageView *nameIconView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectML(nameLab, 10), CGRectMT(iconImageView, 0), 17, 17)];
+    UIImageView *nameIconView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectML(nameLab, 10), CGRectMT(iconImageView, 0), 13, 13)];
     nameIconView.image = [UIImage imageNamed:@"manlogo"];
     [self addSubview:nameIconView];
     
     //献血次数和总量
     UILabel *bloodCountLabel = [[UILabel alloc]init];
     bloodCountLabel.text  = @"累计献血 2次";
+    bloodCountLabel.font = [UIFont systemFontOfSize:14];
     bloodCountLabel.attributedText = [self setLabelColor:bloodCountLabel];
     CGSize expectSize2 = [self setLabelSize:bloodCountLabel];
     bloodCountLabel.frame = CGRectMake(0.2*cpviewW, CGRectMT(nameLab, 10), expectSize2.width, expectSize2.height);
@@ -55,6 +57,7 @@
     
     UILabel *bloodCapacityLabel = [[UILabel alloc]init];
     bloodCapacityLabel.text = @"献血总量 800ml";
+    bloodCapacityLabel.font = [UIFont systemFontOfSize:14];
     bloodCapacityLabel.attributedText = [self setLabelColor:bloodCapacityLabel];
     CGSize expectSize3 = [self setLabelSize:bloodCapacityLabel];
     bloodCapacityLabel.frame = CGRectMake(0.5*cpviewW, CGRectMT(nameLab,10), expectSize3.width, expectSize3.height);
@@ -101,6 +104,7 @@
     
     UILabel *btnNameLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 30, btnView.frame.size.width, 30)];
     btnNameLab.text = btnname;
+    btnNameLab.font = [UIFont systemFontOfSize:16];
     btnNameLab.textAlignment = NSTextAlignmentCenter;
     [btnView addSubview:btnNameLab];
     return btnView;
@@ -121,23 +125,16 @@
 {
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithString:lab.text];
     [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(5, lab.text.length-5)];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(0, 4)];
     NSAttributedString * mString = attributedString;
     return mString;
 }
 #pragma mark - 按钮点击事件处理
 -(void)gotoAction:(UITapGestureRecognizer*)sender
 {
-    long tag = [sender view].tag;
-    if (tag ==49) {
-        NSLog(@"献血记录");
-    }else if (tag ==50){
-        ZJBMyHonorViewController * myhonor = [[ZJBMyHonorViewController alloc]init];
-//        myhonor.view.backgroundColor = [UIColor whiteColor];
-        myhonor.title = @"我的荣誉证";
-        [[self viewController].navigationController pushViewController:myhonor animated:YES];
-    }else if (tag ==51){
-        NSLog(@"我的表彰");
-    }
+    NSInteger tag = [sender view].tag;
+    [self.delegate ZJBPushViewControllerWithTitle:tag];
+
 }
 
 #pragma mark - 获取当前视图的视图控制器
@@ -158,8 +155,16 @@
     UIColor *color = [UIColor whiteColor];
     [color set];
     path = [[UIBezierPath alloc] init];
-    [path addArcWithCenter:CGPointMake(self.frame.size.width/2, 400)
-                    radius:self.frame.size.width*0.8
+    CGFloat radius = self.frame.size.width*0.8;
+    CGFloat y = 360;
+    CGFloat width = self.frame.size.width;
+    if (width>400) {
+        y = 445;
+    }else if (width<414 && width > 374){
+        y = 410;
+    }
+    [path addArcWithCenter:CGPointMake(self.frame.size.width/2, y)
+                    radius:radius
                 startAngle:0
                   endAngle:M_PI*2
                  clockwise:YES];

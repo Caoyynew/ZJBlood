@@ -25,6 +25,7 @@
     
     UIScrollView * rootView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:rootView];
+    
     self.view.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
     NSInteger type;
     type = 1;
@@ -33,29 +34,16 @@
         apliContentView = [[ZJBApplicationContent alloc]initWithFrame:CGRectMake(0, CGRectMT(apliView, 0), zjbWindowW, zjbWindowH-125) type:0];
         [rootView addSubview:apliView];
         [rootView addSubview:apliContentView];
-        rootView.contentSize = CGSizeMake(0, zjbWindowH);
+        rootView.contentSize = CGSizeMake(0, zjbWindowH+22);
     }
     if (type ==1) {
         apliView = [[ZJBApplicant alloc]initWithFrame:CGRectMake(0, 0, zjbWindowW, 125) type:1];
         apliContentView = [[ZJBApplicationContent alloc]initWithFrame:CGRectMake(0, CGRectMT(apliView, 0), zjbWindowW, 520) type:1];
         [rootView addSubview:apliView];
         [rootView addSubview:apliContentView];
-        rootView.contentSize = CGSizeMake(0, 650);
+        rootView.contentSize = CGSizeMake(0, 700);
     }
 }
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden = YES;
-}
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    self.tabBarController.tabBar.hidden = NO;
-    
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

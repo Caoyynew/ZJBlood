@@ -39,9 +39,10 @@
     
     [bgView addSubview:_zjbTextView];
     
-    _zjbPlaceHolderLabel = [[UILabel alloc]initWithFrame:CGRectMake(25,10,self.bounds.size.width-50,40)];
+    _zjbPlaceHolderLabel = [[UILabel alloc]initWithFrame:CGRectMake(25,_zjbTextView.bounds.size.height/2-5,self.bounds.size.width-50,20)];
+    _zjbPlaceHolderLabel.textAlignment = NSTextAlignmentCenter;
     _zjbPlaceHolderLabel.backgroundColor = [UIColor clearColor];
-    _zjbPlaceHolderLabel.font = [UIFont systemFontOfSize:16];
+    _zjbPlaceHolderLabel.font = [UIFont systemFontOfSize:14];
     _zjbPlaceHolderLabel.textColor = RGB_COLOR(149, 149, 149, 1.0);
     if (_zjbPlaceHolderLabel.text == nil) {
         _zjbPlaceHolderLabel.text = @"如果符合您的心意,请不要吝啬您的赞美";
@@ -49,7 +50,8 @@
     [bgView addSubview:_zjbPlaceHolderLabel];
     
     zjbCountLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.bounds.size.width-120,self.bounds.size.height-50,100,50)];
-  
+    zjbCountLabel.font = [UIFont systemFontOfSize:14];
+    zjbCountLabel.textColor = [UIColor grayColor];
     zjbCountLabel.text = [NSString stringWithFormat:@"0/%ld",(long)_strCount];
     zjbCountLabel.textAlignment = NSTextAlignmentRight;
     [bgView addSubview:zjbCountLabel];

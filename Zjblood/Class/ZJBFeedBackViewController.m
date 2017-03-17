@@ -40,6 +40,7 @@
     feedImageView.image = [UIImage imageNamed:@"companyphone"];
     UILabel *feedCompanyLable = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(feedImageView, 10), 0, 200, 45)];
     feedCompanyLable.text = @"浙江省献血管理中心";
+    feedCompanyLable.font = [UIFont systemFontOfSize:17];
     [companyView addSubview:feedImageView];
     [companyView addSubview:feedCompanyLable];
     
@@ -48,15 +49,24 @@
     [companyView addSubview:lineLab];
     CGFloat y = (0.224*zjbWindowH - 45)/3;
     
-    UILabel *emailAddressLab = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectMT(lineLab, 0), 300, y)];
-    emailAddressLab.text = @"电子邮件:    xxfwb@zjb.org.cn";
+    UILabel *emailAddressLab = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectMT(lineLab, 0), 80, y)];
+    emailAddressLab.text = @"电子邮件:";
+    emailAddressLab.font = [UIFont systemFontOfSize:15];
+    emailAddressLab.textColor = [UIColor grayColor];
+
+    UILabel *emailNo =[[UILabel alloc]initWithFrame:CGRectMake(CGRectML(emailAddressLab, 0), CGRectMT(lineLab, 0), 180, y)];
+    emailNo.text = @"xxfwb@zjb.org.cn";
+    emailNo.font = [UIFont systemFontOfSize:15];
+    emailNo.textColor = [UIColor grayColor];
     
     UILabel *phoneNoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectMT(emailAddressLab, 0), 80, y)];
     phoneNoLab.text = @"联系电话:";
-    
-    UILabel *callNumber1 = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(phoneNoLab, 10), CGRectMT(emailAddressLab, 0), 90, y)];
+    phoneNoLab.font = [UIFont systemFontOfSize:15];
+    phoneNoLab.textColor = [UIColor grayColor];
+    UILabel *callNumber1 = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(phoneNoLab, 0), CGRectMT(emailAddressLab, 0), 90, y)];
     callNumber1.text = @"85167833";
     callNumber1.textColor = [UIColor redColor];
+    callNumber1.font = [UIFont systemFontOfSize:15];
     callNumber1.textAlignment = NSTextAlignmentLeft;
     //加下划线
     NSDictionary *attribtDic = @{NSUnderlineStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle]};
@@ -70,6 +80,7 @@
     
     UILabel *callNumber2 = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(callNumber1, 0), CGRectMT(emailAddressLab, 0), 90, y)];
     callNumber2.text = @"85167833";
+    callNumber2.font = [UIFont systemFontOfSize:15];
     callNumber2.textColor = [UIColor redColor];
     callNumber2.textAlignment = NSTextAlignmentLeft;
     //加下划线
@@ -83,12 +94,21 @@
     callNumber2.userInteractionEnabled= YES;
     [callNumber2 addGestureRecognizer:tapCallPhone2];
     
-    UILabel *faxNoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectMT(phoneNoLab, 0), 300, y)];
-    faxNoLab.text = @"传真号码:    85179913";
+    UILabel *faxNoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectMT(phoneNoLab, 0), 80, y)];
+    faxNoLab.text = @"传真号码:";
+    faxNoLab.font = [UIFont systemFontOfSize:15];
+    faxNoLab.textColor = [UIColor grayColor];
+    
+    UILabel *faxNo = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(faxNoLab, 0), CGRectMT(phoneNoLab, 0), 100, y)];
+    faxNo.text = @"85179913";
+    faxNo.font = [UIFont systemFontOfSize:15];
+    faxNo.textColor = [UIColor grayColor];
     
     [companyView addSubview:emailAddressLab];
+    [companyView addSubview:emailNo];
     [companyView addSubview:phoneNoLab];
     [companyView addSubview:faxNoLab];
+    [companyView addSubview:faxNo];
     
     UIView *greyLineView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectMT(companyView, 0), zjbWindowW, 20)];
     greyLineView.backgroundColor = [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1.0];
@@ -106,7 +126,7 @@
     
     UILabel *logoLab = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(logoImgView, 20), 0, 200, 60)];
     logoLab.text = @"关于APP";
-    
+    logoLab.font = [UIFont systemFontOfSize:17];
     [adviceTextView addSubview:logoImgView];
     [adviceTextView addSubview:logoLab];
     

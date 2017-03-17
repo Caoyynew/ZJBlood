@@ -129,9 +129,13 @@
         titleLab.text = @"爱心 · 共享";
     }
     titleLab.textAlignment = NSTextAlignmentCenter;
+    titleLab.textColor = [UIColor grayColor];
+    titleLab.font = [UIFont systemFontOfSize:14];
     UILabel * rightLine = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(titleLab,0), 19.25, (self.frame.size.width-140)/2, 0.5)];
     leftLine.backgroundColor = [UIColor grayColor];
     rightLine.backgroundColor = [UIColor grayColor];
+    leftLine.alpha = 0.3;
+    rightLine.alpha = 0.3;
     [headView addSubview:leftLine];
     [headView addSubview:titleLab];
     [headView addSubview:rightLine];

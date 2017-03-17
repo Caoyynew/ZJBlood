@@ -185,19 +185,6 @@
     //返回顶部代码
     [_homeTableView setContentOffset:CGPointMake(0, 0) animated:YES];
 }
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden = YES;
-}
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    self.tabBarController.tabBar.hidden = NO;
-    backTopView.hidden = YES;
-    
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

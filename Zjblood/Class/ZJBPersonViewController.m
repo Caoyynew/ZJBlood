@@ -9,7 +9,10 @@
 #import "ZJBPersonViewController.h"
 #import "CPersonView.h"
 #import "CPersonTableView.h"
-@interface ZJBPersonViewController ()
+
+#import "ZJBMyHonorViewController.h"
+#import "ZJBMyRecordViewController.h"
+@interface ZJBPersonViewController ()<ZJBPushViewControllerDelegate>
 {
     CPersonView *cpersonView;
     CPersonTableView *cpersonTableView;
@@ -30,6 +33,7 @@
     cpersonView = [[CPersonView alloc]initWithFrame:CGRectMake(0, 0 ,zjbWindowW , 320) withDic:nil];
     cpersonView.backgroundColor = tabarColor;
     [rootView addSubview:cpersonView];
+    cpersonView.delegate = self;
     
     cpersonTableView = [[CPersonTableView alloc]initWithFrame:CGRectMake(0, CGRectMT(cpersonView, -40), zjbWindowW,400)];
     [rootView addSubview:cpersonTableView];
@@ -57,19 +61,41 @@
     return nil;
 }
 
+#pragma mark - ZJBPushViewControllerDelegate
+-(void)ZJBPushViewControllerWithTitle:(NSInteger)VCTag
+{
+    if (VCTag ==49) {
+        ZJBMyRecordViewController * myrecord = [[ZJBMyRecordViewController alloc]init];
+        myrecord.title = @"还血记录";
+        myrecord.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:myrecord animated:YES];
+    }else if (VCTag ==50){
+        ZJBMyHonorViewController * myhonor = [[ZJBMyHonorViewController alloc]init];
+        myhonor.title = @"我的荣誉证";
+        myhonor.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:myhonor animated:YES];
+    }else if (VCTag ==51){
+        NSLog(@"我的表彰");
+    }else{
+        NSLog(@"cucuole!!!");
+    }
+
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSLog(@"====================");
 }
-*/
+
 
 @end
