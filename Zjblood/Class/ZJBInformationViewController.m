@@ -61,7 +61,7 @@ static CGFloat const maxTitleScale = 1.3;
     [super viewWillAppear:animated];
 
 }
-
+#pragma mark - 导航栏右搜索按钮
 -(void)createRightButton
 {
     UIBarButtonItem * rightBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"serviceSearch"] style:UIBarButtonItemStyleDone target:self action:@selector(searchAction)];

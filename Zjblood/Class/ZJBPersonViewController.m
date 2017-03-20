@@ -12,6 +12,7 @@
 
 #import "ZJBMyHonorViewController.h"
 #import "ZJBMyRecordViewController.h"
+#import "ZJBMyCommendViewController.h"
 @interface ZJBPersonViewController ()<ZJBPushViewControllerDelegate>
 {
     CPersonView *cpersonView;
@@ -75,7 +76,10 @@
         myhonor.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:myhonor animated:YES];
     }else if (VCTag ==51){
-        NSLog(@"我的表彰");
+        ZJBMyCommendViewController * mycommend = [[ZJBMyCommendViewController alloc]init];
+        mycommend.title = @"表彰查询";
+        mycommend.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:mycommend animated:YES];
     }else{
         NSLog(@"cucuole!!!");
     }

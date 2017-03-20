@@ -45,6 +45,9 @@
 		AD4C515A1E77F5080062B4A4 /* ZJBloodSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD4C51581E77F5080062B4A4 /* ZJBloodSearchTableViewCell.xib */; };
 		AD4CD70A1E7F6EF500D0612E /* ZJBloodRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4CD7081E7F6EF500D0612E /* ZJBloodRecordCell.m */; };
 		AD4CD70B1E7F6EF500D0612E /* ZJBloodRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD4CD7091E7F6EF500D0612E /* ZJBloodRecordCell.xib */; };
+		AD4CD7101E7F885600D0612E /* ZJBMyCommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4CD70F1E7F885600D0612E /* ZJBMyCommendViewController.m */; };
+		AD4CD7141E7FB64400D0612E /* ZJBCommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4CD7131E7FB64400D0612E /* ZJBCommendView.m */; };
+		AD4CD7171E7FDB7D00D0612E /* ZJBComShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4CD7161E7FDB7D00D0612E /* ZJBComShowTableViewCell.m */; };
 		AD4D79FD1E723A3A00C14A56 /* ZJBClickView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D79FC1E723A3A00C14A56 /* ZJBClickView.m */; };
 		AD4D7A031E7275A900C14A56 /* ZJBServiceTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D7A021E7275A900C14A56 /* ZJBServiceTableView.m */; };
 		AD4D7A061E72807A00C14A56 /* ZJBConfigPhoneStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D7A051E72807A00C14A56 /* ZJBConfigPhoneStyle.m */; };
@@ -159,6 +162,12 @@
 		AD4CD7071E7F6EF500D0612E /* ZJBloodRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBloodRecordCell.h; sourceTree = "<group>"; };
 		AD4CD7081E7F6EF500D0612E /* ZJBloodRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBloodRecordCell.m; sourceTree = "<group>"; };
 		AD4CD7091E7F6EF500D0612E /* ZJBloodRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBloodRecordCell.xib; sourceTree = "<group>"; };
+		AD4CD70E1E7F885600D0612E /* ZJBMyCommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBMyCommendViewController.h; sourceTree = "<group>"; };
+		AD4CD70F1E7F885600D0612E /* ZJBMyCommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBMyCommendViewController.m; sourceTree = "<group>"; };
+		AD4CD7121E7FB64400D0612E /* ZJBCommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBCommendView.h; sourceTree = "<group>"; };
+		AD4CD7131E7FB64400D0612E /* ZJBCommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBCommendView.m; sourceTree = "<group>"; };
+		AD4CD7151E7FDB7D00D0612E /* ZJBComShowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBComShowTableViewCell.h; sourceTree = "<group>"; };
+		AD4CD7161E7FDB7D00D0612E /* ZJBComShowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBComShowTableViewCell.m; sourceTree = "<group>"; };
 		AD4D79FB1E723A3A00C14A56 /* ZJBClickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBClickView.h; sourceTree = "<group>"; };
 		AD4D79FC1E723A3A00C14A56 /* ZJBClickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBClickView.m; sourceTree = "<group>"; };
 		AD4D7A011E7275A900C14A56 /* ZJBServiceTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBServiceTableView.h; sourceTree = "<group>"; };
@@ -460,6 +469,27 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		AD4CD70D1E7F87A700D0612E /* MyCommend */ = {
+			isa = PBXGroup;
+			children = (
+				AD4CD7111E7FB61D00D0612E /* view */,
+				AD4CD70E1E7F885600D0612E /* ZJBMyCommendViewController.h */,
+				AD4CD70F1E7F885600D0612E /* ZJBMyCommendViewController.m */,
+			);
+			name = MyCommend;
+			sourceTree = "<group>";
+		};
+		AD4CD7111E7FB61D00D0612E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AD4CD7121E7FB64400D0612E /* ZJBCommendView.h */,
+				AD4CD7131E7FB64400D0612E /* ZJBCommendView.m */,
+				AD4CD7151E7FDB7D00D0612E /* ZJBComShowTableViewCell.h */,
+				AD4CD7161E7FDB7D00D0612E /* ZJBComShowTableViewCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		AD4D79FA1E72397D00C14A56 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,11 +581,12 @@
 		ADBFDF7D1E6E87E4000358E0 /* Person */ = {
 			isa = PBXGroup;
 			children = (
+				ADF06BF91E6EB7F000E9A0F8 /* CustomView */,
 				ADBFDF841E6E8855000358E0 /* ZJBPersonViewController.h */,
 				ADBFDF851E6E8855000358E0 /* ZJBPersonViewController.m */,
-				ADF06BF91E6EB7F000E9A0F8 /* CustomView */,
 				AD4241381E7BB43B000BDC2A /* MyRecord */,
 				AD4AE8461E7A637800687989 /* MyHonor */,
+				AD4CD70D1E7F87A700D0612E /* MyCommend */,
 				AD38A8B41E7106BC00E7B4A7 /* MyMessageView */,
 				AD38A8B21E71060700E7B4A7 /* MyDataView */,
 				AD38A8B31E71064500E7B4A7 /* SystemSetView */,
@@ -772,6 +803,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD4CD7171E7FDB7D00D0612E /* ZJBComShowTableViewCell.m in Sources */,
 				AD4D7A031E7275A900C14A56 /* ZJBServiceTableView.m in Sources */,
 				AD38A8C21E711FCC00E7B4A7 /* ZJBAddressViewController.m in Sources */,
 				AD91A1271E7E77480018EF59 /* ZJBWholeTableViewController.m in Sources */,
@@ -806,6 +838,7 @@
 				AD7AF0031E790DD2002D4C01 /* ZJBSearchBarViewController.m in Sources */,
 				ADBFDF861E6E8855000358E0 /* ZJBPersonViewController.m in Sources */,
 				AD7AF0131E793BA0002D4C01 /* ZJBLoveTableViewController.m in Sources */,
+				AD4CD7101E7F885600D0612E /* ZJBMyCommendViewController.m in Sources */,
 				AD28F0181E768784005E41B5 /* ZJBloodRecordViewController.m in Sources */,
 				AD7AEFFF1E78D7AB002D4C01 /* ZJBloodLoveTableViewCell.m in Sources */,
 				AD38A8BF1E711E8700E7B4A7 /* ZJBSexViewController.m in Sources */,
@@ -818,6 +851,7 @@
 				AD4C51501E77BAE70062B4A4 /* ZJBloodSearchViewController.m in Sources */,
 				AD4AE8501E7A87F100687989 /* ZJBApplicationContent.m in Sources */,
 				AD4CD70A1E7F6EF500D0612E /* ZJBloodRecordCell.m in Sources */,
+				AD4CD7141E7FB64400D0612E /* ZJBCommendView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
