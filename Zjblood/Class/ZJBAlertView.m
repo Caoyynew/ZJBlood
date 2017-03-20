@@ -35,8 +35,7 @@
     [super viewDidLoad];
     [self createUI];
     self.view.backgroundColor = [UIColor grayColor];
-    
-    self.view.alpha = 0.8;
+    self.view.alpha = 0.95;
 }
 
 
@@ -44,6 +43,7 @@
 {
     showView = [[UIView alloc]initWithFrame:CGRectMake(zjbWindowW*0.1, zjbWindowH*0.28, zjbWindowW*0.8, zjbWindowH*0.45)];
     showView.backgroundColor = [UIColor whiteColor];
+    showView.alpha = 1.0;
     [self.view addSubview:showView];
     
     closeBtn = [[UIButton alloc]initWithFrame:CGRectMake(showView.frame.size.width-45, 15, 30, 30)];
@@ -83,14 +83,20 @@
 -(void)closeAction
 {
     NSLog(@"关闭");
-    [showView removeFromSuperview];
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [showView removeFromSuperview];
+//    [self removeFromParentViewController];
+    [self.delegate ZJBackViewControllerWithTitle:1];
+//    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [showView removeFromSuperview];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate ZJBackViewControllerWithTitle:1];
+
+//    [showView removeFromSuperview];
+//    [self removeFromParentViewController];
+
+//    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 //- (void)popView:(UIView *)view animated:(BOOL)animated {

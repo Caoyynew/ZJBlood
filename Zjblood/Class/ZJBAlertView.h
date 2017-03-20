@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+/**
+ 子视图通知控制器操作代理
+ */
+@protocol ZJBackViewControllerDelegate<NSObject>
 
+-(void)ZJBackViewControllerWithTitle:(NSInteger)VCTag;
+
+@end
 @interface ZJBAlertView : UIViewController
+@property (nonatomic ,weak) id<ZJBackViewControllerDelegate>delegate;
 ///**
 // *  弹出视图
 // *

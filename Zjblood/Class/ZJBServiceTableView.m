@@ -9,11 +9,12 @@
 #import "ZJBServiceTableView.h"
 #import "ZJBAlertView.h"
 #import "ZJBloodLoveTableViewCell.h"
-@interface ZJBServiceTableView ()<UITableViewDelegate,UITableViewDataSource>
+@interface ZJBServiceTableView ()<UITableViewDelegate,UITableViewDataSource,ZJBackViewControllerDelegate>
 {
     UITableView * zJBtabview;
     ZJBAlertView * alertView;
     UINib * nib;
+    UIWindow *keyWindow;
 }
 
 @end
@@ -146,13 +147,20 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0 && indexPath.row == 0) {
-//        CGRect rx = [ UIScreen mainScreen ].bounds;
         alertView = [[ZJBAlertView alloc]init];
-//        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-//        [keyWindow addSubview:alertView];
-        [[self viewController]presentViewController:alertView animated:YES completion:nil];
+        alertView.delegate = self;
+        keyWindow = [UIApplication sharedApplication].keyWindow;
+        [keyWindow addSubview:alertView.view];
     }
 }
+
+-(void)ZJBackViewControllerWithTitle:(NSInteger)VCTag
+{
+    [alertView.view removeFromSuperview];
+    [alertView removeFromParentViewController];
+    
+}
+
 #pragma mark - 获取当前视图的视图控制器
 - (UIViewController *)viewController {
     for (UIView *next = [self superview]; next != nil; next = next.superview) {

@@ -55,7 +55,7 @@
     emailAddressLab.textColor = [UIColor grayColor];
 
     UILabel *emailNo =[[UILabel alloc]initWithFrame:CGRectMake(CGRectML(emailAddressLab, 0), CGRectMT(lineLab, 0), 180, y)];
-    emailNo.text = @"xxfwb@zjb.org.cn";
+    emailNo.text = @"zjxxgl@163.com";
     emailNo.font = [UIFont systemFontOfSize:15];
     emailNo.textColor = [UIColor grayColor];
     
@@ -64,7 +64,7 @@
     phoneNoLab.font = [UIFont systemFontOfSize:15];
     phoneNoLab.textColor = [UIColor grayColor];
     UILabel *callNumber1 = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(phoneNoLab, 0), CGRectMT(emailAddressLab, 0), 90, y)];
-    callNumber1.text = @"85167833";
+    callNumber1.text = @"85167819";
     callNumber1.textColor = [UIColor redColor];
     callNumber1.font = [UIFont systemFontOfSize:15];
     callNumber1.textAlignment = NSTextAlignmentLeft;
@@ -78,21 +78,21 @@
     callNumber1.userInteractionEnabled= YES;
     [callNumber1 addGestureRecognizer:tapCallPhone1];
     
-    UILabel *callNumber2 = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(callNumber1, 0), CGRectMT(emailAddressLab, 0), 90, y)];
-    callNumber2.text = @"85167833";
-    callNumber2.font = [UIFont systemFontOfSize:15];
-    callNumber2.textColor = [UIColor redColor];
-    callNumber2.textAlignment = NSTextAlignmentLeft;
-    //加下划线
-    NSDictionary *attribtDic2 = @{NSUnderlineStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle]};
-    NSMutableAttributedString *attribtStr2 = [[NSMutableAttributedString alloc]initWithString:callNumber2.text attributes:attribtDic2];
-    callNumber2.attributedText = attribtStr2;
-    [companyView addSubview:callNumber2];
+//    UILabel *callNumber2 = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(callNumber1, 0), CGRectMT(emailAddressLab, 0), 90, y)];
+//    callNumber2.text = @"85167819";
+//    callNumber2.font = [UIFont systemFontOfSize:15];
+//    callNumber2.textColor = [UIColor redColor];
+//    callNumber2.textAlignment = NSTextAlignmentLeft;
+//    //加下划线
+//    NSDictionary *attribtDic2 = @{NSUnderlineStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle]};
+//    NSMutableAttributedString *attribtStr2 = [[NSMutableAttributedString alloc]initWithString:callNumber2.text attributes:attribtDic2];
+//    callNumber2.attributedText = attribtStr2;
+//    [companyView addSubview:callNumber2];
     
-    UITapGestureRecognizer *tapCallPhone2=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openPhone2)];
+//    UITapGestureRecognizer *tapCallPhone2=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openPhone2)];
     
-    callNumber2.userInteractionEnabled= YES;
-    [callNumber2 addGestureRecognizer:tapCallPhone2];
+//    callNumber2.userInteractionEnabled= YES;
+//    [callNumber2 addGestureRecognizer:tapCallPhone2];
     
     UILabel *faxNoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectMT(phoneNoLab, 0), 80, y)];
     faxNoLab.text = @"传真号码:";
@@ -100,7 +100,7 @@
     faxNoLab.textColor = [UIColor grayColor];
     
     UILabel *faxNo = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(faxNoLab, 0), CGRectMT(phoneNoLab, 0), 100, y)];
-    faxNo.text = @"85179913";
+    faxNo.text = @"85179369";
     faxNo.font = [UIFont systemFontOfSize:15];
     faxNo.textColor = [UIColor grayColor];
     
@@ -147,18 +147,18 @@
     NSLog(@"run on simulator");
 #define SIMULATOR_TEST
 #else
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://85167833"]];
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://85167819"]];
 #endif
 }
--(void)openPhone2
-{
-#if TARGET_IPHONE_SIMULATOR
-    NSLog(@"run on simulator");
-#define SIMULATOR_TEST
-#else
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://85167833"]];
-#endif
-}
+//-(void)openPhone2
+//{
+//#if TARGET_IPHONE_SIMULATOR
+//    NSLog(@"run on simulator");
+//#define SIMULATOR_TEST
+//#else
+//    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://85167819"]];
+//#endif
+//}
 #pragma mark - 建议按钮
 -(void)drawAdviceButton
 {

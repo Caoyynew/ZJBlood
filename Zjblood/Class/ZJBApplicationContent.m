@@ -194,7 +194,7 @@
     location3.textColor = [UIColor grayColor];
     
     UILabel * servicePhone = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(location3, 0), CGRectMT(location2, 10), 200, 15)];
-    servicePhone.text = @"0571-82883456";
+    servicePhone.text = @"0571-85167819";
     NSDictionary *attribtDic2 = @{NSUnderlineStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle]};
     NSMutableAttributedString *attribtStr2 = [[NSMutableAttributedString alloc]initWithString:servicePhone.text attributes:attribtDic2];
     //赋值

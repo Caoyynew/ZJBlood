@@ -181,7 +181,7 @@ static CGFloat const maxTitleScale = 1.3;
     [UIView animateWithDuration:0.5 animations:^{
         self.selTitleButton.transform = CGAffineTransformMakeScale(maxTitleScale, maxTitleScale);
     }];
-    [contentScrollView setContentOffset:CGPointMake(btn.tag*zjbWindowW, 0) animated:YES];
+    [contentScrollView setContentOffset:CGPointMake(btn.tag*zjbWindowW+0.5, 0) animated:YES];
 }
 
 - (void)setUpOneChildViewController:(NSUInteger)i
@@ -218,18 +218,24 @@ static CGFloat const maxTitleScale = 1.3;
     NSInteger leftIndex = middleIndex - 1;
     
     UIButton *middleButton = self.buttons[middleIndex];
-    
-    [UIView animateWithDuration:0.5 animations:^{
-        lineLab.transform =CGAffineTransformMakeTranslation(middleIndex*80,0);
-    }];
+
     UIButton *rightButton = nil;
-    if (rightIndex < self.buttons.count) {
-        rightButton = self.buttons[rightIndex];
-    }
     UIButton *leftButton = nil;
     if (leftIndex>-1) {
         leftButton = self.buttons[leftIndex];
     }
+    if (rightIndex < self.buttons.count) {
+        rightButton = self.buttons[rightIndex];
+    }
+    [UIView animateWithDuration:0.5 animations:^{
+        if (rightButton == nil) {
+            lineLab.transform = CGAffineTransformScale(CGAffineTransformMakeTranslation(middleIndex*80,0), 1.4, 1);
+        }else{
+            lineLab.transform =CGAffineTransformMakeTranslation(middleIndex*80,0);
+
+        }
+    }];
+   
     
     [UIView animateWithDuration:0.5 animations:^{
         middleButton.alpha = 1.0;
