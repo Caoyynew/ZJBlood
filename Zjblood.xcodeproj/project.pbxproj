@@ -48,6 +48,7 @@
 		AD4CD7101E7F885600D0612E /* ZJBMyCommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4CD70F1E7F885600D0612E /* ZJBMyCommendViewController.m */; };
 		AD4CD7141E7FB64400D0612E /* ZJBCommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4CD7131E7FB64400D0612E /* ZJBCommendView.m */; };
 		AD4CD7171E7FDB7D00D0612E /* ZJBComShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4CD7161E7FDB7D00D0612E /* ZJBComShowTableViewCell.m */; };
+		AD4CD71B1E7FDF2400D0612E /* ZJBApplyHonorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4CD71A1E7FDF2400D0612E /* ZJBApplyHonorVC.m */; };
 		AD4D79FD1E723A3A00C14A56 /* ZJBClickView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D79FC1E723A3A00C14A56 /* ZJBClickView.m */; };
 		AD4D7A031E7275A900C14A56 /* ZJBServiceTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D7A021E7275A900C14A56 /* ZJBServiceTableView.m */; };
 		AD4D7A061E72807A00C14A56 /* ZJBConfigPhoneStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D7A051E72807A00C14A56 /* ZJBConfigPhoneStyle.m */; };
@@ -168,6 +169,8 @@
 		AD4CD7131E7FB64400D0612E /* ZJBCommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBCommendView.m; sourceTree = "<group>"; };
 		AD4CD7151E7FDB7D00D0612E /* ZJBComShowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBComShowTableViewCell.h; sourceTree = "<group>"; };
 		AD4CD7161E7FDB7D00D0612E /* ZJBComShowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBComShowTableViewCell.m; sourceTree = "<group>"; };
+		AD4CD7191E7FDF2400D0612E /* ZJBApplyHonorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBApplyHonorVC.h; sourceTree = "<group>"; };
+		AD4CD71A1E7FDF2400D0612E /* ZJBApplyHonorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBApplyHonorVC.m; sourceTree = "<group>"; };
 		AD4D79FB1E723A3A00C14A56 /* ZJBClickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBClickView.h; sourceTree = "<group>"; };
 		AD4D79FC1E723A3A00C14A56 /* ZJBClickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBClickView.m; sourceTree = "<group>"; };
 		AD4D7A011E7275A900C14A56 /* ZJBServiceTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBServiceTableView.h; sourceTree = "<group>"; };
@@ -490,6 +493,15 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		AD4CD7181E7FDE4400D0612E /* ApplyHonor */ = {
+			isa = PBXGroup;
+			children = (
+				AD4CD7191E7FDF2400D0612E /* ZJBApplyHonorVC.h */,
+				AD4CD71A1E7FDF2400D0612E /* ZJBApplyHonorVC.m */,
+			);
+			name = ApplyHonor;
+			sourceTree = "<group>";
+		};
 		AD4D79FA1E72397D00C14A56 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,6 +570,7 @@
 		ADBFDF7B1E6E87A0000358E0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				AD4CD7181E7FDE4400D0612E /* ApplyHonor */,
 				AD7A2C881E76EFC800E1D95A /* cell */,
 				AD28F0151E76871A005E41B5 /* ViewController */,
 				AD4D79FA1E72397D00C14A56 /* View */,
@@ -846,6 +859,7 @@
 				AD38A8B11E70FEE700E7B4A7 /* CustomTextView.m in Sources */,
 				ADD0654F1E76A87B0026F680 /* ZJBloodRecTableViewCell.m in Sources */,
 				ADBFDF801E6E8827000358E0 /* ZJBServiceViewController.m in Sources */,
+				AD4CD71B1E7FDF2400D0612E /* ZJBApplyHonorVC.m in Sources */,
 				AD4C514D1E77BA760062B4A4 /* ZJBloodAskViewController.m in Sources */,
 				AD91A11B1E7E74500018EF59 /* ZJBReviewTableViewController.m in Sources */,
 				AD4C51501E77BAE70062B4A4 /* ZJBloodSearchViewController.m in Sources */,

@@ -8,6 +8,8 @@
 
 #import "ZJBMyCommendViewController.h"
 #import "ZJBCommendView.h"
+#import "ZJBComShowTableViewCell.h"
+
 @interface ZJBMyCommendViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UILabel * leftLab;
@@ -38,9 +40,9 @@
     rightArr = [[NSArray alloc]initWithObjects:@"全部",@"2015~2016",@"2014~2015", nil];
     
     [self createRightButton];
-    [self createHeadView];
     [self createcommendTableView];
-//    CGRect rect = CGRectMake(0, CGRectMT(headView, 10), zjbWindowW, 300);
+    [self createHeadView];
+//    CGRect rect = CGRectMake(0, CGRectMT(headView, 10), zjbWindowW, zjbWindowH-50);
 //    view1 = [[ZJBCommendView alloc]initWithFrame:rect nowTitle:@"全部" type:0 titleArr:leftArr];
 //    view2 = [[ZJBCommendView alloc]initWithFrame:rect nowTitle:@"全部" type:1 titleArr:rightArr];
     
@@ -60,7 +62,7 @@
 -(void)createHeadView
 {
     headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, zjbWindowW, 40)];
-    [self.view addSubview:headView];
+//    [self.view addSubview:headView];
     headView.backgroundColor = [UIColor whiteColor];
     
     //左按钮
@@ -106,6 +108,8 @@
     [headView addSubview:rightLab];
     [headView addSubview:rightImg];
     
+    commendTableView.tableHeaderView  = headView;
+    
 }
 
 #pragma mark 点击事件
@@ -143,10 +147,12 @@
 #pragma mark - 创建数据显示tableview
 -(void)createcommendTableView
 {
-    commendTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 55, zjbWindowW, zjbWindowH-40)];
-    commendTableView.backgroundColor = [UIColor whiteColor];
+    commendTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, zjbWindowW, zjbWindowH)];
+    commendTableView.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
     commendTableView.delegate = self;
     commendTableView.dataSource = self;
+    commendTableView.tableFooterView = [[UIView alloc]init];
+    commendTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:commendTableView];
 }
 #pragma mark UITableViewDelegate
@@ -160,12 +166,25 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 105;
+    return 105.0f;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 15.0f;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView * head = [[UIView alloc]init];
+    head.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
+    return head;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc]init];
-    cell.textLabel.text = @"1111";
+    static NSString * cellIdentifer = @"commendcell";
+    ZJBComShowTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifer];
+    if (cell == nil) {
+        cell = [[ZJBComShowTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
+    }
     return cell;
 }
 

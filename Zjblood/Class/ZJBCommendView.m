@@ -67,7 +67,7 @@
 {
     if (!_control) {
         _control = [UIControl new];
-        _control.backgroundColor = [UIColor blackColor];
+        _control.backgroundColor = [UIColor clearColor];
         _control.alpha = 0.0f;
         [self addSubview:_control];
         
@@ -79,7 +79,7 @@
 -(void)clickControl:(UIControl *)sender
 {
     [UIView animateWithDuration:0.3 animations:^{
-        self.contentView.frame = CGRectMake(0,0,self.frame.size.width, 45*self.titlesArr.count);
+        self.contentView.frame = CGRectMake(0,0,self.frame.size.width, 0);
         self.control.alpha = 0.0f;
         self.alpha = 0.0f;
     } completion:^(BOOL finished) {

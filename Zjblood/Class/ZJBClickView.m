@@ -7,6 +7,10 @@
 //
 
 #import "ZJBClickView.h"
+
+#import "ZJBApplyHonorVC.h"
+
+
 #import "ZJBloodRecordViewController.h"
 #import "ZJBloodHomeViewController.h"
 #import "ZJBloodAskViewController.h"
@@ -81,6 +85,12 @@
         selectTag = 1;
     }else if (indexPath.row == 1){
         selectTag = 2;
+        NSLog(@"荣誉证");
+        ZJBApplyHonorVC * apply = [[ZJBApplyHonorVC alloc]init];
+        apply.title = @"荣誉证申领";
+        apply.view.backgroundColor = [UIColor whiteColor];
+        apply.hidesBottomBarWhenPushed = YES;
+        [[self viewController].navigationController pushViewController:apply animated:YES];
     }else if (indexPath.row ==2){
         selectTag = 3;
     }
