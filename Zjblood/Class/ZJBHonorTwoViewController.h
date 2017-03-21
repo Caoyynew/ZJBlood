@@ -14,5 +14,4 @@ typedef void (^ZJBActionBlock2)(NSInteger number);
 @property (nonatomic, copy) ZJBActionBlock2 _block;
 
 -(void)ZJBActionBlock2:(ZJBActionBlock2)block;
-
 @end
