@@ -88,7 +88,7 @@
         NSLog(@"荣誉证");
         ZJBApplyHonorVC * apply = [[ZJBApplyHonorVC alloc]init];
         apply.title = @"荣誉证申领";
-        apply.view.backgroundColor = [UIColor whiteColor];
+        apply.view.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
         apply.hidesBottomBarWhenPushed = YES;
         [[self viewController].navigationController pushViewController:apply animated:YES];
     }else if (indexPath.row ==2){
