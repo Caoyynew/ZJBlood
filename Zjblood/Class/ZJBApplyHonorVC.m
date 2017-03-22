@@ -89,7 +89,7 @@
 #pragma mark - 创建显示view
 -(void)createContentView
 {
-    contentScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, CGRectMT(headScrollView, 15), zjbWindowW, zjbWindowH-85)];
+    contentScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, CGRectMT(headScrollView, 0), zjbWindowW, zjbWindowH-70)];
     contentScrollView.backgroundColor = [UIColor whiteColor];
     contentScrollView.delegate = self;
     contentScrollView.scrollEnabled = NO;

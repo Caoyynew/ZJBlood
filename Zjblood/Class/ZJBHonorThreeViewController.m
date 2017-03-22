@@ -8,7 +8,17 @@
 
 #import "ZJBHonorThreeViewController.h"
 
-@interface ZJBHonorThreeViewController ()
+@interface ZJBHonorThreeViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+{
+    NSInteger whichImg;
+    UIImage * image1;
+    UIImage * image2;
+    
+    UIImageView * uploadPic1;
+    UIImageView * uploadPic2;
+    
+}
+@property (nonatomic ,strong) UIImagePickerController * imagePicker;
 
 @end
 
@@ -20,10 +30,23 @@
     [self createUI];
     // Do any additional setup after loading the view.
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (uploadPic1 && image1) {
+        uploadPic1.image = image1;
+    }
+    if (uploadPic2 && image2) {
+        uploadPic2.image = image2;
+    }
+}
 
 -(void)createUI
 {
-    UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, zjbWindowW, 53)];
+    UIView * lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, zjbWindowW, 15)];
+    lineView.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
+    [self.view addSubview:lineView];
+    UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 15, zjbWindowW, 53)];
     titleView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:titleView];
     
@@ -43,7 +66,6 @@
     [self.view addSubview:line];
     //照片
     UIView * picView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectMT(line, 0), zjbWindowW, 400)];
-//    picView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:picView];
     
     UILabel * picLab = [[UILabel alloc]initWithFrame:CGRectMake(15, 10, 180, 20)];
@@ -53,9 +75,17 @@
     UIImageView * picTip = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectML(picLab, 5), 12.5, 15, 15)];
     picTip.image = [UIImage imageNamed:@"tishi"];
     
-    UIImageView * uploadPic1 = [[UIImageView alloc]initWithFrame:CGRectMake(15, CGRectMT(picLab, 10), 62, 62)];
+    uploadPic1 = [[UIImageView alloc]initWithFrame:CGRectMake(15, CGRectMT(picLab, 10), 62, 62)];
     uploadPic1.image = [UIImage imageNamed:@"uploadpic_def"];
-    [uploadPic1 setContentMode:UIViewContentModeScaleAspectFill];
+    if (image1) {
+        uploadPic1.image = image1;
+    }
+    [uploadPic1 setContentMode:UIViewContentModeScaleAspectFit];
+    //imageview添加手势
+    uploadPic1.tag = 1001;
+    UITapGestureRecognizer * selectPic=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectPic:)];
+    uploadPic1.userInteractionEnabled= YES;
+    [uploadPic1 addGestureRecognizer:selectPic];
     
     UILabel * idLab = [[UILabel alloc]initWithFrame:CGRectMake(15, CGRectMT(uploadPic1, 10), 100, 20)];
     idLab.text = @"身份证复印件";
@@ -64,9 +94,17 @@
     UIImageView * picTip2 = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectML(idLab, 0), CGRectMT(uploadPic1, 12.5), 15, 15)];
     picTip2.image = [UIImage imageNamed:@"tishi"];
    
-    UIImageView * uploadPic2 = [[UIImageView alloc]initWithFrame:CGRectMake(15, CGRectMT(idLab, 10), 62, 62)];
+    uploadPic2 = [[UIImageView alloc]initWithFrame:CGRectMake(15, CGRectMT(idLab, 10), 62, 62)];
     uploadPic2.image = [UIImage imageNamed:@"uploadpic_def"];
-    [uploadPic2 setContentMode:UIViewContentModeScaleAspectFill];
+    if (image2) {
+        uploadPic2.image = image2;
+    }
+    [uploadPic2 setContentMode:UIViewContentModeScaleAspectFit];
+    //imageview添加手势
+    uploadPic2.tag = 1002;
+    UITapGestureRecognizer * selectPic2=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectPic:)];
+    uploadPic2.userInteractionEnabled= YES;
+    [uploadPic2 addGestureRecognizer:selectPic2];
     
     [picView addSubview:picLab];
     [picView addSubview:picTip];
@@ -84,7 +122,6 @@
     [nextBtn setTitle:@"提交申请" forState:UIControlStateNormal];
     [nextBtn addTarget:self action:@selector(adviceAction:) forControlEvents:UIControlEventTouchUpInside];
     
-    
     UIButton * backBtn = [[UIButton alloc]initWithFrame:CGRectMake(zjbWindowW/2-100, CGRectMT(nextBtn, 20), 200, 40)];
     backBtn.backgroundColor = [UIColor grayColor];
     backBtn.clipsToBounds=YES;
@@ -96,7 +133,57 @@
     [picView addSubview:nextBtn];
     [picView addSubview:backBtn];
 }
+#pragma mark - 点击图片选择照片
+-(void)selectPic:(UITapGestureRecognizer*)sender
+{
+    whichImg = [sender view].tag;
+    _imagePicker = [[UIImagePickerController alloc]init];
+    // 允许编辑
+    _imagePicker.allowsEditing=NO;
+    // 设置代理，检测操作
+    _imagePicker.delegate= self;
+    [self selectedImageForIcon];
+}
 
+#pragma mark  - 展示选择图片方式
+-(void)selectedImageForIcon
+{
+    UIAlertController *alertController = [[UIAlertController alloc]init];
+    UIAlertAction *actionCamera=[UIAlertAction actionWithTitle:@"打开相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        _imagePicker.sourceType=UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:_imagePicker animated:YES completion:nil];
+    }];
+    UIAlertAction *actionPhotoLIbrary=[UIAlertAction actionWithTitle:@"打开相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        _imagePicker.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:_imagePicker animated:YES completion:nil];
+        
+    }];
+    UIAlertAction *actionPhotoAlbum=[UIAlertAction actionWithTitle:@"打开图库" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        _imagePicker.sourceType=UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        [self presentViewController:_imagePicker animated:YES completion:nil];
+    }];
+    UIAlertAction *cancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction:actionCamera];
+    [alertController addAction:actionPhotoAlbum];
+    [alertController addAction:actionPhotoLIbrary];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
+#pragma mark - UIImagePickerControllerDataDelegate
+//完成拍照后的回调方法
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    UIImage * selectImg = info[@"UIImagePickerControllerOriginalImage"];
+    if (whichImg == 1001) {
+        image1 = selectImg;
+    }else if (whichImg == 1002){
+        image2 = selectImg;
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 -(void)ZJBActionBlock3:(ZJBActionBlock3)block
 {
     self._block = block;

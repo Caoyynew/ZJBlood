@@ -94,11 +94,7 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) {
-        return 0;
-    }else{
-        return 15.0f;
-    }
+    return 15.0f;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -151,13 +147,17 @@
         }
     }else if (indexPath.section == 1){
         if (indexPath.row == 0) {
-            cell.textLabel.text = @"学历(选填)";
+            NSString * str = @"学历 (选填)";
+            NSAttributedString * muStr = [self setLabelColor:str];
+            cell.textLabel.attributedText = muStr;
             UILabel * alertLab2 = [[UILabel alloc]initWithFrame:CGRectMake(zjbWindowW*0.4, 0,zjbWindowW*0.5, 45)];
             alertLab2.textAlignment = NSTextAlignmentRight;
             alertLab2.text = studyStr;
             [cell addSubview:alertLab2];
         }else if (indexPath.row == 1){
-            cell.textLabel.text = @"职业(选填)";
+            NSString * str = @"职业 (选填)";
+            NSAttributedString * muStr = [self setLabelColor:str];
+            cell.textLabel.attributedText = muStr;
             UILabel * alertLab3 = [[UILabel alloc]initWithFrame:CGRectMake(zjbWindowW*0.4, 0,zjbWindowW*0.5, 45)];
             alertLab3.textAlignment = NSTextAlignmentRight;
             alertLab3.text = jobStr;
@@ -325,7 +325,24 @@
     return YES;
     
 }
-
+#pragma mark - Label自适应宽高
+-(CGSize)setLabelSize:(UILabel *)label
+{
+    label.numberOfLines = 1;//根据最大行数需求来设置
+    label.lineBreakMode = NSLineBreakByTruncatingTail;
+    CGSize maximumLabelSize = CGSizeMake(100, 9999);//labelsize的最大值
+    CGSize expectSize = [label sizeThatFits:maximumLabelSize];
+    return expectSize;
+}
+#pragma mark - 设置label颜色
+-(NSAttributedString *)setLabelColor:(NSString *)lab
+{
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithString:lab];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:NSMakeRange(3, lab.length-3)];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(3, lab.length-3)];
+    NSAttributedString * mString = attributedString;
+    return mString;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
