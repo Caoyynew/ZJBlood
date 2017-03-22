@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^ZJBActionBlock5)(NSInteger number);
+
 @interface ZJBHonorFiveViewController : UIViewController
 
+@property (nonatomic, copy) ZJBActionBlock5 _block;
+
+-(void)ZJBActionBlock5:(ZJBActionBlock5)block;
 @end

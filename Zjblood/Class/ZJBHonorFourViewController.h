@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZJBHonorFourViewController : UIViewController
+typedef void (^ZJBActionBlock4)(NSInteger number);
 
+@interface ZJBHonorFourViewController : UIViewController
+@property (nonatomic, copy) ZJBActionBlock4 _block;
+
+-(void)ZJBActionBlock4:(ZJBActionBlock4)block;
 @end

@@ -125,18 +125,18 @@
     logoImgView.image = [UIImage imageNamed:@"aboutapp"];
     
     UILabel *logoLab = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(logoImgView, 20), 0, 200, 60)];
-    logoLab.text = @"关于APP";
+    logoLab.text = @"意见与建议";
     logoLab.font = [UIFont systemFontOfSize:17];
     [adviceTextView addSubview:logoImgView];
     [adviceTextView addSubview:logoLab];
     
     cTextView1 = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(logoLab, 0), 0.9*zjbWindowW, 130) withType:200];
-    cTextView1.zjbPlaceHolderLabel.text = @"如果符合您的心意,请不要吝啬您的赞美";
+    cTextView1.zjbPlaceHolderLabel.text = @"你的意见然我们成长!";
     [adviceTextView addSubview:cTextView1];
     
-    cTextView2 = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(cTextView1, 15), 0.9*zjbWindowW, 130) withType:200];
-    cTextView2.zjbPlaceHolderLabel.text = @"如果有不足之处,请一定指出";
-    [adviceTextView addSubview:cTextView2];
+//    cTextView2 = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(cTextView1, 15), 0.9*zjbWindowW, 130) withType:200];
+//    cTextView2.zjbPlaceHolderLabel.text = @"如果有不足之处,请一定指出";
+//    [adviceTextView addSubview:cTextView2];
     
 }
 

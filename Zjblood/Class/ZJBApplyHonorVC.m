@@ -122,16 +122,24 @@
     }];
     
     ZJBHonorThreeViewController * vc3 = [[ZJBHonorThreeViewController alloc]init];
-    vc3.view.backgroundColor = [UIColor greenColor];
     [self addChildViewController:vc3];
+    [vc3 ZJBActionBlock3:^(NSInteger number) {
+        [self gotoAction:number];
+    }];
     
     ZJBHonorFourViewController * vc4 = [[ZJBHonorFourViewController alloc]init];
-    vc4.view.backgroundColor = [UIColor blueColor];
+//    vc4.view.backgroundColor = [UIColor blueColor];
+    
     [self addChildViewController:vc4];
+    [vc4 ZJBActionBlock4:^(NSInteger number) {
+        [self gotoAction:number];
+    }];
     
     ZJBHonorFiveViewController * vc5 = [[ZJBHonorFiveViewController alloc]init];
-    vc5.view.backgroundColor = [UIColor blackColor];
     [self addChildViewController:vc5];
+    [vc5 ZJBActionBlock5:^(NSInteger number) {
+        [self gotoAction:number];
+    }];
 }
 
 #pragma mark - 展示子控制器

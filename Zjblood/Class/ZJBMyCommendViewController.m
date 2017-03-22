@@ -39,7 +39,7 @@
     leftArr = [[NSArray alloc]initWithObjects:@"全部",@"省级表彰",@"国家级表彰", nil];
     rightArr = [[NSArray alloc]initWithObjects:@"全部",@"2015~2016",@"2014~2015", nil];
     
-    [self createRightButton];
+//    [self createRightButton];
     [self createcommendTableView];
     [self createHeadView];
 //    CGRect rect = CGRectMake(0, CGRectMT(headView, 10), zjbWindowW, zjbWindowH-50);
@@ -48,16 +48,16 @@
     
 }
 #pragma mark - 导航栏右搜索按钮
--(void)createRightButton
-{
-    UIBarButtonItem * leftTabarBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"serviceSearch"] style:UIBarButtonItemStyleDone target:self action:@selector(searchAction)];
-    leftTabarBtn.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = leftTabarBtn;
-}
--(void)searchAction
-{
-    NSLog(@"待定!");
-}
+//-(void)createRightButton
+//{
+//    UIBarButtonItem * leftTabarBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"serviceSearch"] style:UIBarButtonItemStyleDone target:self action:@selector(searchAction)];
+//    leftTabarBtn.tintColor = [UIColor whiteColor];
+//    self.navigationItem.rightBarButtonItem = leftTabarBtn;
+//}
+//-(void)searchAction
+//{
+//    NSLog(@"待定!");
+//}
 #pragma mark - 页面顶部视图
 -(void)createHeadView
 {

@@ -39,7 +39,7 @@
         self.stateImg.image = [UIImage imageNamed:@"unpassPic"];
         
     }else if ([self.states isEqualToString:@"0"]){
-        self.stateLab.text = @"审核提醒";
+        self.stateLab.text = @"审核中";
         self.stateLab.textColor = [UIColor redColor];
         self.stateImg.image = [UIImage imageNamed:@""];
         

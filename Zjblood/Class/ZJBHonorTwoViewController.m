@@ -63,8 +63,8 @@
     citysArr = [NSArray arrayWithObjects:@"杭州",@"滨江",@"下城区",@"上城区",@"西湖区",@"萧山区",@"余杭区", nil];
     studyArr = [NSArray arrayWithObjects:@"本科以下",@"本科以上",@"本科", nil];
     jobArr = [NSArray arrayWithObjects:@"现役军人",@"国家工作人员",@"其他",@"医务人员",@"高校学生", nil];
-    bloodArr = [NSArray arrayWithObjects:@"A型",@"B型",@"AB型",@"O型",@"不明", nil];
-    rhbloodArr = [NSArray arrayWithObjects:@"RH阴性",@"RH阳性",@"不明",@"其他", nil];
+    bloodArr = [NSArray arrayWithObjects:@"A型",@"B型",@"AB型",@"O型",@"不祥", nil];
+    rhbloodArr = [NSArray arrayWithObjects:@"阴性",@"阳性",@"不祥", nil];
 }
 #pragma mark - UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -304,22 +304,22 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     NSInteger tag = textField.tag;
+    nameStr = name.text;
+    phoneStr = phone.text;
+    bloodnumStr = bloodnum.text;
+    postAddressStr = postAddress.text;
     if (tag == 50) {
-        nameStr = name.text;
         [name resignFirstResponder];
-        [bloodnum becomeFirstResponder];
+//        [bloodnum becomeFirstResponder];
     }
     if (tag == 51) {
-        bloodnumStr = bloodnum.text;
         [bloodnum resignFirstResponder];
-        [phone becomeFirstResponder];
+//        [phone becomeFirstResponder];
     }
     if (tag == 52) {
-        phoneStr = phone.text;
         [phone resignFirstResponder];
     }
     if (tag == 53) {
-        postAddressStr = postAddress.text;
         [postAddress resignFirstResponder];
     }
     return YES;

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^ZJBActionBlock3)(NSInteger number);
+
 @interface ZJBHonorThreeViewController : UIViewController
 
+@property (nonatomic, copy) ZJBActionBlock3 _block;
+
+-(void)ZJBActionBlock3:(ZJBActionBlock3)block;
 @end
