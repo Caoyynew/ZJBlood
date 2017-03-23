@@ -30,32 +30,46 @@
 {
 //    NSLog(@"path is null");
     //头像
-    _iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(cpviewW/2-36,50, 72, 72)];
+    CGRect rect = CGRectMake(cpviewW/2-36,50, 72, 72);
+    _iconImageView = [[UIImageView alloc]initWithFrame:rect];
     _iconImageView.tag = 52;
-    _iconImageView.clipsToBounds = YES;
-    _iconImageView.layer.cornerRadius = 36;
-    _iconImageView.layer.shadowColor = [UIColor blackColor].CGColor;
-    _iconImageView.layer.shadowOpacity = 0.8f;
-    _iconImageView.layer.shadowOffset = CGSizeMake(5, 5);
+    
+    CALayer * layer = [_iconImageView layer];
+    [layer setMasksToBounds:YES];
+    [layer setCornerRadius:36.0];
+    
+    UIView * shadow = [[UIView alloc] initWithFrame: rect];
+    _iconImageView.frame = CGRectMake(0,0,rect.size.width, rect.size.height);
+
+    shadow.layer.shadowColor = [UIColor blackColor].CGColor;
+    shadow.layer.shadowOffset = CGSizeMake(1,1);
+    //不透明度
+    shadow.layer.shadowOpacity = 0.5;
+    shadow.layer.shadowRadius = 2.0;
+//    shadow.layer.cornerRadius = 36.0;
+//    shadow.clipsToBounds = NO;
+    [shadow addSubview: _iconImageView];
+//    _iconImageView.backgroundColor = [UIColor orangeColor];
     _iconImageView.image = [UIImage imageNamed:@"icondefault"];
     if (headImg != nil) {
         _iconImageView.image = headImg;
-        _iconImageView.contentMode =  UIViewContentModeScaleAspectFill;
+        _iconImageView.contentMode =  UIViewContentModeScaleAspectFit;
     }
     UITapGestureRecognizer * gotoMyData=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoAction:)];
-    _iconImageView.userInteractionEnabled= YES;
-    [_iconImageView addGestureRecognizer:gotoMyData];
-    [self addSubview:_iconImageView];
+    shadow.tag = 52;
+    shadow.userInteractionEnabled= YES;
+    [shadow addGestureRecognizer:gotoMyData];
+    [self addSubview:shadow];
     
     //名字+性别
     UILabel * nameLab = [[UILabel alloc]init];
     nameLab.text = @"丁丁订";
     nameLab.font = [UIFont systemFontOfSize:16];
     CGSize expectSize1 = [self setLabelSize:nameLab];
-    nameLab.frame = CGRectMake(cpviewW/2-expectSize1.width/2, CGRectMT(_iconImageView, 15), expectSize1.width, expectSize1.height);
+    nameLab.frame = CGRectMake(cpviewW/2-expectSize1.width/2, CGRectMT(shadow, 15), expectSize1.width, expectSize1.height);
     [self addSubview:nameLab];
     
-    UIImageView *nameIconView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectML(nameLab, 5), CGRectMT(_iconImageView, 13), 13, 13)];
+    UIImageView *nameIconView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectML(nameLab, 5), CGRectMT(shadow, 13), 13, 13)];
     nameIconView.image = [UIImage imageNamed:@"manlogo"];
     [self addSubview:nameIconView];
     
