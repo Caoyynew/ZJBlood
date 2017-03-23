@@ -15,6 +15,9 @@
 		AD15FE041E6E66F100F31F1B /* ZjbloodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FE031E6E66F100F31F1B /* ZjbloodTests.m */; };
 		AD15FE0F1E6E66F100F31F1B /* ZjbloodUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FE0E1E6E66F100F31F1B /* ZjbloodUITests.m */; };
 		AD15FE221E6E83B300F31F1B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD15FE211E6E83B300F31F1B /* BaseViewController.m */; };
+		AD2400581E83A7C600ECA670 /* ZJBMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2400571E83A7C600ECA670 /* ZJBMapView.m */; };
+		AD24005D1E83B81E00ECA670 /* ZJBMapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD24005B1E83B81E00ECA670 /* ZJBMapTableViewCell.m */; };
+		AD24005E1E83B81E00ECA670 /* ZJBMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD24005C1E83B81E00ECA670 /* ZJBMapTableViewCell.xib */; };
 		AD28F0111E762FEA005E41B5 /* ZJBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD28F0101E762FEA005E41B5 /* ZJBAlertView.m */; };
 		AD28F0141E76687E005E41B5 /* ZJBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD28F0131E76687E005E41B5 /* ZJBLoginViewController.m */; };
 		AD28F0181E768784005E41B5 /* ZJBloodRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD28F0171E768784005E41B5 /* ZJBloodRecordViewController.m */; };
@@ -24,6 +27,8 @@
 		AD2926F81E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2926F71E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m */; };
 		AD2926FB1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2926FA1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m */; };
 		AD2926FE1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2926FD1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m */; };
+		AD3597C51E8361000055E15D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3597C41E8361000055E15D /* MapKit.framework */; };
+		AD3597C71E8361290055E15D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3597C61E8361290055E15D /* CoreLocation.framework */; };
 		AD38A8B11E70FEE700E7B4A7 /* CustomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8B01E70FEE700E7B4A7 /* CustomTextView.m */; };
 		AD38A8BC1E711DF200E7B4A7 /* ZJBNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8BB1E711DF200E7B4A7 /* ZJBNameViewController.m */; };
 		AD38A8BF1E711E8700E7B4A7 /* ZJBSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD38A8BE1E711E8700E7B4A7 /* ZJBSexViewController.m */; };
@@ -75,6 +80,7 @@
 		ADBFE2EE1E71A4ED0004767D /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADBFE2ED1E71A4ED0004767D /* images.xcassets */; };
 		ADD0654F1E76A87B0026F680 /* ZJBloodRecTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD0654D1E76A87B0026F680 /* ZJBloodRecTableViewCell.m */; };
 		ADD065501E76A87B0026F680 /* ZJBloodRecTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD0654E1E76A87B0026F680 /* ZJBloodRecTableViewCell.xib */; };
+		ADD3259B1E828D1500649D72 /* ZJBCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3259A1E828D1500649D72 /* ZJBCalendarView.m */; };
 		ADF06BFC1E6EB89B00E9A0F8 /* CPersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF06BFB1E6EB89B00E9A0F8 /* CPersonView.m */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +120,11 @@
 		AD15FE101E6E66F100F31F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD15FE201E6E83B300F31F1B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		AD15FE211E6E83B300F31F1B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		AD2400561E83A7C600ECA670 /* ZJBMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBMapView.h; sourceTree = "<group>"; };
+		AD2400571E83A7C600ECA670 /* ZJBMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBMapView.m; sourceTree = "<group>"; };
+		AD24005A1E83B81E00ECA670 /* ZJBMapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBMapTableViewCell.h; sourceTree = "<group>"; };
+		AD24005B1E83B81E00ECA670 /* ZJBMapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBMapTableViewCell.m; sourceTree = "<group>"; };
+		AD24005C1E83B81E00ECA670 /* ZJBMapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBMapTableViewCell.xib; sourceTree = "<group>"; };
 		AD28F00F1E762FEA005E41B5 /* ZJBAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBAlertView.h; sourceTree = "<group>"; };
 		AD28F0101E762FEA005E41B5 /* ZJBAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBAlertView.m; sourceTree = "<group>"; };
 		AD28F0121E76687E005E41B5 /* ZJBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBLoginViewController.h; sourceTree = "<group>"; };
@@ -132,6 +143,8 @@
 		AD2926FA1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBSystenSettingViewController.m; sourceTree = "<group>"; };
 		AD2926FC1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBFeedBackViewController.h; sourceTree = "<group>"; };
 		AD2926FD1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBFeedBackViewController.m; sourceTree = "<group>"; };
+		AD3597C41E8361000055E15D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AD3597C61E8361290055E15D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AD38A8AF1E70FEE700E7B4A7 /* CustomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextView.h; sourceTree = "<group>"; };
 		AD38A8B01E70FEE700E7B4A7 /* CustomTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextView.m; sourceTree = "<group>"; };
 		AD38A8BA1E711DF200E7B4A7 /* ZJBNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBNameViewController.h; sourceTree = "<group>"; };
@@ -225,6 +238,8 @@
 		ADD0654C1E76A87B0026F680 /* ZJBloodRecTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBloodRecTableViewCell.h; sourceTree = "<group>"; };
 		ADD0654D1E76A87B0026F680 /* ZJBloodRecTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBloodRecTableViewCell.m; sourceTree = "<group>"; };
 		ADD0654E1E76A87B0026F680 /* ZJBloodRecTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBloodRecTableViewCell.xib; sourceTree = "<group>"; };
+		ADD325991E828D1500649D72 /* ZJBCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBCalendarView.h; sourceTree = "<group>"; };
+		ADD3259A1E828D1500649D72 /* ZJBCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBCalendarView.m; sourceTree = "<group>"; };
 		ADF06BFA1E6EB89B00E9A0F8 /* CPersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPersonView.h; sourceTree = "<group>"; };
 		ADF06BFB1E6EB89B00E9A0F8 /* CPersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPersonView.m; sourceTree = "<group>"; };
 		ADF06BFE1E6EC53600E9A0F8 /* ZJBPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJBPch.pch; sourceTree = "<group>"; };
@@ -236,6 +251,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3597C71E8361290055E15D /* CoreLocation.framework in Frameworks */,
+				AD3597C51E8361000055E15D /* MapKit.framework in Frameworks */,
 				5A1D5808F3999FB7533E495D /* libPods-Zjblood.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +277,8 @@
 		119FB7BE7848B4331CEAA01F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD3597C61E8361290055E15D /* CoreLocation.framework */,
+				AD3597C41E8361000055E15D /* MapKit.framework */,
 				6E4F538DFBEBDFBB081FB5B6 /* libPods-Zjblood.a */,
 			);
 			name = Frameworks;
@@ -378,9 +397,29 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		AD2400591E83A7D300ECA670 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD2400561E83A7C600ECA670 /* ZJBMapView.h */,
+				AD2400571E83A7C600ECA670 /* ZJBMapView.m */,
+				AD24005A1E83B81E00ECA670 /* ZJBMapTableViewCell.h */,
+				AD24005B1E83B81E00ECA670 /* ZJBMapTableViewCell.m */,
+				AD24005C1E83B81E00ECA670 /* ZJBMapTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AD2400601E83C56200ECA670 /* Commend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Commend;
+			sourceTree = "<group>";
+		};
 		AD28F0151E76871A005E41B5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AD2400591E83A7D300ECA670 /* View */,
 				AD28F0161E768784005E41B5 /* ZJBloodRecordViewController.h */,
 				AD28F0171E768784005E41B5 /* ZJBloodRecordViewController.m */,
 				AD28F0191E769F79005E41B5 /* ZJBloodResultViewController.h */,
@@ -520,14 +559,14 @@
 			name = view;
 			sourceTree = "<group>";
 		};
-		AD4CD7181E7FDE4400D0612E /* ApplyHonor */ = {
+		AD4CD7181E7FDE4400D0612E /* Honor */ = {
 			isa = PBXGroup;
 			children = (
 				AD4CD7191E7FDF2400D0612E /* ZJBApplyHonorVC.h */,
 				AD4CD71A1E7FDF2400D0612E /* ZJBApplyHonorVC.m */,
 				AD5ED4831E810D1D00D59AC5 /* ChildViewController */,
 			);
-			name = ApplyHonor;
+			name = Honor;
 			sourceTree = "<group>";
 		};
 		AD4D79FA1E72397D00C14A56 /* View */ = {
@@ -539,6 +578,8 @@
 				AD4D7A021E7275A900C14A56 /* ZJBServiceTableView.m */,
 				AD28F00F1E762FEA005E41B5 /* ZJBAlertView.h */,
 				AD28F0101E762FEA005E41B5 /* ZJBAlertView.m */,
+				ADD325991E828D1500649D72 /* ZJBCalendarView.h */,
+				ADD3259A1E828D1500649D72 /* ZJBCalendarView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -616,10 +657,11 @@
 		ADBFDF7B1E6E87A0000358E0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				AD4D79FA1E72397D00C14A56 /* View */,
 				ADBFDF7E1E6E8827000358E0 /* ZJBServiceViewController.h */,
 				ADBFDF7F1E6E8827000358E0 /* ZJBServiceViewController.m */,
-				AD4CD7181E7FDE4400D0612E /* ApplyHonor */,
+				AD4D79FA1E72397D00C14A56 /* View */,
+				AD2400601E83C56200ECA670 /* Commend */,
+				AD4CD7181E7FDE4400D0612E /* Honor */,
 				AD7A2C881E76EFC800E1D95A /* cell */,
 				AD28F0151E76871A005E41B5 /* ViewController */,
 			);
@@ -785,6 +827,7 @@
 				AD4AE8401E7A31ED00687989 /* ZJBDynamicTableViewCell.xib in Resources */,
 				ADBFE2EE1E71A4ED0004767D /* images.xcassets in Resources */,
 				AD7AF0091E793022002D4C01 /* ZJBInofTableViewCell.xib in Resources */,
+				AD24005E1E83B81E00ECA670 /* ZJBMapTableViewCell.xib in Resources */,
 				AD4C515A1E77F5080062B4A4 /* ZJBloodSearchTableViewCell.xib in Resources */,
 				AD4AE8451E7A389B00687989 /* ZJBDynamic2TableViewCell.xib in Resources */,
 				AD15FDF91E6E66F000F31F1B /* LaunchScreen.storyboard in Resources */,
@@ -863,6 +906,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD4CD7171E7FDB7D00D0612E /* ZJBComShowTableViewCell.m in Sources */,
+				ADD3259B1E828D1500649D72 /* ZJBCalendarView.m in Sources */,
 				AD4D7A031E7275A900C14A56 /* ZJBServiceTableView.m in Sources */,
 				AD38A8C21E711FCC00E7B4A7 /* ZJBAddressViewController.m in Sources */,
 				AD91A1271E7E77480018EF59 /* ZJBWholeTableViewController.m in Sources */,
@@ -891,7 +935,9 @@
 				AD2926FB1E6FDE3500FBAEF8 /* ZJBSystenSettingViewController.m in Sources */,
 				AD5ED4891E810D5D00D59AC5 /* ZJBHonorTwoViewController.m in Sources */,
 				AD7AF0101E793B8D002D4C01 /* ZJBPolicyTableViewController.m in Sources */,
+				AD2400581E83A7C600ECA670 /* ZJBMapView.m in Sources */,
 				AD4AE83F1E7A31ED00687989 /* ZJBDynamicTableViewCell.m in Sources */,
+				AD24005D1E83B81E00ECA670 /* ZJBMapTableViewCell.m in Sources */,
 				AD2926F81E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m in Sources */,
 				AD38A8C51E7120D000E7B4A7 /* ZJBIdCardViewController.m in Sources */,
 				AD4AE84D1E7A6B9600687989 /* ZJBApplicant.m in Sources */,

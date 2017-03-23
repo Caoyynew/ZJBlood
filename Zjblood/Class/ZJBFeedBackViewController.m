@@ -63,8 +63,8 @@
     phoneNoLab.text = @"联系电话:";
     phoneNoLab.font = [UIFont systemFontOfSize:15];
     phoneNoLab.textColor = [UIColor grayColor];
-    UILabel *callNumber1 = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(phoneNoLab, 0), CGRectMT(emailAddressLab, 0), 90, y)];
-    callNumber1.text = @"85167819";
+    UILabel *callNumber1 = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(phoneNoLab, 0), CGRectMT(emailAddressLab, 0), 180, y)];
+    callNumber1.text = @"0571-85167819";
     callNumber1.textColor = [UIColor redColor];
     callNumber1.font = [UIFont systemFontOfSize:15];
     callNumber1.textAlignment = NSTextAlignmentLeft;
@@ -77,22 +77,6 @@
     UITapGestureRecognizer *tapCallPhone1=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openPhone1)];
     callNumber1.userInteractionEnabled= YES;
     [callNumber1 addGestureRecognizer:tapCallPhone1];
-    
-//    UILabel *callNumber2 = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(callNumber1, 0), CGRectMT(emailAddressLab, 0), 90, y)];
-//    callNumber2.text = @"85167819";
-//    callNumber2.font = [UIFont systemFontOfSize:15];
-//    callNumber2.textColor = [UIColor redColor];
-//    callNumber2.textAlignment = NSTextAlignmentLeft;
-//    //加下划线
-//    NSDictionary *attribtDic2 = @{NSUnderlineStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle]};
-//    NSMutableAttributedString *attribtStr2 = [[NSMutableAttributedString alloc]initWithString:callNumber2.text attributes:attribtDic2];
-//    callNumber2.attributedText = attribtStr2;
-//    [companyView addSubview:callNumber2];
-    
-//    UITapGestureRecognizer *tapCallPhone2=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openPhone2)];
-    
-//    callNumber2.userInteractionEnabled= YES;
-//    [callNumber2 addGestureRecognizer:tapCallPhone2];
     
     UILabel *faxNoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectMT(phoneNoLab, 0), 80, y)];
     faxNoLab.text = @"传真号码:";
@@ -131,7 +115,7 @@
     [adviceTextView addSubview:logoLab];
     
     cTextView1 = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(logoLab, 0), 0.9*zjbWindowW, 130) withType:200];
-    cTextView1.zjbPlaceHolderLabel.text = @"你的意见然我们成长!";
+    cTextView1.zjbPlaceHolderLabel.text = @"你的意见让我们成长!";
     [adviceTextView addSubview:cTextView1];
     
 //    cTextView2 = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(cTextView1, 15), 0.9*zjbWindowW, 130) withType:200];
@@ -147,7 +131,7 @@
     NSLog(@"run on simulator");
 #define SIMULATOR_TEST
 #else
-    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://85167819"]];
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tel://0571-85167819"]];
 #endif
 }
 //-(void)openPhone2

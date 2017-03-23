@@ -9,7 +9,7 @@
 #import "ZJBServiceTableView.h"
 #import "ZJBAlertView.h"
 #import "ZJBloodLoveTableViewCell.h"
-@interface ZJBServiceTableView ()<UITableViewDelegate,UITableViewDataSource,ZJBackViewControllerDelegate>
+@interface ZJBServiceTableView ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * zJBtabview;
     ZJBAlertView * alertView;
@@ -147,18 +147,11 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0 && indexPath.row == 0) {
-        alertView = [[ZJBAlertView alloc]init];
-        alertView.delegate = self;
-        keyWindow = [UIApplication sharedApplication].keyWindow;
-        [keyWindow addSubview:alertView.view];
+        CGFloat w = [UIScreen mainScreen].bounds.size.width;
+        CGFloat h = [UIScreen mainScreen].bounds.size.height;
+        alertView = [[ZJBAlertView alloc]initWithFrame:CGRectMake(w*0.1, h*0.3, w*0.8, h*0.4)];
+        [alertView showView];
     }
-}
-
--(void)ZJBackViewControllerWithTitle:(NSInteger)VCTag
-{
-    [alertView.view removeFromSuperview];
-    [alertView removeFromParentViewController];
-    
 }
 
 #pragma mark - 获取当前视图的视图控制器
@@ -171,7 +164,6 @@
     }
     return nil;
 }
-
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

@@ -15,6 +15,9 @@
 #import "ZJBloodHomeViewController.h"
 #import "ZJBloodAskViewController.h"
 #import "ZJBloodSearchViewController.h"
+
+#import "ZJBMyCommendViewController.h"
+
 @interface ZJBClickView ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * serviceTableView;
@@ -93,6 +96,10 @@
         [[self viewController].navigationController pushViewController:apply animated:YES];
     }else if (indexPath.row ==2){
         selectTag = 3;
+        ZJBMyCommendViewController *commend = [[ZJBMyCommendViewController alloc]init];
+        commend.title = @"表彰查询";
+        commend.hidesBottomBarWhenPushed = YES;
+        [[self viewController].navigationController pushViewController:commend animated:YES];
     }
     [serviceTableView reloadData];
 }

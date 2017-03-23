@@ -22,9 +22,6 @@
     NSString * bloodnumStr;
     NSString * postAddressStr;
     
-//    ZJBHonorAlertView *alert1;
-//    UIButton * backView;
-    
     //选择返回数据
     NSString * cityStr;
     NSString * studyStr;
