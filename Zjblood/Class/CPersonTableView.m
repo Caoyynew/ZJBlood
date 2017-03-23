@@ -7,6 +7,7 @@
 //
 
 #import "CPersonTableView.h"
+
 #import "ZJBMyMessageViewController.h"
 #import "ZJBMyDataTableViewController.h"
 #import "ZJBSystenSettingViewController.h"
@@ -104,11 +105,15 @@
             myMessage.hidesBottomBarWhenPushed = YES;
             [[self viewController].navigationController pushViewController:myMessage animated:YES];
         }else{
-            ZJBMyDataTableViewController *myData = [[ZJBMyDataTableViewController alloc]init];
-            myData.view.backgroundColor = [UIColor whiteColor];
-            myData.title = @"我的资料";
-            myData.hidesBottomBarWhenPushed = YES;
-            [[self viewController].navigationController pushViewController:myData animated:YES];
+            [self.delegate ZJBPushViewControllerWithTitle2];
+//            ZJBMyDataTableViewController *myData = [[ZJBMyDataTableViewController alloc]init];
+//            myData.view.backgroundColor = [UIColor whiteColor];
+//            [myData ZJBHeadImgBlock:^(UIImage *img) {
+//                
+//            }];
+//            myData.title = @"我的资料";
+//            myData.hidesBottomBarWhenPushed = YES;
+//            [[self viewController].navigationController pushViewController:myData animated:YES];
         }
     }else if (indexPath.section ==1){
         ZJBSystenSettingViewController * systemSet = [[ZJBSystenSettingViewController alloc]init];

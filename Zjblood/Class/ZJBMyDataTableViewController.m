@@ -18,6 +18,7 @@
     __block NSString * inputAddress;
     __block NSString * idCard;
     __block NSString * mySexName;
+    
     UIImage * myHeadImg;
 }
 //相机管理器
@@ -29,8 +30,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    [self createLeftButton];
     self.tableView.tableFooterView = [[UIView alloc]init];
+}
+#pragma mark - 导航栏右搜索按钮
+-(void)createLeftButton
+{
+    UIBarButtonItem * leftBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"fanhui"] style:UIBarButtonItemStyleDone target:self action:@selector(searchAction)];
+    leftBtn.tintColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = leftBtn;
+    
+}
+-(void)ZJBHeadImgBlock:(ZJBHeadImgBlock)block
+{
+    self._block = block;
+}
+
+-(void)searchAction
+{
+    if (myHeadImg != nil) {
+        
+        self._block(myHeadImg);
+        
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+// 返回按钮按下
+- (void)backBtnClicked:(UIButton *)sender{
+
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -211,6 +241,8 @@
 {
     UIImage * selectImg = info[@"UIImagePickerControllerEditedImage"];
     myHeadImg = selectImg;
+    NSData *imgData = UIImageJPEGRepresentation(selectImg, 0.5);
+    [[NSUserDefaults standardUserDefaults]setObject:imgData forKey:@"USER_HEAD_IMG"];
     [self dismissViewControllerAnimated:YES completion:nil];
     [self.tableView reloadData];
 }

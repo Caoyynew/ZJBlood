@@ -9,11 +9,9 @@
 #import "ZJBPersonViewController.h"
 #import "CPersonView.h"
 #import "CPersonTableView.h"
+#import "ZJBMyDataTableViewController.h"
 
-#import "ZJBMyHonorViewController.h"
-#import "ZJBMyRecordViewController.h"
-#import "ZJBMyCommendViewController.h"
-@interface ZJBPersonViewController ()<ZJBPushViewControllerDelegate>
+@interface ZJBPersonViewController ()<ZJBPushViewControllerDelegate1,ZJBPushViewControllerDelegate2>
 {
     CPersonView *cpersonView;
     CPersonTableView *cpersonTableView;
@@ -33,10 +31,11 @@
 
     cpersonView = [[CPersonView alloc]initWithFrame:CGRectMake(0, 0 ,zjbWindowW , 320) withDic:nil];
     cpersonView.backgroundColor = tabarColor;
-    [rootView addSubview:cpersonView];
     cpersonView.delegate = self;
+    [rootView addSubview:cpersonView];
     
     cpersonTableView = [[CPersonTableView alloc]initWithFrame:CGRectMake(0, CGRectMT(cpersonView, -40), zjbWindowW,400)];
+    cpersonTableView.delegate = self;
     [rootView addSubview:cpersonTableView];
     
     [self.view addSubview:rootView];
@@ -61,30 +60,27 @@
     }
     return nil;
 }
-
-#pragma mark - ZJBPushViewControllerDelegate
--(void)ZJBPushViewControllerWithTitle:(NSInteger)VCTag
+-(void)ZJBPushViewControllerWithTitle1
 {
-    if (VCTag ==49) {
-        ZJBMyRecordViewController * myrecord = [[ZJBMyRecordViewController alloc]init];
-        myrecord.title = @"还血记录";
-        myrecord.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:myrecord animated:YES];
-    }else if (VCTag ==50){
-        ZJBMyHonorViewController * myhonor = [[ZJBMyHonorViewController alloc]init];
-        myhonor.title = @"我的荣誉证";
-        myhonor.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:myhonor animated:YES];
-    }else if (VCTag ==51){
-        ZJBMyCommendViewController * mycommend = [[ZJBMyCommendViewController alloc]init];
-        mycommend.title = @"表彰查询";
-        mycommend.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:mycommend animated:YES];
-    }else{
-        NSLog(@"cucuole!!!");
-    }
-
+    [self gotoMyDataVC];
 }
+-(void)ZJBPushViewControllerWithTitle2
+{
+    [self gotoMyDataVC];
+}
+
+-(void)gotoMyDataVC
+{
+    ZJBMyDataTableViewController *myData = [[ZJBMyDataTableViewController alloc]init];
+    myData.view.backgroundColor = [UIColor whiteColor];
+    [myData ZJBHeadImgBlock:^(UIImage *img) {
+        cpersonView.iconImageView.image = img;
+    }];
+    myData.title = @"我的资料";
+    myData.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:myData animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -95,11 +91,10 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    NSLog(@"====================");
-}
-
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    NSLog(@"====================");
+//}
 
 @end

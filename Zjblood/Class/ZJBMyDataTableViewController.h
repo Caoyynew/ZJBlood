@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^ZJBHeadImgBlock)(UIImage * img);
+
 @interface ZJBMyDataTableViewController : UITableViewController
+
+@property (nonatomic , copy)ZJBHeadImgBlock _block;
+
+-(void)ZJBHeadImgBlock:(ZJBHeadImgBlock)block;
 
 @end

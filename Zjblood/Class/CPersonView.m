@@ -8,6 +8,10 @@
 
 #import "CPersonView.h"
 
+#import "ZJBMyHonorViewController.h"
+#import "ZJBMyRecordViewController.h"
+#import "ZJBMyCommendViewController.h"
+
 #define cpviewW self.frame.size.width
 #define cpviewH self.frame.size.height
 
@@ -24,24 +28,34 @@
 //画界面
 -(void)createView
 {
-    NSLog(@"path is null");
+//    NSLog(@"path is null");
     //头像
-    UIImageView *iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(cpviewW/2-60,30, 120, 120)];
-    iconImageView.clipsToBounds = YES;
-    iconImageView.layer.cornerRadius = 60;
-    iconImageView.image = [UIImage imageNamed:@"icondefault"];
-    iconImageView.contentMode =  UIViewContentModeScaleAspectFit;
-    [self addSubview:iconImageView];
+    _iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(cpviewW/2-36,50, 72, 72)];
+    _iconImageView.tag = 52;
+    _iconImageView.clipsToBounds = YES;
+    _iconImageView.layer.cornerRadius = 36;
+    _iconImageView.layer.shadowColor = [UIColor blackColor].CGColor;
+    _iconImageView.layer.shadowOpacity = 0.8f;
+    _iconImageView.layer.shadowOffset = CGSizeMake(5, 5);
+    _iconImageView.image = [UIImage imageNamed:@"icondefault"];
+    if (headImg != nil) {
+        _iconImageView.image = headImg;
+        _iconImageView.contentMode =  UIViewContentModeScaleAspectFill;
+    }
+    UITapGestureRecognizer * gotoMyData=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoAction:)];
+    _iconImageView.userInteractionEnabled= YES;
+    [_iconImageView addGestureRecognizer:gotoMyData];
+    [self addSubview:_iconImageView];
     
     //名字+性别
     UILabel * nameLab = [[UILabel alloc]init];
     nameLab.text = @"丁丁订";
     nameLab.font = [UIFont systemFontOfSize:16];
     CGSize expectSize1 = [self setLabelSize:nameLab];
-    nameLab.frame = CGRectMake(cpviewW/2-expectSize1.width/2, CGRectMT(iconImageView, 2), expectSize1.width, expectSize1.height);
+    nameLab.frame = CGRectMake(cpviewW/2-expectSize1.width/2, CGRectMT(_iconImageView, 15), expectSize1.width, expectSize1.height);
     [self addSubview:nameLab];
     
-    UIImageView *nameIconView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectML(nameLab, 10), CGRectMT(iconImageView, 0), 13, 13)];
+    UIImageView *nameIconView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectML(nameLab, 5), CGRectMT(_iconImageView, 13), 13, 13)];
     nameIconView.image = [UIImage imageNamed:@"manlogo"];
     [self addSubview:nameIconView];
     
@@ -109,8 +123,6 @@
     [btnView addSubview:btnNameLab];
     return btnView;
 }
-
-
 #pragma mark - Label自适应宽高
 -(CGSize)setLabelSize:(UILabel *)label
 {
@@ -132,9 +144,37 @@
 #pragma mark - 按钮点击事件处理
 -(void)gotoAction:(UITapGestureRecognizer*)sender
 {
-    NSInteger tag = [sender view].tag;
-    [self.delegate ZJBPushViewControllerWithTitle:tag];
-
+    NSInteger VCTag = [sender view].tag;
+    if (VCTag ==49) {
+        ZJBMyRecordViewController * myrecord = [[ZJBMyRecordViewController alloc]init];
+        myrecord.title = @"还血记录";
+        myrecord.hidesBottomBarWhenPushed = YES;
+        [[self viewController].navigationController pushViewController:myrecord animated:YES];
+    }else if (VCTag ==50){
+        ZJBMyHonorViewController * myhonor = [[ZJBMyHonorViewController alloc]init];
+        myhonor.title = @"我的荣誉证";
+        myhonor.hidesBottomBarWhenPushed = YES;
+        [[self viewController].navigationController pushViewController:myhonor animated:YES];
+    }else if (VCTag ==51){
+        ZJBMyCommendViewController * mycommend = [[ZJBMyCommendViewController alloc]init];
+        mycommend.title = @"表彰查询";
+        mycommend.hidesBottomBarWhenPushed = YES;
+        [[self viewController].navigationController pushViewController:mycommend animated:YES];
+    }else if(VCTag == 52){
+        
+        [self.delegate ZJBPushViewControllerWithTitle1];
+        
+//        ZJBMyDataTableViewController * mydata = [[ZJBMyDataTableViewController alloc]init];
+//        [mydata ZJBHeadImgBlock:^(UIImage *img) {
+//            headImg = img;
+//            _iconImageView.image = headImg;
+//        }];
+//        mydata.title = @"我的资料";
+//        mydata.hidesBottomBarWhenPushed = YES;
+//        [[self viewController].navigationController pushViewController:mydata animated:YES];
+    }else{
+        NSLog(@"cucuole!!!");
+    }
 }
 
 #pragma mark - 获取当前视图的视图控制器
