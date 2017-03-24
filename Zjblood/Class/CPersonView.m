@@ -49,8 +49,8 @@
 //    shadow.layer.cornerRadius = 36.0;
 //    shadow.clipsToBounds = NO;
     [shadow addSubview: _iconImageView];
-//    _iconImageView.backgroundColor = [UIColor orangeColor];
-    _iconImageView.image = [UIImage imageNamed:@"icondefault"];
+
+    _iconImageView.image = [UIImage imageNamed:@"morentouxiang"];
     if (headImg != nil) {
         _iconImageView.image = headImg;
         _iconImageView.contentMode =  UIViewContentModeScaleAspectFit;

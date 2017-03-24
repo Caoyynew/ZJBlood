@@ -7,6 +7,10 @@
 //
 
 #import "ZJBLoginViewController.h"
+#import "BaseViewController.h"
+
+#import "ZJBPassWordViewController.h"
+#import "ZJBRegisterViewController.h"
 
 @interface ZJBLoginViewController ()
 {
@@ -16,6 +20,9 @@
     
     UIButton * forgetPwdBtn;
     UIButton * registerBtn;
+    
+//    UINavigationController * nav;
+    
 }
 
 @end
@@ -24,18 +31,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view .backgroundColor = RGB_COLOR(249, 82, 88, 1.0);
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ditu"]];
     [self createUI];
     
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 -(void)createUI
 {
-    UIImageView *logoIV = [[UIImageView alloc]initWithFrame:CGRectMake(zjbWindowW*0.38, zjbWindowH*0.09, zjbWindowW*0.24, zjbWindowW*0.24)];
-    logoIV.image = [UIImage imageNamed:@"loginlogo"];
+    UIImageView *logoIV = [[UIImageView alloc]initWithFrame:CGRectMake(zjbWindowW*0.38, zjbWindowH*0.19, zjbWindowW*0.24, zjbWindowW*0.24*1.35)];
+    logoIV.image = [UIImage imageNamed:@"logo"];
     [self.view addSubview:logoIV];
     
-    UIView * phoneView = [[UIView alloc]initWithFrame:CGRectMake(zjbWindowW*0.1, CGRectMT(logoIV, zjbWindowH*0.13),zjbWindowW*0.8,45)];
+    UIView * phoneView = [[UIView alloc]initWithFrame:CGRectMake(zjbWindowW*0.1, CGRectMT(logoIV, zjbWindowH*0.13/1.35),zjbWindowW*0.8,45)];
     phoneView.layer.cornerRadius = 5.0f;
     phoneView.clipsToBounds = YES;
     phoneView.backgroundColor = [UIColor whiteColor];
@@ -45,6 +62,7 @@
 
     phoneNum = [[UITextField alloc]initWithFrame:CGRectMake(45, 0,zjbWindowW*0.8-45, 45)];
     phoneNum.placeholder = @"请输入手机号码";
+    phoneNum.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
     [phoneView addSubview:phoneLogo];
     [phoneView addSubview:phoneNum];
     
@@ -58,6 +76,7 @@
 
     passwordNum = [[UITextField alloc]initWithFrame:CGRectMake(45, 0, zjbWindowW*0.8-45, 45)];
     passwordNum.placeholder = @"请输入密码";
+    passwordNum.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
     [pwdView addSubview:pwdLogo];
     [pwdView addSubview:passwordNum];
     
@@ -73,7 +92,7 @@
     [self.view addSubview:loginBtn];
     [loginBtn addTarget: self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
     
-    forgetPwdBtn = [[UIButton alloc]initWithFrame:CGRectMake(zjbWindowW*0.094, CGRectMT(loginBtn, zjbWindowH*0.2), 100, 30)];
+    forgetPwdBtn = [[UIButton alloc]initWithFrame:CGRectMake(zjbWindowW*0.094, zjbWindowH-40, 100, 20)];
     forgetPwdBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     [forgetPwdBtn setTitle:@"忘记密码" forState:UIControlStateNormal];
     forgetPwdBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
@@ -81,7 +100,7 @@
     [self.view addSubview:forgetPwdBtn];
     [forgetPwdBtn addTarget:self action:@selector(forgetAction) forControlEvents:UIControlEventTouchUpInside];
     
-    registerBtn = [[UIButton alloc]initWithFrame:CGRectMake(zjbWindowW*0.906-100, CGRectMT(loginBtn, zjbWindowH*0.2), 100, 30)];
+    registerBtn = [[UIButton alloc]initWithFrame:CGRectMake(zjbWindowW*0.906-100, zjbWindowH-40, 100, 20)];
     registerBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     [registerBtn setTitle:@"快速注册" forState:UIControlStateNormal];
     registerBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
@@ -94,14 +113,22 @@
 -(void)loginAction
 {
     NSLog(@"登录!!!!!!!");
+    BaseViewController * base = [[BaseViewController alloc]init];
+    [self presentViewController:base animated:YES completion:nil];
 }
 -(void)forgetAction
 {
     NSLog(@"忘记密码!!!!!!!");
+    ZJBPassWordViewController * pwd = [[ZJBPassWordViewController alloc]init];
+    pwd.title = @"忘记密码";
+    pwd.view.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
+    [self.navigationController pushViewController:pwd animated:YES];
 }
 -(void)registerAction
 {
     NSLog(@"快速注册!!!!!!!");
+    ZJBRegisterViewController * reg = [[ZJBRegisterViewController alloc]init];
+    [self.navigationController pushViewController:reg animated:YES];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

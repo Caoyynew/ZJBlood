@@ -108,13 +108,13 @@
     UIImageView *logoImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, 20, 20)];
     logoImgView.image = [UIImage imageNamed:@"aboutapp"];
     
-    UILabel *logoLab = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(logoImgView, 20), 0, 200, 60)];
+    UILabel *logoLab = [[UILabel alloc]initWithFrame:CGRectMake(CGRectML(logoImgView, 10), 0, 200, 60)];
     logoLab.text = @"意见与建议";
     logoLab.font = [UIFont systemFontOfSize:17];
     [adviceTextView addSubview:logoImgView];
     [adviceTextView addSubview:logoLab];
     
-    cTextView1 = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(logoLab, 0), 0.9*zjbWindowW, 130) withType:200];
+    cTextView1 = [[CustomTextView alloc]initWithFrame:CGRectMake(0, CGRectMT(logoLab, 0), 0.9*zjbWindowW, 200) withType:200];
     cTextView1.zjbPlaceHolderLabel.text = @"你的意见让我们成长!";
     [adviceTextView addSubview:cTextView1];
     
@@ -146,7 +146,7 @@
 #pragma mark - 建议按钮
 -(void)drawAdviceButton
 {
-    UIButton * adviceBtn = [[UIButton alloc]initWithFrame:CGRectMake(zjbWindowW/2-100, CGRectMT(adviceTextView, 40), 200, 40)];
+    UIButton * adviceBtn = [[UIButton alloc]initWithFrame:CGRectMake(zjbWindowW/2-100, zjbWindowH*0.75, 200, 40)];
     adviceBtn.backgroundColor = buttonColor;
     adviceBtn.clipsToBounds=YES;
     adviceBtn.layer.cornerRadius=5;

@@ -9,6 +9,8 @@
 #import "ZJBServiceViewController.h"
 #import "ZJBClickView.h"
 #import "ZJBServiceTableView.h"
+#import "ZJBMyMessageViewController.h"
+
 @interface ZJBServiceViewController ()<UIScrollViewDelegate>
 {
     ZJBClickView * clickView;
@@ -37,7 +39,10 @@
 }
 -(void)clickAction
 {
-    NSLog(@"点击了消息按钮");
+    ZJBMyMessageViewController *messge = [[ZJBMyMessageViewController alloc]init];
+    messge.title = @"我的消息";
+    [self.navigationController pushViewController:messge animated:YES];
+    
 }
 #pragma mark - UI
 -(void)createUI
@@ -53,7 +58,6 @@
     serviceView.backgroundColor = RGB_COLOR(242, 242, 242, 1.0);
     [rootScrollView addSubview:serviceView];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
