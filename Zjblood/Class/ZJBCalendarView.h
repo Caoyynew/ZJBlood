@@ -10,4 +10,9 @@
 
 @interface ZJBCalendarView : UIView
 
+- (void)createCalendarViewWith:(NSDate *)date;
+- (NSDate *)nextMonth:(NSDate *)date;
+- (NSDate *)lastMonth:(NSDate *)date;
+
+@property (nonatomic, strong) NSDate *date;
 @end

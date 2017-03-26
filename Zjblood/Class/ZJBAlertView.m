@@ -7,7 +7,7 @@
 //
 
 #import "ZJBAlertView.h"
-
+#import "ZJBCalendarView.h"
 @interface ZJBAlertView ()
 {
     UIView * showView;
@@ -18,6 +18,8 @@
     
     UIWindow * keywindow;
     UIButton * backViewBtn;
+    
+    ZJBCalendarView * calendarView;
 }
 
 @end
@@ -111,8 +113,19 @@
 
 -(void)lookSignRecord
 {
-    NSLog(@"查看签到历史记录");
-    
+    [self removeFromSuperview];
+    calendarView = [[ZJBCalendarView alloc] init];
+    CGFloat w = [UIScreen mainScreen].bounds.size.width;
+    CGFloat h = [UIScreen mainScreen].bounds.size.height;
+    calendarView.frame = CGRectMake(w*0.1, h*0.3, w*0.8, w*0.8*8/7);
+    [keywindow addSubview:calendarView];
+    calendarView.date = [NSDate date];
+    calendarView.layer.cornerRadius = 2.0f;
+
+    closeBtn = [[UIButton alloc]initWithFrame:CGRectMake(w*0.8, h*0.3+5, 30, 30)];
+    [closeBtn setImage:[UIImage imageNamed:@"scloseBtn"] forState:UIControlStateNormal];
+    [closeBtn addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
+    [keywindow addSubview:closeBtn];
 }
 
 -(void)closeAction
@@ -121,6 +134,10 @@
         [self removeFromSuperview];
         [backViewBtn removeFromSuperview];
         backViewBtn = nil;
+        if (calendarView) {
+            [calendarView removeFromSuperview];
+            [closeBtn removeFromSuperview];
+        }
     }];
 }
 

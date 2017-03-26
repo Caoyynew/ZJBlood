@@ -16,6 +16,10 @@
     UIButton * loginBtn;
     //获取验证码按钮
     UIButton * securtyBtn;
+    
+    UIImageView *img;
+    UIButton * agreenBtn;
+    int touch;
 }
 
 @end
@@ -100,10 +104,36 @@
     [self.view addSubview:loginBtn];
     
     UIView * bottomView = [[UIView alloc]initWithFrame:CGRectMake(zjbWindowW*0.1, zjbWindowH-120, zjbWindowW*0.8, 20)];
-    bottomView.backgroundColor = [UIColor orangeColor];
-    [self.view addSubview:bottomView];
     
+    UIView * agreenV = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 20)];
+    touch = 1;
+    img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 5, 10, 10)];
+    img.image = [UIImage imageNamed:@"renke"];
+    [agreenV addSubview:img];
+    UILabel *agreenLab = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, 180, 20)];
+    agreenLab.text = @"我已阅读并认可";
+    agreenLab.font = [UIFont systemFontOfSize:16];
+    agreenLab.textColor = [UIColor whiteColor];
+    [agreenV addSubview:agreenLab];
+    
+    agreenBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 200, 20)];
+    [agreenBtn addTarget:self action:@selector(clickAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    [agreenV addSubview:agreenBtn];
+    [bottomView addSubview:agreenV];
+    [self.view addSubview:bottomView];
 }
+
+-(void)clickAction
+{
+    touch = touch +1;
+    if (touch%2 == 0) {
+        img.image = [UIImage imageNamed:@""];
+    }else{
+        img.image = [UIImage imageNamed:@"renke"];
+    }
+}
+
 #pragma mark - 注册
 -(void)registerAction
 {
