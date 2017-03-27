@@ -126,8 +126,8 @@
 		AD15FE0A1E6E66F100F31F1B /* ZjbloodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZjbloodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD15FE0E1E6E66F100F31F1B /* ZjbloodUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZjbloodUITests.m; sourceTree = "<group>"; };
 		AD15FE101E6E66F100F31F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD15FE201E6E83B300F31F1B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		AD15FE211E6E83B300F31F1B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		AD15FE201E6E83B300F31F1B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = ../BaseViewController.h; sourceTree = "<group>"; };
+		AD15FE211E6E83B300F31F1B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = ../BaseViewController.m; sourceTree = "<group>"; };
 		AD2400561E83A7C600ECA670 /* ZJBMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBMapView.h; sourceTree = "<group>"; };
 		AD2400571E83A7C600ECA670 /* ZJBMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBMapView.m; sourceTree = "<group>"; };
 		AD24005A1E83B81E00ECA670 /* ZJBMapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBMapTableViewCell.h; sourceTree = "<group>"; };
@@ -351,11 +351,8 @@
 		AD15FDE81E6E66F000F31F1B /* Zjblood */ = {
 			isa = PBXGroup;
 			children = (
-				AD4582611E84B9B8004D8646 /* LogoinView */,
 				AD15FDEC1E6E66F000F31F1B /* AppDelegate.h */,
 				AD15FDED1E6E66F000F31F1B /* AppDelegate.m */,
-				AD15FE201E6E83B300F31F1B /* BaseViewController.h */,
-				AD15FE211E6E83B300F31F1B /* BaseViewController.m */,
 				AD15FE1D1E6E835C00F31F1B /* Class */,
 				AD15FE1E1E6E835C00F31F1B /* Tool */,
 				AD15FE1F1E6E835C00F31F1B /* Resource */,
@@ -394,6 +391,9 @@
 		AD15FE1D1E6E835C00F31F1B /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				AD15FE201E6E83B300F31F1B /* BaseViewController.h */,
+				AD15FE211E6E83B300F31F1B /* BaseViewController.m */,
+				AD4582611E84B9B8004D8646 /* LogoinView */,
 				ADBFDF7B1E6E87A0000358E0 /* Service */,
 				ADBFDF7C1E6E87AF000358E0 /* Information */,
 				ADBFDF7D1E6E87E4000358E0 /* Person */,
@@ -546,6 +546,7 @@
 				AD4582691E84BADF004D8646 /* ZJBRegisterViewController.m */,
 			);
 			name = LogoinView;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		AD4AE83B1E7A31A200687989 /* cell */ = {
