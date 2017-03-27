@@ -14,7 +14,7 @@
 #import "ZJBInformationViewController.h"
 #import "ZJBPersonViewController.h"
 #import "ZJBConfigPhoneStyle.h"
-
+#import "ZJBNetClient.h"
 #define tabarColor [UIColor colorWithRed:249/255.0 green:65/255.0 blue:72/255.0 alpha:1.0]
 #define buttonColor [UIColor colorWithRed:44/255.0 green:221/255.0 blue:155/255.0 alpha:1.0]
 #define backColor [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0]

@@ -87,6 +87,8 @@
 		ADD0654F1E76A87B0026F680 /* ZJBloodRecTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD0654D1E76A87B0026F680 /* ZJBloodRecTableViewCell.m */; };
 		ADD065501E76A87B0026F680 /* ZJBloodRecTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD0654E1E76A87B0026F680 /* ZJBloodRecTableViewCell.xib */; };
 		ADD3259B1E828D1500649D72 /* ZJBCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD3259A1E828D1500649D72 /* ZJBCalendarView.m */; };
+		ADE7B6701E88A66B00F9B622 /* ZJBNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE7B66F1E88A66B00F9B622 /* ZJBNetClient.m */; };
+		ADE7B6731E88B0CA00F9B622 /* ZJBAFNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE7B6721E88B0CA00F9B622 /* ZJBAFNManager.m */; };
 		ADF06BFC1E6EB89B00E9A0F8 /* CPersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF06BFB1E6EB89B00E9A0F8 /* CPersonView.m */; };
 /* End PBXBuildFile section */
 
@@ -258,6 +260,10 @@
 		ADD0654E1E76A87B0026F680 /* ZJBloodRecTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJBloodRecTableViewCell.xib; sourceTree = "<group>"; };
 		ADD325991E828D1500649D72 /* ZJBCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBCalendarView.h; sourceTree = "<group>"; };
 		ADD3259A1E828D1500649D72 /* ZJBCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBCalendarView.m; sourceTree = "<group>"; };
+		ADE7B66E1E88A66B00F9B622 /* ZJBNetClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBNetClient.h; sourceTree = "<group>"; };
+		ADE7B66F1E88A66B00F9B622 /* ZJBNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBNetClient.m; sourceTree = "<group>"; };
+		ADE7B6711E88B0CA00F9B622 /* ZJBAFNManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBAFNManager.h; sourceTree = "<group>"; };
+		ADE7B6721E88B0CA00F9B622 /* ZJBAFNManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBAFNManager.m; sourceTree = "<group>"; };
 		ADF06BFA1E6EB89B00E9A0F8 /* CPersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPersonView.h; sourceTree = "<group>"; };
 		ADF06BFB1E6EB89B00E9A0F8 /* CPersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPersonView.m; sourceTree = "<group>"; };
 		ADF06BFE1E6EC53600E9A0F8 /* ZJBPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJBPch.pch; sourceTree = "<group>"; };
@@ -351,7 +357,7 @@
 				AD15FE201E6E83B300F31F1B /* BaseViewController.h */,
 				AD15FE211E6E83B300F31F1B /* BaseViewController.m */,
 				AD15FE1D1E6E835C00F31F1B /* Class */,
-				AD15FE1E1E6E835C00F31F1B /* Config */,
+				AD15FE1E1E6E835C00F31F1B /* Tool */,
 				AD15FE1F1E6E835C00F31F1B /* Resource */,
 				AD15FDF71E6E66F000F31F1B /* LaunchScreen.storyboard */,
 				AD15FDE91E6E66F000F31F1B /* Supporting Files */,
@@ -395,13 +401,18 @@
 			path = Class;
 			sourceTree = "<group>";
 		};
-		AD15FE1E1E6E835C00F31F1B /* Config */ = {
+		AD15FE1E1E6E835C00F31F1B /* Tool */ = {
 			isa = PBXGroup;
 			children = (
 				ADF06BFE1E6EC53600E9A0F8 /* ZJBPch.pch */,
 				AD4D7A041E72807A00C14A56 /* ZJBConfigPhoneStyle.h */,
 				AD4D7A051E72807A00C14A56 /* ZJBConfigPhoneStyle.m */,
+				ADE7B6711E88B0CA00F9B622 /* ZJBAFNManager.h */,
+				ADE7B6721E88B0CA00F9B622 /* ZJBAFNManager.m */,
+				ADE7B66E1E88A66B00F9B622 /* ZJBNetClient.h */,
+				ADE7B66F1E88A66B00F9B622 /* ZJBNetClient.m */,
 			);
+			name = Tool;
 			path = Config;
 			sourceTree = "<group>";
 		};
@@ -958,6 +969,7 @@
 				AD91A1271E7E77480018EF59 /* ZJBWholeTableViewController.m in Sources */,
 				AD5ED4861E810D4E00D59AC5 /* ZJBHonorOneViewController.m in Sources */,
 				AD4C51591E77F5080062B4A4 /* ZJBloodSearchTableViewCell.m in Sources */,
+				ADE7B6731E88B0CA00F9B622 /* ZJBAFNManager.m in Sources */,
 				AD28F01B1E769F79005E41B5 /* ZJBloodResultViewController.m in Sources */,
 				AD2926FE1E6FDE7100FBAEF8 /* ZJBFeedBackViewController.m in Sources */,
 				AD4D7A061E72807A00C14A56 /* ZJBConfigPhoneStyle.m in Sources */,
@@ -988,6 +1000,7 @@
 				AD2400581E83A7C600ECA670 /* ZJBMapView.m in Sources */,
 				AD4AE83F1E7A31ED00687989 /* ZJBDynamicTableViewCell.m in Sources */,
 				AD24005D1E83B81E00ECA670 /* ZJBMapTableViewCell.m in Sources */,
+				ADE7B6701E88A66B00F9B622 /* ZJBNetClient.m in Sources */,
 				AD2926F81E6FDDF700FBAEF8 /* ZJBMyDataTableViewController.m in Sources */,
 				AD38A8C51E7120D000E7B4A7 /* ZJBIdCardViewController.m in Sources */,
 				AD4AE84D1E7A6B9600687989 /* ZJBApplicant.m in Sources */,
@@ -1157,6 +1170,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5N55KK46S2;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/caoyang/Documents/Zjblood/Zjblood/Config/ZJBPch.pch;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = Zjblood/Info.plist;
@@ -1165,6 +1179,7 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjhlhl.zjblood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -1175,6 +1190,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5N55KK46S2;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/caoyang/Documents/Zjblood/Zjblood/Config/ZJBPch.pch;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = Zjblood/Info.plist;
@@ -1183,6 +1199,7 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjhlhl.zjblood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};
